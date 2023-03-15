@@ -1,12 +1,15 @@
 import React from 'react';
 import '../../scss/layout/_landing.scss';
 
+
+import Logo1 from '../../assets/img/Logo1.svg';
+
 import Background from '../landing/header/Background';
 import InputHero from '../landing/header/Input';
 import Button from '../landing/header/Button';
 import Titles from '../landing/header/Titles';
 import Logo from '../landing/header/Logo';
-import MenuNav from '../landing/header/MenuNav';
+import Navigation from './header/Navigation';
 
 import BackgroundCallToAction from '../landing/body/Background-call-to-action';
 import CallToAction from '../landing/body/CallToAction';
@@ -45,84 +48,150 @@ export default function Landing() {
     return (
 
         <>
-            <div class="container">
-                <div class="header"></div>
-
-                <div class="bg-hero"><Background /></div>
-                <div class="imput-hero"><InputHero /></div>
-                <div  class="btn-hero"><Button/>
+            <div id='container'>
+                <div className='hero'>
+                    <header className='hero__header header'>
+                        <input className='header__input' placeholder='escribe aca'></input>
+                        <img className='header__img' /* src={ Logo1 } */ alt="logo academia" />
+                        <h1 className='header__h1'>DESAFIO</h1>
+                        <h2 className='header__h2'>latam_</h2>
+                        <button className='header__btn'> clik me </button>
+                        <nav className='header__nav'>
+                            <ul className='header__nav--ul'>
+                                <li className='header__nav--li'>{/* <img src={groups} />*/}1</li>
+                                <li className='header__nav--li'>{/* <img src={drafts} /> */}2</li>
+                                <li className='header__nav--li'>{/* <img src={mail1} /> */}3</li>
+                                <li className='header__nav--li'>{/* <img src={calendar} /> */}4</li>
+                                <li className='header__nav--li'>{/* <img src={communication} /> */}5</li>
+                            </ul>
+                        </nav>
+                    </header>
                 </div>
-                <div class="titles-hero"><Titles/></div>
-                <div class="logo-hero"><Logo/></div>
-                <div class="menu-nav"><MenuNav/></div>
+
                 
-                
-                
-                <div class="body"></div>
-                <div class="bg-call-to-action"><BackgroundCallToAction/></div>
-                <div class="call-to-action"><CallToAction/></div>
-                <div class="bg-comunidad"><Bgcomunidad/></div>
-                <div class="comunidad"><Comunidad/></div>
-                <div class="bg-card1"><BgCard1 /></div>
-                <div class="svg-card1"><SvgCard1 /></div>
-                <div class="img-card1"><ImgCard1 /></div>
-                <div class="text-card1"><TextCard1 /></div>
-                <div class="bg-card2"><BgCard2 /></div>
-                <div class="svg-card2"><SvgCard2 /></div>
-                <div class="img-card2"><ImgCard2 /></div>
-                <div class="text-card2"><TextCard2 /></div>
-                <div class="bg-card3"><BgCard3 /></div>
-                <div class="svg-card3"><SvgCard3 /></div>
-                <div class="img-card3"><ImgCard3 /></div>
-                <div class="text-card3"><TextCard3 /></div>
-                <div class="bg-experiencia"><BgExperiencia/></div>
-                <div class="experiencia"><Experiencia/></div>
-                <div class="bg-carousel1"></div>
-                <div class="carousel1"><CarruselStories/></div>
-                <div class="bg-agenda"><BgActividades/></div>
-                <div class="agenda"><Actividades/></div>
-                <div class="bg-carousel2"></div>
-                <div class="carousel2"><CarruselCalendario/></div>
-                
-                
-                <div class="footer"></div>
-                <div class="bg-footer"></div>
-                <div class="footer-content"><Footer/></div>
+
+
+
+
+
+                <main className='main'>
+
+                    <div className='main__calltoaction calltoaction'>
+                        <img className='calltoaction__img--svg1'></img>
+                        <h2 className='calltoaction__h2'>Unete a nuestro equipo</h2>
+                        <p className='calltoaction__p'> unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete </p>
+                        <img className='calltoaction__img--svg2' alt='svg'></img>
+                    </div>
+                    <div className='main__comunidad comunidad'>
+                        <h2 className='comunidad__h2'> COMUNIDAD DLATAM_</h2>
+                        <img className='comunidad__img--svg'></img>
+                    </div>
+
+
+                    <section className='section'>
+                        <div className='section__card card1'>
+                            <img className='card1__img--svg'></img>
+                            <img className='card1__img'></img>
+                            <p className='card1__p'>
+                                unete unete unete unete unete unete unete unete unete unete
+                            </p>
+                        </div>
+                        <div className='section__card card2'>
+                            <img className='card2__img--svg'></img>
+                            <img className='card2__img'></img>
+                            <p className='card2__p'>
+                                unete unete unete unete unete unete unete unete unete unete
+                            </p>
+                        </div>
+                        <div className='section__card card3'>
+                            <img className='card3__img'></img>
+                            <img className='card3__img--svg'></img>
+                            <p className='card3__p'>
+                                unete unete unete unete unete unete unete unete unete unete
+                            </p>
+                        </div>
+                    </section>
+
+                    <div className='main__experiencia experiencia'>
+                        <h2 className='experiencia__h2'> EXPERIENCIA ESTUDIANTIL</h2>
+                        <img className='experiencia__img--svg'></img>
+                    </div>
+
+                    <div className='main-carousel carousel1'>
+                        carrusel1
+                    </div>
+
+                    <div className='main__agenda agenda'>
+                        <h2 className='agenda__h2'> AGENDA ACTIVIDADES</h2>
+                        <img className='agenda__img--svg'></img>
+                    </div>
+
+                    <div className='main-carousel carousel2'>
+                        carrusel2
+                    </div>
+                </main>
+
+                <footer className='footer'>
+                    <h2 className='footer__h2'>SUSCRÍBETE Y RECIBE
+                        NUESTRO BOLETÍN QUINCENAL </h2>
+                    <input className='footer__input' placeholder='escribe aca'></input>
+
+                    <section className='footer__section section'>
+
+
+                        <ul className='section__ul ul'>
+                            <li className='ul--li1'>NUESTROS CONTACTOS</li>
+                            <li className='ul--li2'>Dudas y consultas</li>
+                            <li className='ul--li3'><a href='#'>sos@desafiolatam.com</a></li>
+                            <li className='ul--li4'>Ayuda tecnica</li>
+                            <li className='ul--li5'><a href='#'>ayuda@desafiolatam.com</a></li>
+                            <li className='ul--li6'>NUESTRAS REDES SOCIALES</li>
+                        </ul>
+
+
+
+                        <span className='section__span icons'>
+                            <i className='icons__i'><a href='#'>icon</a></i>
+                            <i className='icons__i'><a href='#'>icon</a></i>
+                            <i className='icons__i'><a href='#'>icon</a></i>
+                        </span>
+
+
+                        <div className='section__logo logo' >
+                            <img className='logo__img' alt="logo">
+                            </img>
+                        </div>
+
+                        <div className='section__h2 h2'>
+                            <h2 className='h2--h2'>
+                                DESAFIO latam_
+                            </h2>
+                        </div>
+                    </section>
+
+                </footer>
             </div>
 
 
 
-            {/* <div class="container">
-                <div class="background-hero"><Background /></div>
-                <div class="imput-hero"><InputHero /></div>
-                <div class="logo-hero"> <Logo />  </div>
-                <div class="title-hero"><Titles /></div>
-                <div class="btn-hero"> <Button /></div>
-                <div class="menu-hero"><MenuNav /></div>
-                <div class="background-call-to-action"><BackgroundCallToAction /></div>
-                <div class="call-to-action"><CallToAction /> </div>
-                <div class="background-comunidad"><Bgcomunidad /></div>
-                <div class="comunidad"><Comunidad /></div>
-                <div class="background-card1"><BgCard1 /></div>
-                <div class="card1"><Card1 /></div>
-                <div class="background-card2"><BgCard2 /></div>
-                <div class="card2"><Card2 /></div>
-                <div class="background-card3"><BgCard3 /></div>
-                <div class="card3"><Card3 /></div>
-                <div class="background-experiencia"><BgExperiencia /></div>
-                <div class="experiencia"><Experiencia /></div>
-                <div class="background-carousel1"></div>
-                <div class="carousel1"><CarruselStories /></div>
-                <div class="background-actividades"><BgActividades /></div>
-                <div class="actividades"><Actividades /></div>
-                <div class="background-carousel2"></div>
-                <div class="carousel2"><CarruselCalendario /></div>
-                <div class="background-footer"></div>
-                <div class="footer"><Footer /></div>
-            </div> */}
         </>
 
-
-
     )
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

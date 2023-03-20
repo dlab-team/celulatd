@@ -49,127 +49,300 @@ export default function Landing() {
 
         <>
             <div id='container'>
-                <div className='hero'>
-                    <header className='hero__header header'>
-                        <input className='header__input' placeholder='escribe aca'></input>
-                        <img className='header__img' /* src={ Logo1 } */ alt="logo academia" />
-                        <h1 className='header__h1'>DESAFIO</h1>
-                        <h2 className='header__h2'>latam_</h2>
-                        <button className='header__btn'> clik me </button>
-                        <nav className='header__nav'>
-                            <ul className='header__nav--ul'>
-                                <li className='header__nav--li'>{/* <img src={groups} />*/}1</li>
-                                <li className='header__nav--li'>{/* <img src={drafts} /> */}2</li>
-                                <li className='header__nav--li'>{/* <img src={mail1} /> */}3</li>
-                                <li className='header__nav--li'>{/* <img src={calendar} /> */}4</li>
-                                <li className='header__nav--li'>{/* <img src={communication} /> */}5</li>
-                            </ul>
-                        </nav>
-                    </header>
+                <header className='header'>
+                    <input className='header__input' placeholder='escribe aca'></input>
+                    <img className='header__img' /* src={ Logo1 } */ alt="logo academia" />
+                    <h1 className='header__h1'>DESAFIO</h1>
+                    <h2 className='header__h2'>latam_</h2>
+                    <button className='header__btn'> clik me </button>
+
+
+
+                    <nav className='header__nav'>
+                        <ul className='header__nav--ul'>
+                            <li className='header__nav--li'>{/* <img src={groups} />*/}1</li>
+                            <li className='header__nav--li'>{/* <img src={drafts} /> */}2</li>
+                            <li className='header__nav--li'>{/* <img src={mail1} /> */}3</li>
+                            <li className='header__nav--li'>{/* <img src={calendar} /> */}4</li>
+                            <li className='header__nav--li'>{/* <img src={communication} /> */}5</li>
+                        </ul>
+                    </nav>
+                </header>
+
+
+
+
+
+
+
+                <div className='main__call-to-action'>
+                    <div className='main__call-to-action--content'>
+                        <img className='main__call-to-action--svg1' alt='svg'></img>
+                        <div className='main__call-to-action--texts'>
+                            <h2 className='main__call-to-action--h2'>Unete a nuestro equipo</h2>
+                            <p className='main__call-to-action--p'> unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete
+                                unete unete unete unete unete unete unete unete
+
+                            </p>
+                        </div>
+                        <img className='main__call-to-action--svg2' alt='svg'></img>
+                    </div>
                 </div>
 
+
+                <div className='main__comunidad'>
+                    <div className='main__comunidad--content'>
+                        <h2 className='main__comunidad--h2'> COMUNIDAD DLATAM_</h2>
+                        <img className='main__comunidad--svg' alt='svg'></img>
+                    </div>
+                </div>
+
+
+
+                {/* carddddd 11111111111111111111111111111111111111111111111111111111111 */}
+
+                <div className='main__card1-mobile'>
+                    <div className='main__card1-mobile--content'>
+                        <img className='main__card1-mobile--svg'></img>
+                        <img className='main__card1-mobile--img'></img>
+                        <p className='main__card1-mobile--p'>
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+                        </p>
+                    </div>
+                </div>
+
+                <div className='main__card1-desktop'>
+                    <div className='main__card1-desktop--content'>
+                        <img className='main__card1-desktop--svg'></img>
+                        <img className='main__card1-desktop--img'></img>
+                        <p className='main__card1-desktop--p'>
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+
+                        </p>
+                    </div>
+                </div>
+                {/* carddddd 11111111111111111111111111111111111111111111111111111111111 */}
+
+                {/* carddddd  22222222222222222222222222222222222222222222222222222222222 */}
+
+
+                <div className='main__card2-mobile'>
+                    <div className='main__card2-mobile--content'>
+                        <img className='main__card2-mobile--svg'></img>
+                        <img className='main__card2-mobile--img'></img>
+                        <p className='main__card2-mobile--p'>
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+                        </p>
+                    </div>
+                </div>
+
+                <div className='main__card2-desktop'>
+                    <div className='main__card2-desktop--content'>
+                        <img className='main__card2-desktop--svg'></img>
+                        <img className='main__card2-desktop--img'></img>
+                        <p className='main__card2-desktop--p'>
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+
+                        </p>
+                    </div>
+                </div>
+
+                {/* carddddd  22222222222222222222222222222222222222222222222222222222222 */}
+                {/* carddddd  33333333333333333333333333333333333333333333333333333333 */}
+
+
+                <div className='main__card3-mobile'>
+                    <div className='main__card3-mobile--content'>
+                        <img className='main__card3-mobile--svg'></img>
+                        <img className='main__card3-mobile--img'></img>
+                        <p className='main__card3-mobile--p'>
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+                        </p>
+                    </div>
+                </div>
+
+                <div className='main__card3-desktop'>
+                    <div className='main__card3-desktop--content'>
+                        <img className='main__card3-desktop--svg'></img>
+                        <img className='main__card3-desktop--img'></img>
+                        <p className='main__card3-desktop--p'>
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+                            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                {/* carddddd  33333333333333333333333333333333333333333333333333333333 */}
+
+
+
+
+                <div className='main__experiencia'>
+                    <div className='main__experiencia--content'>
+                        <h2 className='main__experiencia--h2'> EXPERIENCIA ESTUDIANTIL</h2>
+                        <img className='main__experiencia--svg' alt='svg'></img>
+                    </div>
+                </div>
+
+
+
+                <div className='main__carousel1 '>
+                <div className='main__carousel1--content'>
+                        <p>Carrusel 1</p>
+                    </div>
+                </div>
+
+
+                <div className='main__agenda'>
+                    <div className='main__agenda--content'>
+                        <h2 className='main__agenda--h2'> AGENDA ACTIVADES</h2>
+                        <img className='main__agenda--svg' alt='svg'></img>
+                    </div>
+                </div>
                 
-
-
-
-
-
-                <main className='main'>
-
-                    <div className='main__calltoaction calltoaction'>
-                        <img className='calltoaction__img--svg1'></img>
-                        <h2 className='calltoaction__h2'>Unete a nuestro equipo</h2>
-                        <p className='calltoaction__p'> unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete unete </p>
-                        <img className='calltoaction__img--svg2' alt='svg'></img>
+                <div className='main__carousel2 '>
+                <div className='main__carousel2--content'>
+                        <p>Carrusel 2</p>
                     </div>
-                    <div className='main__comunidad comunidad'>
-                        <h2 className='comunidad__h2'> COMUNIDAD DLATAM_</h2>
-                        <img className='comunidad__img--svg'></img>
-                    </div>
+                </div>
 
 
-                    <section className='section'>
-                        <div className='section__card card1'>
-                            <img className='card1__img--svg'></img>
-                            <img className='card1__img'></img>
-                            <p className='card1__p'>
-                                unete unete unete unete unete unete unete unete unete unete
-                            </p>
-                        </div>
-                        <div className='section__card card2'>
-                            <img className='card2__img--svg'></img>
-                            <img className='card2__img'></img>
-                            <p className='card2__p'>
-                                unete unete unete unete unete unete unete unete unete unete
-                            </p>
-                        </div>
-                        <div className='section__card card3'>
-                            <img className='card3__img'></img>
-                            <img className='card3__img--svg'></img>
-                            <p className='card3__p'>
-                                unete unete unete unete unete unete unete unete unete unete
-                            </p>
-                        </div>
-                    </section>
 
-                    <div className='main__experiencia experiencia'>
-                        <h2 className='experiencia__h2'> EXPERIENCIA ESTUDIANTIL</h2>
-                        <img className='experiencia__img--svg'></img>
-                    </div>
 
-                    <div className='main-carousel carousel1'>
-                        carrusel1
-                    </div>
 
-                    <div className='main__agenda agenda'>
-                        <h2 className='agenda__h2'> AGENDA ACTIVIDADES</h2>
-                        <img className='agenda__img--svg'></img>
-                    </div>
-
-                    <div className='main-carousel carousel2'>
-                        carrusel2
-                    </div>
-                </main>
-
+               
                 <footer className='footer'>
-                    <h2 className='footer__h2'>SUSCRÍBETE Y RECIBE
-                        NUESTRO BOLETÍN QUINCENAL </h2>
-                    <input className='footer__input' placeholder='escribe aca'></input>
 
-                    <section className='footer__section section'>
+                    <div className='footer-mobile-version'>
 
+                        <div className='footer-mobile-version__hfooter'>
 
-                        <ul className='section__ul ul'>
-                            <li className='ul--li1'>NUESTROS CONTACTOS</li>
-                            <li className='ul--li2'>Dudas y consultas</li>
-                            <li className='ul--li3'><a href='#'>sos@desafiolatam.com</a></li>
-                            <li className='ul--li4'>Ayuda tecnica</li>
-                            <li className='ul--li5'><a href='#'>ayuda@desafiolatam.com</a></li>
-                            <li className='ul--li6'>NUESTRAS REDES SOCIALES</li>
-                        </ul>
+                            <h2 className='footer-mobile-version__hfooter--h2'>SUSCRÍBETE Y RECIBE
+                                NUESTRO BOLETÍN QUINCENAL </h2>
 
 
+                            <div className='footer-mobile-version__hfooter--icon-input'>
+                                <span className='footer-mobile-version__hfooter--icon'> <p>hola hola hola hola hola<br /> hola<br /> hola</p></span>
+                                <input className='footer-mobile-version__hfooter--input' placeholder='escribe aca'></input>
+                            </div>
 
-                        <span className='section__span icons'>
-                            <i className='icons__i'><a href='#'>icon</a></i>
-                            <i className='icons__i'><a href='#'>icon</a></i>
-                            <i className='icons__i'><a href='#'>icon</a></i>
+                        </div>
+
+
+
+
+
+
+                        <section className='footer-mobile-version__section '>
+                            <ul className='footer-mobile-version__section--ul'>
+                                <li className='footer-mobile-version__section--li1'><p>NUESTROS CONTACTOS</p></li>
+                                <li className='footer-mobile-version__section--li2'>Dudas y consultas</li>
+                                <li className='footer-mobile-version__section--li3'><p><a href='#'>sos@desafiolatam.com</a></p></li>
+                                <li className='footer-mobile-version__section--li4'><p>Ayuda tecnica</p></li>
+                                <li className='footer-mobile-version__section--li5'><p><a href='#'>ayuda@desafiolatam.com</a></p></li>
+                            </ul>
+                        </section>
+
+
+
+                        <span className='footer-mobile-version__span'>
+                            <p className='footer-mobile-version__span--p'>NUESTRAS REDES SOCIALES</p>
+                            <i className='footer-mobile-version__span--i'><a href='#'>icon</a></i>
+                            <i className='footer-mobile-version__span--i'><a href='#'>icon</a></i>
+                            <i className='footer-mobile-version__span--i'><a href='#'>icon</a></i>
+
                         </span>
 
 
-                        <div className='section__logo logo' >
-                            <img className='logo__img' alt="logo">
-                            </img>
+
+
+                        <div className='footer-mobile-version__logo'>
+                            <img className='footer-mobile-version__logo--img' alt="logo"></img>
+                            <h2 className='footer-mobile-version__logo--h2'>DESAFIO<br />latam_</h2>
                         </div>
 
-                        <div className='section__h2 h2'>
-                            <h2 className='h2--h2'>
-                                DESAFIO latam_
-                            </h2>
-                        </div>
-                    </section>
 
-                </footer>
+                    </div>
+
+
+                             
+                        <div className='footer-desktop-version'>
+
+                        <div className='footer-desktop-version__hfooter'>
+
+                            <h2 className='footer-desktop-version__hfooter--h2'>SUSCRÍBETE Y RECIBE
+                                NUESTRO BOLETÍN QUINCENAL </h2>
+
+
+                            <div className='footer-desktop-version__hfooter--icon-input'>
+                                <span className='footer-desktop-version__hfooter--icon'> <p>hola hola hola hola hola<br /> hola<br /> hola</p></span>
+                                <input className='footer-desktop-version__hfooter--input' placeholder='escribe aca'></input>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                        <section className='footer-desktop-version__section '>
+                            <ul className='footer-desktop-version__section--ul'>
+                                <li className='footer-desktop-version__section--li1'><p>NUESTROS CONTACTOS</p></li>
+                                <li className='footer-desktop-version__section--li2'>Dudas y consultas</li>
+                                <li className='footer-desktop-version__section--li3'><p><a href='#'>sos@desafiolatam.com</a></p></li>
+                                <li className='footer-desktop-version__section--li4'><p>Ayuda tecnica</p></li>
+                                <li className='footer-desktop-version__section--li5'><p><a href='#'>ayuda@desafiolatam.com</a></p></li>
+                            </ul>
+                        </section>
+
+
+
+                        <span className='footer-desktop-version__span'>
+                            <p className='footer-desktop-version__span--p'>NUESTRAS REDES SOCIALES</p>
+                            <i className='footer-desktop-version__span--i'><a href='#'>icon</a></i>
+                            <i className='footer-desktop-version__span--i'><a href='#'>icon</a></i>
+                            <i className='footer-desktop-version__span--i'><a href='#'>icon</a></i>
+
+                        </span>
+
+
+
+
+                        <div className='footer-desktop-version__logo'>
+                            <img className='footer-desktop-version__logo--img' alt="logo"></img>
+                            <h2 className='footer-desktop-version__logo--h2'>DESAFIO<br />latam_</h2>
+                        </div>
+
+                         <div className='faq'>
+                           <p>FAQ</p> 
+                        </div>
+                        <div className=' about'>
+                             <p>ABOUT</p>
+                        </div>
+                        <div className='site'>
+                            <p>SITIO</p>
+                        </div> 
+
+
+                    </div> 
+
+
+
+
+                </footer> 
+
             </div>
 
 

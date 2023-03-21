@@ -1,4 +1,4 @@
-@import '../../../abstracts/variables';
+/* @import '../../../abstracts/variables';
 @import'../../../abstracts/mixins';
 
 .header {
@@ -15,7 +15,7 @@
     "logo    h2     btn"
     "nav    nav    nav";
 
-  @include background_image_fixed('../../../../assets/img/BkgdTransp.jpg');
+  @include background_image_fixed('../../../../assets/img/BkgdTransp.jpg'); */
 
 //en input se trabajo en un scss aparte 
  /*  &__input {
@@ -25,7 +25,7 @@
     width: 100%;
   } */
 
-  &__img {
+  /* &__img {
     grid-area: logo;
     display: flex;
    @include logo-mobile-size;
@@ -74,5 +74,5 @@
   align-items: center;
   justify-content: space-between;
   
-}
+} */
 

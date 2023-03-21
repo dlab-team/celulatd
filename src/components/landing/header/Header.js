@@ -14,12 +14,18 @@ import communication from '../../../assets/img/communication.svg';
 
 export default function Header() {
   return (
-    <header className='header'>
+    
+
+
+
+
+
+
+
+     <header className='header'>
 
                 
-                      <div className='input'>
-                      {/* <input className='header__input' placeholder='escribe aca'></input> */} 
-
+                      <div className='input'> 
                       <InputHero/>
                       </div>
 
@@ -31,19 +37,18 @@ export default function Header() {
 
 
                     <nav className='header__nav'>
-                        <ul className='header__nav--ul'>
+                         {/* <ul className='header__nav--ul'>  */}
 
 
-                          <div className='header__nav--li-container'>
+                          
                             <li className='header__nav--li'><a className='anchor' href= '#card1'><img src={groups} /></a></li>
                             <li className='header__nav--li'><a className='anchor' href= '#'><img src={drafts} /></a></li>
                             <li className='header__nav--li'><a className='anchor' href= '#'><img src={mail1} /></a></li>
                             <li className='header__nav--li'><a className='anchor' href= '#calendario'><img src={calendar} /></a></li>
                             <li className='header__nav--li'><a className='anchor' href= '#experiencia'><img src={communication} /></a></li>
-
-                            </div>
-                        </ul>
+                           
+                        {/*  </ul>  */}
                     </nav>
-                </header>
+                </header> 
   )
 }

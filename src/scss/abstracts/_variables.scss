@@ -1,8 +1,17 @@
-$primary:#E2A30B;
+$btn-color:#E2A30B;
+$nav-color1: #E2A30BA6;
+$nav-color2: #E2A30B;
+$text-color: #ECECEC;
+$bg-color:  #073B3A;
+
+
+$font-weight-400: 400;
+
+
 
 
 //background
-$background_hero: url('../../assets/img/background.jpg');
+$background_hero: url('../../assets/img/BkgdTransp.jpg');
 $background_call_to_action: url('../../assets/img/bg2.png');
 
 //svg
@@ -24,3 +33,18 @@ $img_card1: url('../../assets/img/card1.png');
 $img_card2: url('../../assets/img/card2.png');
 $img_card3: url('../../assets/img/card3.png');
 
+//grid areas
+
+$grid-header: (
+    grid-area: header,
+    display: grid,
+    grid-column-start: 1,
+    grid-column-end: -1,
+    grid-row-start: 1,
+    grid-row-end: 4,
+    grid-template-areas:
+    "input  input  input"
+    "logo    h1     btn"
+    "logo    h2     btn"
+    "nav    nav    nav"
+);

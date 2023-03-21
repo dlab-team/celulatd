@@ -1,132 +1,320 @@
-/* .footer {
-    background: #073B3A;
+@import '../../../abstracts/variables';
+@import'../../../abstracts/mixins';
 
-    h2 {
-        color: #ECECEC;
-        text-align: center;
-    }
 
-    .ico-imput {
-        display: flex;
-        justify-content: center;
 
-        .caja-icono {
-            background-color: white;
-            border-radius: 100px 100px 0em 100px;
-            transform: rotate(-45deg);
-            height: 2.275rem;
-            width: 2.275rem;
-            margin-top: 0.4375rem;
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 18;
+    grid-row-end: 23;
+    width: auto;
+    
+    
+      .footer-mobile-version {
+    background-color: #073B3A;
+    
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+        "hfooter hfooter hfooter " 
+        "section section section "
+        "span span span "
+        "logo logo logo"
+    ; 
+        
+        &__hfooter {
+          width: auto;
+          grid-area: hfooter;
 
-            img {
-                transform: rotate(45deg);
-                width: 85%;
-                display: flex;
-                margin-left: 0.1875rem;
-                color: #073B3A;
-
-            }
-
-            .icon {
-                transform: rotate(45deg);
-            }
-        }
-    }
-
-    .contactos {
-        color: #ECECEC;
-        font-family: Inter;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.125rem;
-        line-height: 1.375rem;
-        text-align: center;
-    }
-
-    .redes {
-        color: #ECECEC;
-        text-align: center;
-
-        .icon-redes {
+          &--h2{
+            color: white;
+            text-align: center;
+          }
+          
+  
+          &--icon-input {
+            
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            font-size: 35px;
-            margin-top: 1.5rem;
-
-        }
-
-    }
-
-    .logo-and-title {
-        border-top: .0625rem solid white;
-        justify-content: center;
-        display: flex;
-        align-items: end;
-        flex-direction: row;
-        margin-top: 2rem;
-        padding-top: 2rem;
-        margin-bottom: 2rem;
-
-        .titles {
-            margin-left: 20px;
-
-            h2 {
-                color: #ECECEC;
-                font-family: Roboto;
-                font-style: italic;
-                font-weight: 900;
-                font-size: 1.25rem;
-                line-height: 1.4375rem;
-
-
-
+            align-items: center;
+            justify-content: center;
+  
+            .footer-mobile-version__hfooter--icon {
+              height: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              
+              p {
+                margin: auto;
+                text-align: center;
+                color: black;
+  
+              }
             }
-
-            h3 {
-                color: #ECECEC;
-                font-family: Roboto;
-                font-style: italic;
-                font-weight: 200;
-                font-size: 1.25rem;
-                line-height: 1.4375rem;
+  
+            input.footer-mobile-version__hfooter--input {
+              background-color: white;
+              color: black;
             }
-
+  
+          }
         }
+  
+      
+  
+        &__section {
+          grid-area: section;
+          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+  
+          &--ul {
+            color: white;
+          }
+  
+          &--li1 {
+            color: white;
+          }
+  
+          &--li2 {
+            color: white;
+          }
+  
+          &--li3 {
+            color: white;
+          }
+  
+          &--li4 {
+            color: white;
+          }
+  
+          &--li5 {
+            color: white;
+          }
+  
+  
+        }
+  
+  
+  
+        &__span {
+          grid-area: span;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: yellow;
+          width: auto;
+  
+  
+  
+          &--p {
+  
+          }
+  
+          &--i {
+            
+          }
+        }
+  
+        &__logo {
+          grid-area: logo;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          width: 100%;
+  
+          &--img {
+            
+            @include logo-mobile-size
+            
+          }
+  
+          &--h2 {
+            
+            color: white;
+            margin: auto 0;
+          }
+  
+        }
+      
     }
+  
+  
+  
+      .footer-desktop-version {
+  
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+        "section hfooter site " 
+        "span hfooter site "
+        "faq about logo"
+        ". . . "
+        
+    ; 
+      
+        &__hfooter {
+          grid-area: hfooter;
+  
+          background-color: #073B3A;
 
-    .logo-footer {
-        /* border-radius: 1.875rem 1.875rem 0rem 1.875rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #ECECEC;
-
-        color: white;
-        font-weight: 500;
-        font-style: italic;
-        font-size: 50px;
-        line-height: 58.59px;
-        width: 100px;
-        height: 100px;
-
-        h1 {
-            color: #073B3A;
-            font-family: Roboto;
-            font-style: italic;
-            font-weight: 500;
-            font-size: 4.375rem;
-            line-height: 5.125rem;
-        } 
-
-        height: 102px;
-        width: 102px;
-        left: 93px;
-        top: 3265px;
-        border-radius: [object Object]px;
-
+          &--h2{
+            color: white;
+            text-align: center;
+          }
+  
+          &--icon-input {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            .footer-desktop-version__hfooter--icon {
+              height: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+             
+  
+  
+  
+              p {
+                margin: auto;
+                text-align: center;
+                color: white;
+  
+              }
+            }
+  
+            input.footer-desktop-version__hfooter--input {
+              background-color: white;
+              color: black;
+            }
+  
+          }
+        }
+  
+  
+        &__section {
+  
+          grid-area: section;
+  
+          background-color: #073B3A;
+  
+          &--ul {
+            color: white;
+          }
+  
+          &--li1 {
+            color: white;
+          }
+  
+          &--li2 {
+            color: white;
+          }
+  
+          &--li3 {
+            color: white;
+          }
+  
+          &--li4 {
+            color: white;
+          }
+  
+          &--li5 {
+            color: black;
+          }
+  
+  
+        }
+  
+  
+  
+        &__span {
+          grid-area: span;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #073B3A;
+          
+  
+  
+  
+          &--p {
+  
+            color: lightpink;
+          }
+  
+          &--i {
+            
+  
+          }
+        }
+  
+        &__logo {
+          grid-area: logo;
+  
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          background-color: antiquewhite;
+  
+          &--img {
+            height: 100%;
+            width: 50px;
+            background-color: #073B3A;
+            color: white;
+          }
+  
+          &--h2 {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            background-color: #073B3A;
+            color: white;
+          }
+  
+        }
+  
+        .faq{
+  
+          grid-area: faq;
+          background-color: #073B3A;
+          color: white;
+        }
+        .about{
+          grid-area: about;
+          background-color: #073B3A;
+          color: white;
+        }
+        .site{
+          grid-area: site;
+          background-color: #073B3A;
+          color: white;
+        }
+    } 
+  
+      @media screen and (min-width: 768px) {
+      .footer-mobile-version {
+        display: none;
+      }
     }
-
-*/
-
- 
+    @media screen and (max-width: 768px) { 
+      .footer-desktop-version {
+        display: none;
+      }
+    } 
+  }

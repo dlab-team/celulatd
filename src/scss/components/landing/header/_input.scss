@@ -1,6 +1,5 @@
-@import '../../../abstracts/mixins';
-@import '../../../abstracts/variables';
-
+@import '../../../abstracts/mixins/mixins';
+@import '../../../abstracts/variables/variables';
         .input{
             grid-area: input;
             width:70%;

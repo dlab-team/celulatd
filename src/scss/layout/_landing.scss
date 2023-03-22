@@ -1,5 +1,5 @@
-@import '../abstracts/_mixins.scss';
-@import '../abstracts/_variables.scss';
+@import '../abstracts/mixins/mixins';
+@import '../abstracts/variables/variables';
 
 
 * {
@@ -68,7 +68,7 @@
     "logo    h2     btn"
     "nav    nav    nav";
 
-    @include background_image_fixed('../../assets/img/BkgdTransp.jpg'); 
+  @include background_image_fixed('../../assets/img/BkgdTransp.jpg');
 
   //en input se trabajo en un scss aparte 
   /*  &__input {
@@ -80,18 +80,19 @@
 
   &__img {
     grid-area: logo;
-    display: flex;
     @include logo-mobile-size;
   }
 
   &__h1 {
     grid-area: h1;
-    @include h1_mobile($text-color);
+    @include font-roboto(900, 40px,47px);
+    color: $text-color;
   }
 
   &__h2 {
     grid-area: h2;
-    @include h2_mobile($text-color)
+    @include font-roboto(200, 40px,47px);
+    color: $text-color;
   }
 
   &__btn {
@@ -106,8 +107,8 @@
     grid-area: nav;
     @include ul-display-mobile($nav-color2);
     @include ul-size-mobile;
-    
-    
+
+
     &--li {
       flex: 1;
       grid-area: icon1;
@@ -118,7 +119,7 @@
       justify-content: center;
       position: relative;
       filter: brightness(0) invert(1);
-      
+
 
 
       &::after {
@@ -134,184 +135,9 @@
       &:last-child::after {
         display: none;
       }
-
-    }
-  }
-
-
-
-}
-
-
-
-
-
-
-/* 
-.header {
-
-  background-color: blue;
-  grid-area: header;
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 5;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-
-  grid-template-areas:
-    "input input input"
-    "logo texts btn"
-    "logo texts btn"
-    "nav nav nav";
-
-  padding: 5px;
-
-  @include background_image_fixed('../../assets/img/BkgdTransp.jpg');
-
-  .input {
-    grid-area: input;
-    background-color: black;
-
-  }
-
-  .input {
-    grid-area: input;
-    width: 70%;
-    margin-left: auto;
-
-    .form-input {}
-
-    .button-addon2 {
-      background-color: $btn-color ;
-      color: black;
-      width: auto;
-      border-radius: 0em 2em 2em 0em;
-
-    }
-  }
-
-  img {
-    width: 1.25rem;
-  }
-
-  &__img {
-    grid-area: logo;
-    display: flex;
-    @include logo-mobile-size;
-  }
-
-  &__texts {
-    grid-area: texts;
-
-    &--h1 {
-      color: white;
-      @include h1_mobile($text-color);
-    }
-
-    &--h2 {
-      color: white;
-      @include h2_mobile($text-color)
-    }
-  }
-
-  &__btn {
-    grid-area: btn;
-    @include btn-size;
-    @include btn-display;
-    @include btn_text_mobile($text-color);
-  }
-
-  &__nav {
-    grid-area: nav;
-    background-color: red;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-areas:
-      "icon1 icon2 icon3 icon4 icon5";
-
-    width: 60%;
-    height: 100%;
-    margin-left: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: auto 1px;
-
-    &--li1 {
-      grid-area: icon1;
-      height: 100%;
-      width: 70%;
-      margin: auto;
-      margin-left: 3px;
-
-    }
-
-    &--li2 {
-      grid-area: icon2;
-      color: yellow;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50%;
-      width: 50%;
-      margin: auto;
-    }
-
-    &--li3 {
-      grid-area: icon3;
-      color: yellow;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50%;
-      width: 50%;
-      margin: auto;
-    }
-
-    &--li4 {
-      grid-area: icon4;
-      color: yellow;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50%;
-      width: 50%;
-      margin: auto;
-    }
-
-    &--li5 {
-      grid-area: icon5;
-      color: yellow;
-      display: flex;
-      
-      
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 70%;
-      margin: auto;
-      margin-right: 3px;
-
     }
   }
 }
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .main {
@@ -344,36 +170,34 @@
         "svg1 texts svg2";
       background-color: $bg-color;
       ;
-      /* @include background_image_fixed('../../../../assets/img/bg2.png'); */
-
+        @include background_image_fixed('../../assets/img/bg2.png');
+        padding: 3%;  
     }
 
     &--svg1 {
       grid-area: svg1;
-      /*  @include svg_call_to_action_mobile_left */
-
+      @include svg_call_to_action_mobile_left  
     }
 
     &--svg2 {
       grid-area: svg2;
-      /* @include svg_call_to_action_mobile_right; */
+      @include svg_call_to_action_mobile_right
     }
 
     &--texts {
-      grid-area: texts;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
-      height: auto;
+      @include column-text;
 
       .main__call-to-action--h2 {
-        background-color: aqua;
+        color: $text-color;
+        @include font-inter(600,20px,24px);
+        width: 200px;
+        text-align: $text-center;
+        
       }
 
       .main__call-to-action--p {
-        color: white;
+        color: $text-color;
+        @include font-inter(400, 16px,19px)
       }
     }
   }

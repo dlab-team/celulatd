@@ -5,6 +5,8 @@
 //align-items: $align;
 //}
 
+
+///////////RESPONSIVE///////////////////////////////////////////////////////
 $breakpoints: (
     sm:375px,
     md:768px,
@@ -23,14 +25,45 @@ $breakpoints: (
     }
 }
 
-//////HEADER//////////////////////////////
+///////////RESPONSIVE///////////////////////////////////////////////////////
 
 
-@mixin logo-mobile-size {
-    height: 6.25rem;
-    width: 6.25rem;
+
+
+
+
+////////////////TEXT////////////////////////////////////////////////////////
+
+@mixin column-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
 }
 
+@mixin font-roboto($font-weight, $font-size, $line-height) {
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: $font-weight ;
+    font-size: $font-size ;
+    line-height: $line-height ;
+}
+
+@mixin font-inter($font-weight, $font-size, $line-height) {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: $font-weight ;
+    font-size: $font-size ;
+    line-height: $line-height ;
+}
+
+////////////////TEXT////////////////////////////////////////////////////////
+
+
+
+
+///////////////////BACKGROUND///////////////////////////////////////////////
 @mixin background_color($bg_color) {
     background-color: $bg_color;
     height: 100%;
@@ -50,7 +83,6 @@ $breakpoints: (
     overflow: hidden;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
 @mixin background_image_normal($path) {
@@ -63,61 +95,22 @@ $breakpoints: (
     background-repeat: no-repeat;
 }
 
-@mixin h1_mobile ($color) {
-    font-family: Roboto;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.5rem;
-    line-height: 2.9375rem;
-    color: $color;
-}
+///////////////////BACKGROUND///////////////////////////////////////////////
 
-@mixin h1_desktop ($color) {
-    font-family: Roboto;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 7.5rem;
-    line-height: 8.8125rem;
-    color: $color;
-}
 
-@mixin h2_mobile($color) {
-    font-family: Roboto;
-    font-weight: 200;
-    font-style: italic;
-    font-size: 2.5rem;
-    line-height: 2.9375rem;
-    color: $color;
-    margin-bottom: 10px;
-}
 
-@mixin h2_desktop($color) {
-    font-family: Roboto;
-    font-weight: 200;
-    font-style: italic;
-    font-size: 7.5rem;
-    line-height: 8.8125rem;
-    color: $color;
-}
 
-@mixin navbar ($width, $height) {
-    width: $width;
-    height: $height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: #E2A30B;
-}
 
+
+////////////////COMPONENTS//////////////////////////////////////////////////
+
+//NAV----------------------------------------------------------
 @mixin ul-display-mobile ($background-color-nav) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
     background-color: $nav-color2;
-    background-color: $background-color-nav;
-    
 }
 
 @mixin ul-size-mobile {
@@ -128,28 +121,17 @@ $breakpoints: (
     padding: 10px;
 }
 
+//NAV----------------------------------------------------------
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+//BUTTON--------------------------------------------------------
 @mixin btn-size {
     border-radius: .5em;
     background: $btn-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 2.5rem;
     width: 4.6875rem;
-    
 }
 
 @mixin btn-display {
@@ -157,8 +139,6 @@ $breakpoints: (
     align-items: center;
     justify-content: center;
     margin: auto;
-    
-    
 }
 
 @mixin btn_text_mobile($color) {
@@ -179,30 +159,23 @@ $breakpoints: (
     color: $color;
 }
 
+//BUTTON------------------------------------------------------
 
 
-
-
-
-
-///////////////////////HEADER////////////////////////
-
-@mixin href_sections {
-    height: 100%;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+//LOGO--------------------------------------------------------
+@mixin logo-mobile-size {
+    height: 6.25rem;
+    width: 6.25rem;
 }
 
+//LOGO--------------------------------------------------------
+
+
+//CALL-TO-ACTION-----------------------------------------------
 @mixin svg_call_to_action_mobile_left {
     width: 3.125rem;
     height: 100%;
     margin: auto;
-
-
 }
 
 @mixin svg_call_to_action_mobile_right {
@@ -225,6 +198,10 @@ $breakpoints: (
     stroke-width: 1;
 }
 
+//CALL-TO-ACTION--------------------------------------------
+
+
+//CARD------------------------------------------------------
 @mixin svg_card_mobile_left($path) {
     background-image: url(#{$path});
     height: 4rem;
@@ -284,26 +261,34 @@ $breakpoints: (
     border-radius: 100px 100px 0px 100px;
 }
 
+//CARD----------------------------------------------------
+
+////////////////COMPONENTS/////////////////////////////////////////////////
 
 
 
 
-@mixin paragraph_desktop($color, $font-weight) {
-    color: $color;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: $font-weight;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: justify;
-}
 
-@mixin paragraph_mobile($color) {
-    color: $color;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: justify;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin href_sections {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }

@@ -14,16 +14,16 @@ export default function Main() {
 
 <div className='main__call-to-action'>
     <div className='main__call-to-action--content'>
-        <img className='main__call-to-action--svg1' /* src={LLave1} */ alt='svg' />
+        <img className='main__call-to-action--svg1'  src={LLave1}  alt='svg' />
         <div className='main__call-to-action--texts'>
-            <h2 className='main__call-to-action--h2'>Unete a nuestro equipo</h2>
+            <h2 className='main__call-to-action--h2'>¡ÚNETE A NUESTRO EQUIPO! </h2>
             <p className='main__call-to-action--p'> Lorem ipsum dolor sit amet
                 consectetur. Adipiscing suscipit
                 sed elit cursus dui lorem
                 donec. Quis porta at adipiscin
             </p>
         </div>
-        <img className='main__call-to-action--svg2' /* src={LLave2} */ alt='svg'></img>
+        <img className='main__call-to-action--svg2'  src={LLave2}  alt='svg'></img>
     </div>
 </div>
 

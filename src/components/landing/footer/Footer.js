@@ -4,10 +4,12 @@ import InputHero from '../header/Input';
 
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-import drafts from '../../../assets/img/drafts.svg';
+
 import logo3 from '../../../assets/img/logo3.svg';
 
 import '../../../scss/components/landing/footer/_footer.scss';
+
+import drafts from '../../../assets/img/draftsVerde.svg';
 
 export default function Footer() {
     return (
@@ -25,8 +27,16 @@ export default function Footer() {
 
 
                     <div className='footer-mobile-version__hfooter--icon-input'>
-                        <span className='footer-mobile-version__hfooter--icon'> <p>hola hola hola hola hola<br /> hola<br /> hola</p></span>
-                        <input className='footer-mobile-version__hfooter--input' placeholder='escribe aca'></input>
+                        {/* <span className='footer-mobile-version__hfooter--icon'> </span> */}
+
+                        <button className='footer-mobile-version__hfooter--logo'>
+                            <img className='footer-mobile-version__hfooter--svg' src={drafts} alt='svg' ></img>
+                        </button>
+
+
+                        <div className='footer-mobile-version__hfooter--input' placeholder='escribe aca'>
+                        <InputHero />
+                        </div>
                     </div>
 
                 </div>

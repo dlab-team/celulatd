@@ -85,21 +85,21 @@
 
   &__h1 {
     grid-area: h1;
-    @include font-roboto(900, 40px,47px);
-    color: $text-color;
+    @include font-roboto(900, 40px, 47px);
+    color: $main-color;
   }
 
   &__h2 {
     grid-area: h2;
-    @include font-roboto(200, 40px,47px);
-    color: $text-color;
+    @include font-roboto(200, 40px, 47px);
+    color: $main-color;
   }
 
   &__btn {
     grid-area: btn;
     @include btn-size;
     @include btn-display;
-    @include btn_text_mobile($text-color);
+    @include btn_text_mobile($main-color);
   }
 
 
@@ -147,11 +147,9 @@
   grid-column-end: -1;
   grid-row-start: 5;
   grid-row-end: 20;
-
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(15, 1fr);
-
-
+  grid-template-rows:  repeat(2, auto) 150px repeat(6, auto) 150px repeat(2, auto) 150px repeat(2, auto);
+  gap: 1.25rem;
 
   .main__call-to-action {
 
@@ -170,13 +168,13 @@
         "svg1 texts svg2";
       background-color: $bg-color;
       ;
-        @include background_image_fixed('../../assets/img/bg2.png');
-        padding: 3%;  
+      @include background_image_fixed('../../assets/img/bg2.png');
+      padding: 3%;
     }
 
     &--svg1 {
       grid-area: svg1;
-      @include svg_call_to_action_mobile_left  
+      @include svg_call_to_action_mobile_left
     }
 
     &--svg2 {
@@ -188,22 +186,21 @@
       @include column-text;
 
       .main__call-to-action--h2 {
-        color: $text-color;
-        @include font-inter(600,20px,24px);
+        color: $main-color;
+        @include font-inter(600, 20px, 24px);
         width: 200px;
         text-align: $text-center;
-        
+
       }
 
       .main__call-to-action--p {
-        color: $text-color;
-        @include font-inter(400, 16px,19px)
+        color: $main-color;
+        @include font-inter(400, 16px, 19px)
       }
     }
   }
 
   .main__comunidad {
-    border: 10px solid black;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -212,28 +209,47 @@
     display: grid;
     grid-template-areas:
       "content content content";
+      margin: 10px 0;
 
     &--content {
       grid-area: content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row-reverse;
+      @include flex(flex, center, center, row, nowrap);
+     
+
 
       .main__comunidad--h2 {
         grid-area: h2;
-        color: black;
-        background-color: yellow;
+        @include font-roboto(500, 20px, 23px);
+
+      }
+
+      .main__comunidad--line {
+        border-bottom: 4px solid $bg-color;
+        display: inline-block;
+        margin-right: 10px;
+        
+      }
+
+      .main__comunidad--logo {
+        background-color: #073B3A;
+        border-radius: 6.25rem 6.25rem 0rem 6.25rem;
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
       }
 
       .main__comunidad--svg {
         grid-area: svg;
-        background-color: blue;
-        color: white;
-        margin: auto 0;
-        display: flex;
-        align-items: end;
-        justify-content: end;
+
+        transform: rotate(-45deg);
+        width: 50%;
+
+        margin-left: 0.1875rem;
+        filter: brightness(0) invert(1);
       }
     }
   }
@@ -241,41 +257,44 @@
   ///////CARD 1/////////////////////////////////////////////
 
   .main__card1-mobile {
-
-    border: 10px solid;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 6;
 
     &--content {
-      background-color: blue;
+      padding: 10px;
+      background-color: $bg-card1;
+      border-radius: $border-card;
       display: grid;
       grid-template-areas:
         "svg-card1 img-card1 img-card1"
         "p-card1 p-card1 p-card1";
 
       grid-template-columns: 33% 33% 33%;
+      
 
       .main__card1-mobile--svg {
         grid-area: svg-card1;
-        background-color: black;
         width: 50px;
-        height: 50px;
+        height: 70px;
         margin: auto;
       }
 
       .main__card1-mobile--img {
         grid-area: img-card1;
-        background-color: red;
-        width: 100px;
-        height: 100px;
-        margin-left: 5%;
+        width: 140px;
+        height: 140px;
+        margin: 0;
+        
+        
       }
 
       .main__card1-mobile--p {
         grid-area: p-card1;
-        color: white;
+        @include font-inter(400, 14px, 30px);
+        color: $main-color;
+        text-align: $text-justify;
       }
     }
   }
@@ -340,15 +359,16 @@
 
   ///////CARD 2/////////////////////////////////////////////
   .main__card2-mobile {
-
-    border: 10px solid;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 6;
     grid-row-end: 8;
 
+
     &--content {
-      background-color: blue;
+      padding: 10px;
+      background-color: $bg-card2;
+      border-radius: $border-card;
       display: grid;
       grid-template-areas:
         "svg-card2 img-card2 img-card2"
@@ -358,23 +378,23 @@
 
       .main__card2-mobile--svg {
         grid-area: svg-card2;
-        background-color: black;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 80px;
         margin: auto;
       }
 
       .main__card2-mobile--img {
         grid-area: img-card2;
-        background-color: red;
-        width: 100px;
-        height: 100px;
-        margin-left: 5%;
+        width: 140px;
+        height: 140px;
+        margin:0;
       }
 
       .main__card2-mobile--p {
         grid-area: p-card2;
-        color: white;
+        @include font-inter(400, 14px, 30px);
+        color: $main-color;
+        text-align: $text-justify;
       }
     }
   }
@@ -438,14 +458,15 @@
   /// ///////CARD 3/////////////////////////////////////////////
 
   .main__card3-mobile {
-
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 8;
     grid-row-end: 10;
 
     &--content {
-      background-color: blue;
+      padding: 10px;
+      background-color: $bg-card3;
+      border-radius: $border-card;
       display: grid;
       grid-template-areas:
         "img-card3 img-card3 svg-card3"
@@ -456,24 +477,25 @@
 
       .main__card3-mobile--svg {
         grid-area: svg-card3;
-        background-color: black;
+        
         width: 50px;
-        height: 50px;
+        height: 70px;
         margin: auto;
-        margin-right: 10%;
+        margin-left: 50%;;
       }
 
       .main__card3-mobile--img {
         grid-area: img-card3;
-        background-color: red;
-        width: 100px;
-        height: 100px;
-        margin-left: 55%;
+        width: 140px;
+        height: 140px;
+        margin-left:50%;
       }
 
       .main__card3-mobile--p {
         grid-area: p-card3;
-        color: white;
+        @include font-inter(400, 14px, 30px);
+        color: $main-color;
+        text-align: $text-justify;
       }
     }
   }
@@ -536,7 +558,7 @@
 
 
   .main__experiencia {
-    border: 10px solid black;
+    
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 10;
@@ -545,28 +567,43 @@
     display: grid;
     grid-template-areas:
       "content content content";
+      margin: 10px 0;
 
     &--content {
       grid-area: content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row-reverse;
+      @include flex(flex, center, center, row, nowrap);
 
       .main__experiencia--h2 {
         grid-area: h2;
-        color: black;
-        background-color: yellow;
+        @include font-roboto(500, 20px, 23px);
+      }
+
+      .main__comunidad--line {
+        border-bottom: 4px solid $bg-color;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+
+      .main__experiencia--logo {
+        background-color: #073B3A;
+        border-radius: 6.25rem 6.25rem 0rem 6.25rem;
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .main__experiencia--svg {
         grid-area: svg;
-        background-color: blue;
-        color: white;
-        margin: auto 0;
-        display: flex;
-        align-items: end;
-        justify-content: end;
+
+        transform: rotate(-45deg);
+        width: 50%;
+
+        margin-left: 0.1875rem;
+        filter: brightness(0) invert(1);
       }
     }
   }
@@ -594,7 +631,6 @@
 
 
   .main__agenda {
-    border: 10px solid black;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 13;
@@ -603,28 +639,46 @@
     display: grid;
     grid-template-areas:
       "content content content";
+      margin: 10px 0;
 
     &--content {
       grid-area: content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row-reverse;
+      @include flex(flex, center, center, row, nowrap);
 
       .main__agenda--h2 {
         grid-area: h2;
-        color: black;
-        background-color: yellow;
+        @include font-roboto(500, 20px, 23px);
+      }
+
+
+      .main__agenda--line {
+        border-bottom: 4px solid $bg-color;
+        display: inline-block;
+        margin-right: 10px;
+        width: 100px;
+        
+      }
+
+
+      .main__agenda--logo {
+        background-color: #073B3A;
+        border-radius: 6.25rem 6.25rem 0rem 6.25rem;
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
       }
 
       .main__agenda--svg {
         grid-area: svg;
-        background-color: blue;
-        color: white;
-        margin: auto 0;
-        display: flex;
-        align-items: end;
-        justify-content: end;
+        transform: rotate(-45deg);
+        width: 50%;
+
+        margin-left: 0.1875rem;
+        filter: brightness(0) invert(1);
       }
     }
   }
@@ -659,11 +713,11 @@
   grid-row-start: 20;
   grid-row-end: 24;
   width: auto;
-  display: grid;
-  padding: 50px;
+  
+ 
 
   .footer-mobile-version {
-    background-color: #073B3A;
+    background-color:$bg-color;
     width: auto;
     height: auto;
     display: grid;
@@ -680,32 +734,50 @@
 
       &--h2 {
         color: white;
-        text-align: center;
+        text-align: $text-center;
+        @include font-inter(700,15px,18px);
       }
 
       &--icon-input {
 
         display: flex;
-        align-items: center;
         justify-content: center;
+        
+        
 
-        .footer-mobile-version__hfooter--icon {
+        
+
+        .footer-mobile-version__hfooter--logo {
+          
+         
+          margin-left: 70px;
+
           height: auto;
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: $main-color;
+          border-radius: 100px 100px 0px 100px;
+          width: 36px;
+          height: 36px;
+          transform: rotate(-45deg);
+          
 
-          p {
-            margin: auto;
-            text-align: center;
-            color: black;
-
+          
+          
+          .footer-mobile-version__hfooter--svg{
+            transform: rotate(45deg);
           }
+          
         }
 
-        input.footer-mobile-version__hfooter--input {
-          background-color: white;
-          color: black;
+        .footer-mobile-version__hfooter--input {
+
+         
+          flex: 1;
+          margin-right: 60px;
+          width: 70px;
+          
         }
 
       }
@@ -755,6 +827,7 @@
       align-items: center;
       background-color: yellow;
       width: auto;
+      margin: 0;
 
 
       &--p {}

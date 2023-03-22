@@ -1,8 +1,16 @@
 $btn-color:#E2A30B;
 $nav-color1: #E2A30BA6;
 $nav-color2: #E2A30B;
-$text-color: #ECECEC;
+$main-color: #ECECEC;
+$secondary-color:#073B3A;
 $bg-color:  #073B3A;
+$bg-card1:rgba(74, 157, 222, 0.8);
+$bg-card2:rgba(214, 91, 49, 0.8);
+$bg-card3:rgba(125, 157, 66, 0.8);
+
+
+
+$border-card: 0px 0px 20px 0px ;
 
 
 
@@ -20,19 +28,21 @@ $svg_logo_hero: url('../../assets/img/Logo1.svg');
 $svg_logo_footer: url('../../assets/img/logo3.svg');
 $svg_call_to_action_letf : url('../../assets/img/llave1.svg');
 $svg_call_to_action_right : url('../../assets/img/llave2.svg');
-$svg_card1:url('../../assets/img/_Menor.svg');
-$svg_card2:url('../../assets/img/Slash.svg');
-$svg_card3:url('../../assets/img/_Mayor.svg');
-$svg_footer_icon1: url('../../assets/instagram.svg');
-$svg_footer_icon2: url('../../assets/facebook.svg');
-$svg_footer_icon3: url('../../assets/twiter.svg');
+$svg_card1:url('../../../assets/img/_Menor.svg');
+$svg_card2:url('../../../assets/img/_Mayor.svg');
+$svg_card3:url('../../../assets/img/Slash.svg');
+$svg-footer-input:url('../../../assets//img/draftsVerde.svg');
+$svg_footer_icon1: url('../../../assets/instagram.svg');
+$svg_footer_icon2: url('../../../assets/facebook.svg');
+$svg_footer_icon3: url('../../../assets/twiter.svg');
+
 
 
 
 //img
-$img_card1: url('../../assets/img/card1.png');
-$img_card2: url('../../assets/img/card2.png');
-$img_card3: url('../../assets/img/card3.png');
+$img_card1: url('../../../assets/img/card1.png');
+$img_card2: url('../../../assets/img/card2.png');
+$img_card3: url('../../../assets/img/card3.png');
 
 //media querys
 

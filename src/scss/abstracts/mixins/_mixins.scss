@@ -1,9 +1,9 @@
-//@mixin flexible ($dis, $direction, $corte, $just, $align) {
-//display: $dis;
-//flex-flow: $direction $corte;
-//justify-content: $just;
-//align-items: $align;
-//}
+@mixin flex ($display, $justify, $align, $direction, $wrap ) {
+display: $display;
+flex-flow: $direction $wrap;
+justify-content: $justify;
+align-items: $align;
+}
 
 
 ///////////RESPONSIVE///////////////////////////////////////////////////////

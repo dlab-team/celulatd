@@ -11,6 +11,8 @@ import '../../../scss/components/landing/footer/_footer.scss';
 
 import drafts from '../../../assets/img/draftsVerde.svg';
 
+
+
 export default function Footer() {
     return (
 
@@ -21,7 +23,6 @@ export default function Footer() {
             <div className='footer-mobile-version'>
 
                 <div className='footer-mobile-version__hfooter'>
-
                     <h2 className='footer-mobile-version__hfooter--h2'>SUSCRÍBETE Y RECIBE
                         NUESTRO BOLETÍN QUINCENAL </h2>
 
@@ -29,14 +30,18 @@ export default function Footer() {
                     <div className='footer-mobile-version__hfooter--icon-input'>
                         {/* <span className='footer-mobile-version__hfooter--icon'> </span> */}
 
-                        <button className='footer-mobile-version__hfooter--logo'>
-                            <img className='footer-mobile-version__hfooter--svg' src={drafts} alt='svg' ></img>
+                        {/*< button className='footer-mobile-version__hfooter--logo'> */}
+                        <button className='footer-mobile-version__hfooter--svg'>
+
+                            <img src={drafts} alt='svg' />
+
                         </button>
+                        {/* </button> */}
 
 
-                        <div className='footer-mobile-version__hfooter--input' placeholder='escribe aca'>
+                        {/* <div className='footer-mobile-version__hfooter--input' placeholder='escribe aca'> */}
                         <InputHero />
-                        </div>
+                        {/* </div> */}
                     </div>
 
                 </div>
@@ -60,11 +65,14 @@ export default function Footer() {
 
                 <span className='footer-mobile-version__span'>
                     <p className='footer-mobile-version__span--p'>NUESTRAS REDES SOCIALES</p>
-                    <i className='footer-mobile-version__span--i'><a href='#'>icon</a></i>
-                    <i className='footer-mobile-version__span--i'><a href='#'>icon</a></i>
-                    <i className='footer-mobile-version__span--i'><a href='#'>icon</a></i>
+
+                    <i className='footer-mobile-version__span--i'><a href='#'> <FaInstagram /></a></i>
+                    <i className='footer-mobile-version__span--i'><a href='#'><FaFacebookF /></a></i>
+                    <i className='footer-mobile-version__span--i'><a href='#'><FaTwitter /></a></i>
+
 
                 </span>
+
 
 
 

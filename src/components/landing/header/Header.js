@@ -16,9 +16,9 @@ export default function Header() {
   return (
 
     <header className='header'>
-      <div className='input'>
+      {/* <div className='input'> */}
         <InputHero />
-      </div>
+     {/*  </div> */}
       <img className='header__img' src={logo} alt="logo academia" />
       <h1 className='header__h1'>DESAFIO</h1>
       <h2 className='header__h2'>latam_</h2>

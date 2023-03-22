@@ -148,7 +148,7 @@
   grid-row-start: 5;
   grid-row-end: 20;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows:  repeat(2, auto) 150px repeat(6, auto) 150px repeat(2, auto) 150px repeat(2, auto);
+  grid-template-rows: repeat(2, auto) 150px repeat(6, auto) 150px repeat(2, auto) 150px repeat(2, auto);
   gap: 1.25rem;
 
   .main__call-to-action {
@@ -209,12 +209,12 @@
     display: grid;
     grid-template-areas:
       "content content content";
-      margin: 10px 0;
+    margin: 10px 0;
 
     &--content {
       grid-area: content;
       @include flex(flex, center, center, row, nowrap);
-     
+
 
 
       .main__comunidad--h2 {
@@ -227,7 +227,7 @@
         border-bottom: 4px solid $bg-color;
         display: inline-block;
         margin-right: 10px;
-        
+
       }
 
       .main__comunidad--logo {
@@ -239,7 +239,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
       }
 
       .main__comunidad--svg {
@@ -272,7 +272,7 @@
         "p-card1 p-card1 p-card1";
 
       grid-template-columns: 33% 33% 33%;
-      
+
 
       .main__card1-mobile--svg {
         grid-area: svg-card1;
@@ -286,8 +286,8 @@
         width: 140px;
         height: 140px;
         margin: 0;
-        
-        
+
+
       }
 
       .main__card1-mobile--p {
@@ -387,7 +387,7 @@
         grid-area: img-card2;
         width: 140px;
         height: 140px;
-        margin:0;
+        margin: 0;
       }
 
       .main__card2-mobile--p {
@@ -477,18 +477,19 @@
 
       .main__card3-mobile--svg {
         grid-area: svg-card3;
-        
+
         width: 50px;
         height: 70px;
         margin: auto;
-        margin-left: 50%;;
+        margin-left: 50%;
+        ;
       }
 
       .main__card3-mobile--img {
         grid-area: img-card3;
         width: 140px;
         height: 140px;
-        margin-left:50%;
+        margin-left: 50%;
       }
 
       .main__card3-mobile--p {
@@ -558,7 +559,7 @@
 
 
   .main__experiencia {
-    
+
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 10;
@@ -567,7 +568,7 @@
     display: grid;
     grid-template-areas:
       "content content content";
-      margin: 10px 0;
+    margin: 10px 0;
 
     &--content {
       grid-area: content;
@@ -639,7 +640,7 @@
     display: grid;
     grid-template-areas:
       "content content content";
-      margin: 10px 0;
+    margin: 10px 0;
 
     &--content {
       grid-area: content;
@@ -656,7 +657,7 @@
         display: inline-block;
         margin-right: 10px;
         width: 100px;
-        
+
       }
 
 
@@ -669,7 +670,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
       }
 
       .main__agenda--svg {
@@ -714,126 +715,149 @@
   grid-row-end: 24;
   width: auto;
   
- 
+
+
 
   .footer-mobile-version {
-    background-color:$bg-color;
-    width: auto;
-    height: auto;
+    background-color: $bg-color;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-areas:
       "hfooter hfooter hfooter "
       "section section section "
-      "span span span "
-      "logo logo logo"
-    ;
+      "spann spann spann"
+      "logo logo logo";
+      padding: 40px 10px 10px 10px ;
+
+
 
     &__hfooter {
       width: auto;
       grid-area: hfooter;
 
       &--h2 {
-        color: white;
+        color: $main-color;
         text-align: $text-center;
-        @include font-inter(700,15px,18px);
+        @include font-inter(700, 15px, 18px);
+        margin-bottom: 30px;
       }
 
-      &--icon-input {
 
+
+
+//solo modificamos lo que queremos que cambie, lo que no queremos que cambie lo hereda de la clase principal que en este caso es input--hero que se encuentra declarada en Input.js
+
+      .input--footer {
+        width: 85%;
+        margin-left: auto;
+        margin-bottom: 15px;
+      }
+
+
+      &--icon-input{
+        
         display: flex;
-        justify-content: center;
-        
-        
-
-        
-
-        .footer-mobile-version__hfooter--logo {
-          
-         
-          margin-left: 70px;
-
-          height: auto;
+       justify-content: center;
+       
+       
+        .footer-mobile-version__hfooter--svg{
+          background-color: white;  
+          border-radius: 100px 100px 0px 100px;
+          transform: rotate(-45deg);
+          width: 37px;
+          height: 37px;
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: $main-color;
-          border-radius: 100px 100px 0px 100px;
-          width: 36px;
-          height: 36px;
-          transform: rotate(-45deg);
-          
 
-          
-          
-          .footer-mobile-version__hfooter--svg{
+          img{
+            width: 26px;
+            height: 25px;
             transform: rotate(45deg);
+            
           }
-          
         }
-
-        .footer-mobile-version__hfooter--input {
-
-         
-          flex: 1;
-          margin-right: 60px;
-          width: 70px;
-          
-        }
-
       }
     }
 
 
+
+
+
+
+
     &__section {
       grid-area: section;
+      padding: 40px;
 
       display: flex;
       justify-content: center;
       align-items: center;
       width: auto;
+      text-align: $text-center;
 
       &--ul {
         color: white;
       }
 
       &--li1 {
-        color: white;
+        
       }
 
       &--li2 {
-        color: white;
+        
       }
 
       &--li3 {
-        color: white;
+       margin-bottom: 30px;
       }
 
       &--li4 {
-        color: white;
+        margin-bottom: 0;
       }
 
       &--li5 {
-        color: white;
+        margin-top: -15px;
       }
 
     }
 
 
-    &__span {
-      grid-area: span;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: yellow;
-      width: auto;
-      margin: 0;
+    
+      
+      
+        
+      
+      &__span {
+        grid-area: spann;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+       
+        &--p {
+          text-align: $text-center;
+          @include font-inter(600,18px,22px);
+          color: $main-color;
+        }
+  
+        &--i {
 
+          a{
+            text-align: $text-center;
+            width: 55px;
+            height: 55px;
+          }
+          }
+          
+      }
+    
 
-      &--p {}
-
-      &--i {}
-    }
 
     &__logo {
       grid-area: logo;
@@ -874,6 +898,12 @@
       ". . . "
 
     ;
+    /* 
+    .input-nav{
+      width: 1px;
+      background-color: black;
+      height: 1px;
+    }
 
     &__hfooter {
       grid-area: hfooter;
@@ -912,7 +942,11 @@
         }
 
       }
-    }
+    } */
+
+
+
+
 
     &__section {
 

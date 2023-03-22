@@ -52,7 +52,7 @@ export default function Main() {
 
 
                         <button className='main__comunidad--logo'>
-                            <img className='main__comunidad--svg' src={groups} alt='svg' ></img>
+                            <img className='main__comunidad--svg' src={groups} alt='svg' />
                         </button>
 
 

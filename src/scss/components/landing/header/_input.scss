@@ -1,24 +1,29 @@
 @import '../../../abstracts/mixins/mixins';
 @import '../../../abstracts/variables/variables';
-        .input{
-            grid-area: input;
-            width:70%;
-            margin-left: auto;
 
-            .form-input{
-                
-            }
-            
-            .button-addon2{
-                background-color: $btn-color ;
-                color: black;
-                width: auto;
-                border-radius: 0em 2em 2em 0em;    
-                
-            }
-        }
-        img{
-            width: 1.25rem;
-        }
+.input--hero {
+    grid-area: input;
+    width: 51%;
+    margin-left: auto;
+    margin-bottom: 5px;
+    .button-addon2 {
+        background-color: $btn-color ;
+        color: white;
+        width: auto;
+        border-radius: 0em 2em 2em 0em;
+    }
+}
+
+img {
+    width: 1.25rem;
+}
+
+
+//clase abstracta de react bootstrap para el componente Input
+.form-control {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.input-footer{
     
-    
+}

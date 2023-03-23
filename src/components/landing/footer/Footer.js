@@ -66,7 +66,7 @@ export default function Footer() {
                 <span className='footer-mobile-version__span'>
                     <p className='footer-mobile-version__span--p'>NUESTRAS REDES SOCIALES</p>
 
-                    <i className='footer-mobile-version__span--i'><a href='#'> <FaInstagram /></a></i>
+                    <i className='footer-mobile-version__span--i'><a href='#'> <FaInstagram  /></a></i>
                     <i className='footer-mobile-version__span--i'><a href='#'><FaFacebookF /></a></i>
                     <i className='footer-mobile-version__span--i'><a href='#'><FaTwitter /></a></i>
 
@@ -79,7 +79,10 @@ export default function Footer() {
 
                 <div className='footer-mobile-version__logo'>
                     <img className='footer-mobile-version__logo--img' src={logo3} alt="logo" />
-                    <h2 className='footer-mobile-version__logo--h2'>DESAFIO<br />latam_</h2>
+                    <div className='footer-mobile-version__logo--texts'>
+                    <h2 className='footer-mobile-version__logo--h2'>DESAFIO</h2>
+                    <h3 className='footer-mobile-version__logo--h3'>latam_</h3>
+                    </div>
                 </div>
 
 

@@ -1,8 +1,11 @@
+
+
+
 @mixin flex ($display, $justify, $align, $direction, $wrap ) {
-display: $display;
-flex-flow: $direction $wrap;
-justify-content: $justify;
-align-items: $align;
+    display: $display;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-items: $align;
 }
 
 
@@ -168,6 +171,30 @@ $breakpoints: (
     width: 6.25rem;
 }
 
+@mixin logo-body($bg-color) {
+    background-color: $bg-color;
+    border-radius: 6.25rem 6.25rem 0rem 6.25rem;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin line-horizontal-body{
+    border-bottom: 4px solid #073B3A;
+    display: inline-block;
+    width: 100%;
+}
+
+@mixin svg-body{
+    transform: rotate(-45deg);
+    width: 50%;
+    margin-left: 0.1875rem;
+    filter: brightness(0) invert(1);
+}
+
 //LOGO--------------------------------------------------------
 
 
@@ -264,31 +291,3 @@ $breakpoints: (
 //CARD----------------------------------------------------
 
 ////////////////COMPONENTS/////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@mixin href_sections {
-    height: 100%;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-}

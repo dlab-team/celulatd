@@ -169,7 +169,7 @@ export default function Main() {
                 <div className='main__experiencia'>
                     <div className='main__experiencia--content'>
                         <h2 className='main__experiencia--h2'>
-                            <span className='main__comunidad--line'> EXPERIENCIA
+                            <span className='main__experiencia--line'> EXPERIENCIA
                             </span><br />ESTUDIANTIL</h2>
 
 

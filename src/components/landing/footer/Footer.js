@@ -8,6 +8,8 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import logo3 from '../../../assets/img/logo3.svg';
 
 import '../../../scss/components/landing/footer/_footer.scss';
+import '../../../scss/components/landing/footer/_footer-desktop.scss';
+
 
 import drafts from '../../../assets/img/draftsVerde.svg';
 
@@ -16,16 +18,17 @@ import drafts from '../../../assets/img/draftsVerde.svg';
 export default function Footer() {
     return (
 
-
+        
 
         <footer className='footer'>
+
+
 
             <div className='footer-mobile-version'>
 
                 <div className='footer-mobile-version__hfooter'>
                     <h2 className='footer-mobile-version__hfooter--h2'>SUSCRÍBETE Y RECIBE
                         NUESTRO BOLETÍN QUINCENAL </h2>
-
 
                     <div className='footer-mobile-version__hfooter--icon-input'>
                         {/* <span className='footer-mobile-version__hfooter--icon'> </span> */}
@@ -36,12 +39,8 @@ export default function Footer() {
                             <img src={drafts} alt='svg' />
 
                         </button>
-                        {/* </button> */}
 
-
-                        {/* <div className='footer-mobile-version__hfooter--input' placeholder='escribe aca'> */}
                         <InputHero />
-                        {/* </div> */}
                     </div>
 
                 </div>
@@ -66,7 +65,7 @@ export default function Footer() {
                 <span className='footer-mobile-version__span'>
                     <p className='footer-mobile-version__span--p'>NUESTRAS REDES SOCIALES</p>
 
-                    <i className='footer-mobile-version__span--i'><a href='#'> <FaInstagram  /></a></i>
+                    <i className='footer-mobile-version__span--i'><a href='#'> <FaInstagram /></a></i>
                     <i className='footer-mobile-version__span--i'><a href='#'><FaFacebookF /></a></i>
                     <i className='footer-mobile-version__span--i'><a href='#'><FaTwitter /></a></i>
 
@@ -80,8 +79,8 @@ export default function Footer() {
                 <div className='footer-mobile-version__logo'>
                     <img className='footer-mobile-version__logo--img' src={logo3} alt="logo" />
                     <div className='footer-mobile-version__logo--texts'>
-                    <h2 className='footer-mobile-version__logo--h2'>DESAFIO</h2>
-                    <h3 className='footer-mobile-version__logo--h3'>latam_</h3>
+                        <h2 className='footer-mobile-version__logo--h2'>DESAFIO</h2>
+                        <h3 className='footer-mobile-version__logo--h3'>latam_</h3>
                     </div>
                 </div>
 

@@ -1,320 +1,141 @@
-/* @import '../../../abstracts/variables';
-@import'../../../abstracts/mixins';
+
+
+@import '../../../abstracts/variables/variables';
+@import'../../../abstracts/mixins/mixins';
+ 
+ .footer-mobile-version__hfooter {
+  width: auto;
+  grid-area: hfooter;
+
+  &--h2 {
+    color: $main-color;
+    text-align: $text-center;
+    @include font-inter(700, 15px, 18px);
+    margin-bottom: 30px;
+  }
+  //solo modificamos lo que queremos que cambie, lo que no queremos que cambie lo hereda de la clase principal que en este caso es input--hero que se encuentra declarada en Input.js
+  .input--footer {
+    width: 85%;
+    margin-left: auto;
+    margin-bottom: 15px;
+  }
+
+
+  &--icon-input {
+
+    display: flex;
+    justify-content: center;
 
 
 
-.footer {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 18;
-    grid-row-end: 23;
-    width: auto;
-    
-    
-      .footer-mobile-version {
-    background-color: #073B3A;
-    
-    width: auto;
-    height: auto;
-    display: grid;
-    grid-template-areas:
-        "hfooter hfooter hfooter " 
-        "section section section "
-        "span span span "
-        "logo logo logo"
-    ; 
-        
-        &__hfooter {
-          width: auto;
-          grid-area: hfooter;
+    .footer-mobile-version__hfooter--svg {
+      background-color: $main-color;
+      border-radius: 100px 100px 0px 100px;
+      transform: rotate(-45deg);
+      width: 37px;
+      height: 37px;
+      @include flex(flex, center, center, row, nowrap);
 
-          &--h2{
-            color: white;
-            text-align: center;
-          }
-          
-  
-          &--icon-input {
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-  
-            .footer-mobile-version__hfooter--icon {
-              height: auto;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              
-              p {
-                margin: auto;
-                text-align: center;
-                color: black;
-  
-              }
-            }
-  
-            input.footer-mobile-version__hfooter--input {
-              background-color: white;
-              color: black;
-            }
-  
-          }
-        }
-  
-      
-  
-        &__section {
-          grid-area: section;
-          
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: auto;
-  
-          &--ul {
-            color: white;
-          }
-  
-          &--li1 {
-            color: white;
-          }
-  
-          &--li2 {
-            color: white;
-          }
-  
-          &--li3 {
-            color: white;
-          }
-  
-          &--li4 {
-            color: white;
-          }
-  
-          &--li5 {
-            color: white;
-          }
-  
-  
-        }
-  
-  
-  
-        &__span {
-          grid-area: span;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: yellow;
-          width: auto;
-  
-  
-  
-          &--p {
-  
-          }
-  
-          &--i {
-            
-          }
-        }
-  
-        &__logo {
-          grid-area: logo;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: nowrap;
-          width: 100%;
-  
-          &--img {
-            
-            @include logo-mobile-size
-            
-          }
-  
-          &--h2 {
-            
-            color: white;
-            margin: auto 0;
-          }
-  
-        }
-      
+      img {
+        width: 26px;
+        height: 25px;
+        transform: rotate(45deg);
+      }
     }
+  }
   
-  
-  
-      .footer-desktop-version {
-  
+} 
+
+.footer-mobile-version__section {
+  grid-area: section;
+  @include flex(flex, center, center, row, nowrap);
+  padding: 40px;
+  width: auto;
+  text-align: $text-center;
+
+  &--ul {
+    @include flex(flex, center, center, column, nowrap);
+    color: $main-color;
+    width: 100%;
+    margin-right: 35px;
+  }
+
+  &--li3 {
+    margin-bottom: 30px;
+  }
+
+  &--li4 {
+    margin-bottom: 0;
+  }
+
+  &--li5 {
+    margin-top: -15px;
+  }
+
+}
+
+.footer-mobile-version__span {
+  grid-area: span;
+  @include flex(flex, center, center, column, nowrap);
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  &--p {
+    @include font-inter(600, 18px, 22px);
+    text-align: $text-center;
+    color: $main-color;
+  }
+
+  &--i {
+    @include flex(flex,center,center,row,nowrap);
+    font-size: 35px;
+    margin: auto;
     padding: 20px;
-    border: 1px solid black;
-    background-color: white;
-    width: auto;
-    height: auto;
-    display: grid;
-    grid-template-areas:
-        "section hfooter site " 
-        "span hfooter site "
-        "faq about logo"
-        ". . . "
-        
-    ; 
-      
-        &__hfooter {
-          grid-area: hfooter;
-  
-          background-color: #073B3A;
 
-          &--h2{
-            color: white;
-            text-align: center;
-          }
-  
-          &--icon-input {
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-  
-            .footer-desktop-version__hfooter--icon {
-              height: auto;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-             
-  
-  
-  
-              p {
-                margin: auto;
-                text-align: center;
-                color: white;
-  
-              }
-            }
-  
-            input.footer-desktop-version__hfooter--input {
-              background-color: white;
-              color: black;
-            }
-  
-          }
-        }
-  
-  
-        &__section {
-  
-          grid-area: section;
-  
-          background-color: #073B3A;
-  
-          &--ul {
-            color: white;
-          }
-  
-          &--li1 {
-            color: white;
-          }
-  
-          &--li2 {
-            color: white;
-          }
-  
-          &--li3 {
-            color: white;
-          }
-  
-          &--li4 {
-            color: white;
-          }
-  
-          &--li5 {
-            color: black;
-          }
-  
-  
-        }
-  
-  
-  
-        &__span {
-          grid-area: span;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #073B3A;
-          
-  
-  
-  
-          &--p {
-  
-            color: lightpink;
-          }
-  
-          &--i {
-            
-  
-          }
-        }
-  
-        &__logo {
-          grid-area: logo;
-  
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: nowrap;
-          background-color: antiquewhite;
-  
-          &--img {
-            height: 100%;
-            width: 50px;
-            background-color: #073B3A;
-            color: white;
-          }
-  
-          &--h2 {
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-            background-color: #073B3A;
-            color: white;
-          }
-  
-        }
-  
-        .faq{
-  
-          grid-area: faq;
-          background-color: #073B3A;
-          color: white;
-        }
-        .about{
-          grid-area: about;
-          background-color: #073B3A;
-          color: white;
-        }
-        .site{
-          grid-area: site;
-          background-color: #073B3A;
-          color: white;
-        }
-    } 
-  
-      @media screen and (min-width: 768px) {
-      .footer-mobile-version {
-        display: none;
-      }
+    a {
+      color: $main-color;
+
     }
-    @media screen and (max-width: 768px) { 
-      .footer-desktop-version {
-        display: none;
-      }
-    } 
-  } */
+  }
+
+}
+
+
+
+.footer-mobile-version__logo {
+  grid-area: logo;
+  @include flex(flex,center,flex-end,row,nowrap);
+  width: $width-100;
+  border-top: 2px solid $main-color;
+  padding: 20px;
+
+  &--img {
+
+    @include logo-mobile-size
+  }
+
+  &--texts {
+    @include flex(flex,space-between,start,column,nowrap);
+    margin-left: 10px;
+  }
+
+  &--h2 {
+    color: $main-color;
+    @include font-roboto(italic,900, 20px, 23px)
+  }
+
+  &--h3 {
+    color: $main-color;
+    @include font-roboto(italic,200, 20px, 23px)
+  }
+
+}
+
+
+
+
+
+
+

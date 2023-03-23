@@ -45,9 +45,9 @@ $breakpoints: (
     height: auto;
 }
 
-@mixin font-roboto($font-weight, $font-size, $line-height) {
+@mixin font-roboto($font-style,$font-weight, $font-size, $line-height) {
     font-family: Roboto;
-    font-style: italic;
+    font-style: $font-style;
     font-weight: $font-weight ;
     font-size: $font-size ;
     line-height: $line-height ;

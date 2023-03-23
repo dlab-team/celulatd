@@ -1,0 +1,14 @@
+@import '../../../abstracts/mixins/mixins';
+@import '../../../abstracts/variables/variables';
+
+.btn{
+    @include btn-size;
+    @include btn-display;
+    @include btn_text_mobile($main-color);
+    margin-top: auto;
+    
+    &link{
+        text-decoration: none;
+    }
+}
+

@@ -1,2 +1,59 @@
+@import '../../../abstracts/variables/variables';
+@import'../../../abstracts/mixins/mixins';
+ 
+
+ .header__img {
+    grid-area: logo;
+    @include logo-mobile-size;
+  }
+
+  .header__h1 {
+    grid-area: h1;
+    color: $main-color;
+    @include font-roboto(italic,900, 40px, 47px);
+
+  }
+
+  .header__h2 {
+    grid-area: h2;
+    color: $main-color;
+    @include font-roboto(italic,200, 40px, 47px);
+
+  }
+ .header__btn {
+    grid-area: btn;
+    @include btn-size;
+    @include btn-display;
+    @include btn_text_mobile($main-color);
+  } 
 
 
+  .header__nav {
+    grid-area: nav;
+    @include ul-display-mobile($nav-color2);
+    @include ul-size-mobile;
+
+
+    &--li {
+      flex: 1;
+      grid-area: icon1;
+      filter: $invert-color-svg;
+      @include flex(flex, center, center, row, nowrap);
+
+
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        height: $heigth-100;
+        border-right: 1px solid white;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }

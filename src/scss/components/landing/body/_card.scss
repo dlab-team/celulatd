@@ -1,0 +1,304 @@
+@import '../../../abstracts/mixins/mixins';
+@import '../../../abstracts/variables/variables';
+@import '../../../mediaQuerys/media';
+
+
+
+
+.main__card1-mobile {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+
+
+
+    &--content {
+        padding: 10px;
+        background-color: $bg-card1;
+        border-radius: $border-card;
+        display: grid;
+        grid-template-areas:
+            "svg-card1 img-card1 img-card1"
+            "p-card1 p-card1 p-card1";
+
+        grid-template-columns: 33% 33% 33%;
+
+
+        .main__card1-mobile--svg {
+            grid-area: svg-card1;
+
+            width: 50px;
+            height: 70px;
+            margin: auto;
+        }
+
+        .main__card1-mobile--img {
+            grid-area: img-card1;
+            width: 140px;
+            height: 140px;
+            margin: 0;
+
+
+        }
+
+        .main__card1-mobile--p {
+            grid-area: p-card1;
+            @include font-inter(400, 14px, 30px);
+            color: $main-color;
+            text-align: $text-justify;
+        }
+    }
+}
+
+.main__card1-desktop {
+
+    border: 10px solid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+
+    
+
+    &--content {
+        background-color: blue;
+        display: grid;
+        grid-template-areas:
+            "svg-card1 p-card1 img-card1"
+            "svg-card1 p-card1 mg-card1";
+        grid-template-columns: 20% 50% 30%;
+
+        .main__card1-desktop--svg {
+            grid-area: svg-card1;
+            background-color: black;
+            width: 50px;
+            height: 50%;
+            margin: auto;
+
+        }
+
+        .main__card1-desktop--img {
+            grid-area: img-card1;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+
+        }
+
+        .main__card1-desktop--p {
+            grid-area: p-card1;
+            color: white;
+
+        }
+    }
+}
+
+
+
+.main__card2-mobile {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 8;
+
+
+    &--content {
+        padding: 10px;
+        background-color: $bg-card2;
+        border-radius: $border-card;
+        display: grid;
+        grid-template-areas:
+            "svg-card2 img-card2 img-card2"
+            "p-card2 p-card2 p-card2";
+
+        grid-template-columns: 33% 33% 33%;
+
+        .main__card2-mobile--svg {
+            grid-area: svg-card2;
+
+            width: 40px;
+            height: 80px;
+            margin: auto;
+        }
+
+        .main__card2-mobile--img {
+            grid-area: img-card2;
+            width: 140px;
+            height: 140px;
+            margin: 0;
+        }
+
+        .main__card2-mobile--p {
+            grid-area: p-card2;
+            @include font-inter(400, 14px, 30px);
+            color: $main-color;
+            text-align: $text-justify;
+        }
+    }
+}
+
+.main__card2-desktop {
+
+    border: 10px solid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 8;
+
+    &--content {
+        background-color: blue;
+        display: grid;
+        grid-template-areas:
+            "svg-card2 p-card2 img-card2"
+            "svg-card2 p-card2 mg-card2";
+        grid-template-columns: 20% 50% 30%;
+
+        .main__card2-desktop--svg {
+            grid-area: svg-card2;
+            background-color: black;
+            width: 50px;
+            height: 50%;
+            margin: auto;
+
+        }
+
+        .main__card2-desktop--img {
+            grid-area: img-card2;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+
+        }
+
+        .main__card2-desktop--p {
+            grid-area: p-card2;
+            color: white;
+
+        }
+    }
+}
+
+
+
+.main__card3-mobile {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 10;
+
+    &--content {
+        padding: 10px;
+        background-color: $bg-card3;
+        border-radius: $border-card;
+        display: grid;
+        grid-template-areas:
+            "img-card3 img-card3 svg-card3"
+            "p-card3 p-card3 p-card3";
+
+        grid-template-columns: 33% 33% 33%;
+
+        .main__card3-mobile--svg {
+            grid-area: svg-card3;
+
+            width: 50px;
+            height: 70px;
+            margin: auto;
+            margin-left: 50%;
+        }
+
+        .main__card3-mobile--img {
+            grid-area: img-card3;
+            width: 140px;
+            height: 140px;
+            margin-left: 50%;
+        }
+
+        .main__card3-mobile--p {
+            grid-area: p-card3;
+            @include font-inter(400, 14px, 30px);
+            color: $main-color;
+            text-align: $text-justify;
+        }
+    }
+}
+
+.main__card3-desktop {
+
+    border: 10px solid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 10;
+
+    &--content {
+        background-color: blue;
+        display: grid;
+        grid-template-areas:
+            "img-card3 p-card3 svg-card3"
+            "img-card3 p-card3 svg-card3";
+        grid-template-columns: 20% 50% 30%;
+
+        .main__card3-desktop--svg {
+            grid-area: svg-card3;
+            background-color: black;
+            width: 50px;
+            height: 50%;
+            margin: auto;
+
+        }
+
+        .main__card3-desktop--img {
+            grid-area: img-card3;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin-left: 15%;
+
+        }
+
+        .main__card3-desktop--p {
+            grid-area: p-card3;
+            color: white;
+
+        }
+    }
+}
+
+  @media screen and (min-width: 768px) {
+    .main__card1-mobile {
+        display: none;
+    }
+ }
+
+  @media screen and (max-width: 768px) {
+    .main__card1-desktop {
+        display: none;
+    }
+  } 
+
+@media screen and (min-width: 768px) {
+    .main__card2-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__card2-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main__card3-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__card3-desktop {
+        display: none;
+    }
+}

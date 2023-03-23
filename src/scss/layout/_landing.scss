@@ -48,11 +48,12 @@
     "footer footer footer"
     "footer footer footer"
     "footer footer footer"
-    ;
-    ::selection {
-      color: $main-color;
-      background-color: rgba(40, 44, 39, 0.215);
-    }
+  ;
+
+  ::selection {
+    color: $main-color;
+    background-color: rgba(40, 44, 39, 0.215);
+  }
 }
 
 .header {
@@ -79,7 +80,7 @@
     width: 100%;
   } */
 
-  &__img {
+  /*   &__img {
     grid-area: logo;
     @include logo-mobile-size;
   }
@@ -134,7 +135,7 @@
         display: none;
       }
     }
-  }
+  } */
 }
 
 .main {
@@ -147,514 +148,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto) 150px repeat(6, auto) 150px repeat(2, auto) 150px repeat(2, auto);
   gap: 1.25rem;
-
-  .main__call-to-action {
-    width: $width-100;
-    height: $heigth-100;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-
-    &--content {
-
-      display: grid;
-      grid-template-areas:
-        "svg1 texts svg2"
-        "svg1 texts svg2";
-      background-color: $bg-color;
-      ;
-      @include background_image_fixed('../../assets/img/bg2.png');
-      padding: 3%;
-    }
-
-    &--svg1 {
-      grid-area: svg1;
-      @include svg_call_to_action_mobile_left
-    }
-
-    &--svg2 {
-      grid-area: svg2;
-      @include svg_call_to_action_mobile_right
-    }
-
-    &--texts {
-      @include column-text;
-
-      .main__call-to-action--h2 {
-        color: $main-color;
-        @include font-inter(600, 20px, 24px);
-        width: 200px;
-        text-align: $text-center;
-
-      }
-
-      .main__call-to-action--p {
-        color: $main-color;
-        @include font-inter(400, 16px, 19px)
-      }
-    }
-  }
-
-  .main__comunidad {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-
-    display: grid;
-    grid-template-areas:
-      "content content content";
-    margin: 10px 0;
-
-    &--content {
-      grid-area: content;
-      @include flex(flex, center, center, row, nowrap);
-
-
-
-      .main__comunidad--h2 {
-        grid-area: h2;
-        @include font-roboto(500, 20px, 23px);
-
-      }
-
-      .main__comunidad--line {
-        @include line-horizontal-body
-      }
-
-      .main__comunidad--logo {
-        @include logo-body($bg-color);
-      }
-
-      .main__comunidad--svg {
-        @include svg-body;
-      }
-    }
-  }
-
-  ///////CARD 1/////////////////////////////////////////////
-
-  .main__card1-mobile {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 6;
-
-    &--content {
-      padding: 10px;
-      background-color: $bg-card1;
-      border-radius: $border-card;
-      display: grid;
-      grid-template-areas:
-        "svg-card1 img-card1 img-card1"
-        "p-card1 p-card1 p-card1";
-
-      grid-template-columns: 33% 33% 33%;
-
-
-      .main__card1-mobile--svg {
-        grid-area: svg-card1;
-
-        width: 50px;
-        height: 70px;
-        margin: auto;
-      }
-
-      .main__card1-mobile--img {
-        grid-area: img-card1;
-        width: 140px;
-        height: 140px;
-        margin: 0;
-
-
-      }
-
-      .main__card1-mobile--p {
-        grid-area: p-card1;
-        @include font-inter(400, 14px, 30px);
-        color: $main-color;
-        text-align: $text-justify;
-      }
-    }
-  }
-
-  .main__card1-desktop {
-
-    border: 10px solid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 6;
-
-    &--content {
-      background-color: blue;
-      display: grid;
-      grid-template-areas:
-        "svg-card1 p-card1 img-card1"
-        "svg-card1 p-card1 mg-card1";
-      grid-template-columns: 20% 50% 30%;
-
-      .main__card1-desktop--svg {
-        grid-area: svg-card1;
-        background-color: black;
-        width: 50px;
-        height: 50%;
-        margin: auto;
-
-      }
-
-      .main__card1-desktop--img {
-        grid-area: img-card1;
-        background-color: red;
-        width: 200px;
-        height: 200px;
-        margin: auto;
-
-      }
-
-      .main__card1-desktop--p {
-        grid-area: p-card1;
-        color: white;
-
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .main__card1-mobile {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .main__card1-desktop {
-      display: none;
-    }
-  }
-
-  ///////CARD 1/////////////////////////////////////////////
-
-
-
-  ///////CARD 2/////////////////////////////////////////////
-  .main__card2-mobile {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 8;
-
-
-    &--content {
-      padding: 10px;
-      background-color: $bg-card2;
-      border-radius: $border-card;
-      display: grid;
-      grid-template-areas:
-        "svg-card2 img-card2 img-card2"
-        "p-card2 p-card2 p-card2";
-
-      grid-template-columns: 33% 33% 33%;
-
-      .main__card2-mobile--svg {
-        grid-area: svg-card2;
-
-        width: 40px;
-        height: 80px;
-        margin: auto;
-      }
-
-      .main__card2-mobile--img {
-        grid-area: img-card2;
-        width: 140px;
-        height: 140px;
-        margin: 0;
-      }
-
-      .main__card2-mobile--p {
-        grid-area: p-card2;
-        @include font-inter(400, 14px, 30px);
-        color: $main-color;
-        text-align: $text-justify;
-      }
-    }
-  }
-
-  .main__card2-desktop {
-
-    border: 10px solid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 8;
-
-    &--content {
-      background-color: blue;
-      display: grid;
-      grid-template-areas:
-        "svg-card2 p-card2 img-card2"
-        "svg-card2 p-card2 mg-card2";
-      grid-template-columns: 20% 50% 30%;
-
-      .main__card2-desktop--svg {
-        grid-area: svg-card2;
-        background-color: black;
-        width: 50px;
-        height: 50%;
-        margin: auto;
-
-      }
-
-      .main__card2-desktop--img {
-        grid-area: img-card2;
-        background-color: red;
-        width: 200px;
-        height: 200px;
-        margin: auto;
-
-      }
-
-      .main__card2-desktop--p {
-        grid-area: p-card2;
-        color: white;
-
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .main__card2-mobile {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .main__card2-desktop {
-      display: none;
-    }
-  }
-
-  ///////CARD 2/////////////////////////////////////////////
-  /// 
-  /// ///////CARD 3/////////////////////////////////////////////
-
-  .main__card3-mobile {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 10;
-
-    &--content {
-      padding: 10px;
-      background-color: $bg-card3;
-      border-radius: $border-card;
-      display: grid;
-      grid-template-areas:
-        "img-card3 img-card3 svg-card3"
-        "p-card3 p-card3 p-card3";
-
-      grid-template-columns: 33% 33% 33%;
-
-      .main__card3-mobile--svg {
-        grid-area: svg-card3;
-
-        width: 50px;
-        height: 70px;
-        margin: auto;
-        margin-left: 50%;
-      }
-
-      .main__card3-mobile--img {
-        grid-area: img-card3;
-        width: 140px;
-        height: 140px;
-        margin-left: 50%;
-      }
-
-      .main__card3-mobile--p {
-        grid-area: p-card3;
-        @include font-inter(400, 14px, 30px);
-        color: $main-color;
-        text-align: $text-justify;
-      }
-    }
-  }
-
-  .main__card3-desktop {
-
-    border: 10px solid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 10;
-
-    &--content {
-      background-color: blue;
-      display: grid;
-      grid-template-areas:
-        "img-card3 p-card3 svg-card3"
-        "img-card3 p-card3 svg-card3";
-      grid-template-columns: 20% 50% 30%;
-
-      .main__card3-desktop--svg {
-        grid-area: svg-card3;
-        background-color: black;
-        width: 50px;
-        height: 50%;
-        margin: auto;
-
-      }
-
-      .main__card3-desktop--img {
-        grid-area: img-card3;
-        background-color: red;
-        width: 200px;
-        height: 200px;
-        margin-left: 15%;
-
-      }
-
-      .main__card3-desktop--p {
-        grid-area: p-card3;
-        color: white;
-
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .main__card3-mobile {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .main__card3-desktop {
-      display: none;
-    }
-  }
-
-  ///////CARD 3/////////////////////////////////////////////
-
-
-  .main__experiencia {
-
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 10;
-    grid-row-end: 11;
-
-    display: grid;
-    grid-template-areas:
-      "content content content";
-    margin: 10px 0;
-
-    &--content {
-      grid-area: content;
-      @include flex(flex, center, center, row, nowrap);
-
-      .main__experiencia--h2 {
-        grid-area: h2;
-        @include font-roboto(500, 20px, 23px);
-      }
-
-      .main__experiencia--line {
-        @include line-horizontal-body;
-      }
-
-      .main__experiencia--logo {
-        @include logo-body($bg-color);
-      }
-
-      .main__experiencia--svg {
-        grid-area: svg;
-        @include svg-body;
-      }
-    }
-  }
-
-  .main__carousel1 {
-    background-color: yellow;
-    border: 10px solid black;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 11;
-    grid-row-end: 13;
-    display: grid;
-    grid-template-areas:
-      "content content content"
-      "content content content";
-
-    &--content {
-      grid-area: content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-    }
-  }
-
-
-  .main__agenda {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 13;
-    grid-row-end: 14;
-
-    display: grid;
-    grid-template-areas:
-      "content content content";
-    margin: 10px 0;
-
-    &--content {
-      grid-area: content;
-      @include flex(flex, center, center, row, nowrap);
-
-      .main__agenda--h2 {
-        grid-area: h2;
-        @include font-roboto(500, 20px, 23px);
-      }
-
-
-      .main__agenda--line {
-        @include line-horizontal-body;
-
-      }
-
-
-      .main__agenda--logo {
-        @include logo-body($bg-color);
-      }
-
-      .main__agenda--svg {
-        grid-area: svg;
-        @include svg-body;
-      }
-    }
-  }
-
-
-  .main__carousel2 {
-    background-color: yellow;
-    border: 10px solid black;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 14;
-    grid-row-end: 16;
-    display: grid;
-    grid-template-areas:
-      "content content content"
-      "content content content";
-
-    &--content {
-      grid-area: content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-    }
-  }
-
 }
 
 .footer {
@@ -663,8 +156,6 @@
   grid-row-start: 20;
   grid-row-end: 24;
   width: auto;
-
-
 
 
   .footer-mobile-version {
@@ -678,149 +169,6 @@
       "span span span"
       "logo logo logo";
     padding: 40px 10px 10px 10px;
-
-
-
-    &__hfooter {
-      width: auto;
-      grid-area: hfooter;
-
-      &--h2 {
-        color: $main-color;
-        text-align: $text-center;
-        @include font-inter(700, 15px, 18px);
-        margin-bottom: 30px;
-      }
-
-
-
-
-      //solo modificamos lo que queremos que cambie, lo que no queremos que cambie lo hereda de la clase principal que en este caso es input--hero que se encuentra declarada en Input.js
-
-      .input--footer {
-        width: 85%;
-        margin-left: auto;
-        margin-bottom: 15px;
-      }
-
-
-      &--icon-input {
-
-        display: flex;
-        justify-content: center;
-
-
-
-        .footer-mobile-version__hfooter--svg {
-          background-color: $main-color;
-          border-radius: 100px 100px 0px 100px;
-          transform: rotate(-45deg);
-          width: 37px;
-          height: 37px;
-          @include flex(flex, center, center, row, nowrap);
-
-          img {
-            width: 26px;
-            height: 25px;
-            transform: rotate(45deg);
-          }
-        }
-      }
-    }
-
-
-
-
-
-
-
-    &__section {
-      grid-area: section;
-      @include flex(flex, center, center, row, nowrap);
-      padding: 40px;
-      width: auto;
-      text-align: $text-center;
-
-      &--ul {
-        @include flex(flex, center, center, column, nowrap);
-        color: $main-color;
-        width: 100%;
-        margin-right: 35px;
-      }
-
-      &--li3 {
-        margin-bottom: 30px;
-      }
-
-      &--li4 {
-        margin-bottom: 0;
-      }
-
-      &--li5 {
-        margin-top: -15px;
-      }
-
-    }
-
-    &__span {
-      grid-area: span;
-      @include flex(flex, center, center, column, nowrap);
-      grid-column-start: 1;
-      grid-column-end: -1;
-      grid-row-start: 3;
-      grid-row-end: 4;
-
-      &--p {
-        @include font-inter(600, 18px, 22px);
-        text-align: $text-center;
-        color: $main-color;
-      }
-
-      &--i {
-        @include flex(flex,center,center,row,nowrap);
-        font-size: 35px;
-        margin: auto;
-        padding: 20px;
-
-        a {
-          color: $main-color;
-
-        }
-      }
-
-    }
-
-
-
-    &__logo {
-      grid-area: logo;
-      @include flex(flex,center,flex-end,row,nowrap);
-      width: $width-100;
-      border-top: 2px solid $main-color;
-      padding: 20px;
-
-      &--img {
-
-        @include logo-mobile-size
-      }
-
-      &--texts {
-        @include flex(flex,space-between,start,column,nowrap);
-        margin-left: 10px;
-      }
-
-      &--h2 {
-        color: $main-color;
-        @include font-roboto(900, 20px, 23px)
-      }
-
-      &--h3 {
-        color: $main-color;
-        @include font-roboto(200, 20px, 23px)
-      }
-
-    }
-
   }
 
 
@@ -837,124 +185,117 @@
       "span hfooter site "
       "faq about logo"
       ". . . "
-
     ;
-    /* 
-    .input-nav{
-      width: 1px;
-      background-color: black;
-      height: 1px;
-    }
 
     &__hfooter {
       grid-area: hfooter;
-
+  
       background-color: #073B3A;
-
+  
       &--h2 {
         color: white;
         text-align: center;
       }
-
+  
       &--icon-input {
-
+  
         display: flex;
         align-items: center;
         justify-content: center;
-
+  
         .footer-desktop-version__hfooter--icon {
           height: auto;
           display: flex;
           justify-content: center;
           align-items: center;
-
-
+  
+  
           p {
             margin: auto;
             text-align: center;
             color: white;
-
+  
           }
         }
-
+  
         input.footer-desktop-version__hfooter--input {
           background-color: white;
           color: black;
         }
-
+  
       }
-    } */
-
-
-
-
-
+    }
+  
+  
+  
+  
+  
     &__section {
-
+  
       grid-area: section;
-
+  
       background-color: #073B3A;
-
+  
       &--ul {
         color: white;
       }
-
+  
       &--li1 {
         color: white;
       }
-
+  
       &--li2 {
         color: white;
       }
-
+  
       &--li3 {
         color: white;
       }
-
+  
       &--li4 {
         color: white;
       }
-
+  
       &--li5 {
         color: black;
       }
-
+  
     }
-
-
+  
+  
     &__span {
       grid-area: span;
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: #073B3A;
-
-
-
+  
+  
+  
       &--p {
-
+  
         color: lightpink;
       }
-
+  
       &--i {}
     }
-
+  
     &__logo {
       grid-area: logo;
-
+  
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: nowrap;
       background-color: antiquewhite;
-
+  
       &--img {
         height: 100%;
         width: 50px;
         background-color: #073B3A;
         color: white;
       }
-
+  
       &--h2 {
         margin: auto;
         display: flex;
@@ -964,22 +305,22 @@
         background-color: #073B3A;
         color: white;
       }
-
+  
     }
-
+  
     .faq {
-
+  
       grid-area: faq;
       background-color: #073B3A;
       color: white;
     }
-
+  
     .about {
       grid-area: about;
       background-color: #073B3A;
       color: white;
     }
-
+  
     .site {
       grid-area: site;
       background-color: #073B3A;
@@ -998,4 +339,19 @@
       display: none;
     }
   }
-}
+  }
+
+  
+
+    /* 
+  .input-nav{
+    width: 1px;
+    background-color: black;
+    height: 1px;
+  }
+  */
+
+   
+   
+
+      

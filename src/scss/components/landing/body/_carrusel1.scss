@@ -2,37 +2,85 @@
 @import '../../../abstracts/variables/variables';
 
 
-.carousel1{
-    background-color:  gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
 
-   
+
+.carousel1 {
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .testimonio{
+    width: 70%;
+  }
+
+  
 }
 
-.title-date-container{
-    height: 100%;
-    padding: 0 9%;
-} 
 
-.carousel-indicators li {
-    background-color: black;
-  }
+.title-date-container {
+  height: 100%;
+  padding: 0 9%;
+  width: 100%;
+}
 
-  .carousel-control-prev, .carousel-control-next {
-    
-  }
+h3,
+p {
+  font-family: Roboto;
+}
+.title-date-container {
+  position: relative;
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
 
-  .icon-prev, .icon-next {
-    
-  }
+.title-date-container::before,
+.title-date-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  margin: 15px;
+  background-color: black;
+}
 
-  h3, p{
-    @include font-roboto(normal,400,15px,18px);
+.title-date-container::before {
+  left: -1rem;
+}
+
+.title-date-container::after {
+  right: -1rem;
+}
+
+.title-date-container.active {
+  transform: scale(1.2);
+}
+
+$carousel-control-color: black;
+$carousel-indicator-active-bg: black;
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+@import "~bootstrap/scss/bootstrap";
+
+.title-date-container p {
+  width: 100%;
+  word-wrap: break-word;
+}
+
+
+
+@include media(lg) {
+  .carousel-inner{
+    padding: 0 8%;
   }
+  
+
+}
+
+
+
 
 
 

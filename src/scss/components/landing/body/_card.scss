@@ -15,6 +15,7 @@
 
     &--content {
         padding: 10px;
+        /* background-color: $bg-card1; */
         background-color: $bg-card1;
         border-radius: $border-card;
         display: grid;
@@ -23,7 +24,8 @@
             "p-card1 p-card1 p-card1";
 
         grid-template-columns: 33% 33% 33%;
-
+        
+        height: 100%;
 
         .main__card1-mobile--svg {
             grid-area: svg-card1;

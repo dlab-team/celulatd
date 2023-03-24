@@ -60,6 +60,8 @@
   padding: 10px;
   grid-area: header;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px 180px 50px 50px;
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
@@ -81,7 +83,7 @@
   grid-row-start: 5;
   grid-row-end: 20;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto) 150px repeat(6, auto) 150px repeat(2, auto) 150px repeat(2, auto);
+  grid-template-rows: repeat(2, 350px) 320px  repeat(6, 420px) 320px repeat(2, 350px) 320px repeat(2, 350px);
   gap: 1.25rem;
 }
 

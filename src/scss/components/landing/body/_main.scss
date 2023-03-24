@@ -21,6 +21,11 @@
     ;
     @include background_image_fixed('../../../../assets/img/bg2.png');
     padding: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
   }
 
   &--svg1 {

@@ -14,42 +14,49 @@
 
 
     &--content {
-        padding: 10px;
+
         /* background-color: $bg-card1; */
         background-color: $bg-card1;
-        border-radius: $border-card;
         display: grid;
         grid-template-areas:
             "svg-card1 img-card1 img-card1"
             "p-card1 p-card1 p-card1";
 
         grid-template-columns: 33% 33% 33%;
-        
+        grid-template-rows: 30% 70%;
         height: 100%;
+        width: 100%;
 
         .main__card1-mobile--svg {
             grid-area: svg-card1;
-
-            width: 50px;
-            height: 70px;
+            width: 4.375rem;
+            height: 6.25rem;
             margin: auto;
+            margin-bottom: 40%;
+
         }
 
         .main__card1-mobile--img {
             grid-area: img-card1;
-            width: 140px;
-            height: 140px;
-            margin: 0;
-
-
+            width: 11.25rem;
+            height: 11.25rem;
+            margin: 25% -5%;
         }
 
         .main__card1-mobile--p {
             grid-area: p-card1;
-            @include font-inter(400, 14px, 30px);
-            color: $main-color;
+            @include font-roboto(normal,400, 1.1rem, 1.6rem);
+            color: white;
             text-align: $text-justify;
+            margin-top: 10%;
+            padding: 0.3125rem 10% 0 10%;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
         }
+
+
+
     }
 }
 
@@ -61,7 +68,7 @@
     grid-row-start: 4;
     grid-row-end: 6;
 
-    
+
 
     &--content {
         background-color: blue;
@@ -107,36 +114,44 @@
 
 
     &--content {
-        padding: 10px;
+
         background-color: $bg-card2;
-        border-radius: $border-card;
         display: grid;
         grid-template-areas:
             "svg-card2 img-card2 img-card2"
             "p-card2 p-card2 p-card2";
 
         grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 30% 70%;
+        height: 100%;
+        width: 100%;
 
         .main__card2-mobile--svg {
             grid-area: svg-card2;
 
-            width: 40px;
-            height: 80px;
+            width: 4.375rem;
+            height: 7.5rem;
             margin: auto;
+            margin-bottom: 20%;
         }
 
         .main__card2-mobile--img {
             grid-area: img-card2;
-            width: 140px;
-            height: 140px;
-            margin: 0;
+            width: 11.25rem;
+            height: 11.25rem;
+            margin: 25% -5%;
         }
 
         .main__card2-mobile--p {
             grid-area: p-card2;
-            @include font-inter(400, 14px, 30px);
-            color: $main-color;
+            @include font-roboto(normal,400, 1.1rem, 1.6rem);
+            color: white;
             text-align: $text-justify;
+            margin-top: 10%;
+            padding: 0.3125rem 10% 0 10%;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
         }
     }
 }
@@ -192,37 +207,46 @@
     grid-row-end: 10;
 
     &--content {
-        padding: 10px;
+
         background-color: $bg-card3;
-        border-radius: $border-card;
         display: grid;
         grid-template-areas:
             "img-card3 img-card3 svg-card3"
             "p-card3 p-card3 p-card3";
 
-        grid-template-columns: 33% 33% 33%;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 30% 70%;
+            height: 100%;
+            width: 100%;
 
         .main__card3-mobile--svg {
             grid-area: svg-card3;
-
-            width: 50px;
-            height: 70px;
+            width: 4.375rem;
+            height: 6.25rem;
             margin: auto;
-            margin-left: 50%;
+            margin-bottom: 40%;
+            margin-left: 35%;
         }
 
         .main__card3-mobile--img {
             grid-area: img-card3;
-            width: 140px;
-            height: 140px;
-            margin-left: 50%;
+            width: 11.25rem;
+            height: 11.25rem;
+            margin-top: 25%;
+            margin-left: 45%;
+
         }
 
         .main__card3-mobile--p {
             grid-area: p-card3;
-            @include font-inter(400, 14px, 30px);
-            color: $main-color;
+            @include font-roboto(normal,400, 1.1rem, 1.6rem);
+            color: white;
             text-align: $text-justify;
+            margin-top: 10%;
+            padding: 0.3125rem 10% 0 10%;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
         }
     }
 }
@@ -269,17 +293,17 @@
     }
 }
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .main__card1-mobile {
         display: none;
     }
- }
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .main__card1-desktop {
         display: none;
     }
-  } 
+}
 
 @media screen and (min-width: 768px) {
     .main__card2-mobile {

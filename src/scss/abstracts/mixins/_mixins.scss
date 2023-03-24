@@ -200,14 +200,18 @@ $breakpoints: (
 
 //CALL-TO-ACTION-----------------------------------------------
 @mixin svg_call_to_action_mobile_left {
-    width: 3.125rem;
-    height: 100%;
-    margin: auto;
+    width: 9.375rem;
+    height: 6.875rem;
+    stroke-width: 1;
+    margin: auto; 
+
+ 
 }
 
 @mixin svg_call_to_action_mobile_right {
-    width: 3.125rem;
-    height: 100%;
+    width: 9.375rem;
+    height: 6.875rem;
+    stroke-width: 1;
     margin: auto;
 }
 
@@ -236,6 +240,7 @@ $breakpoints: (
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10%;
+
 }
 
 
@@ -274,6 +279,7 @@ $breakpoints: (
     height: auto;
     margin: 0;
     border-radius: 20px 20px 0px 20px;
+    
 }
 
 @mixin img_card_desktop($path) {

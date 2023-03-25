@@ -1,10 +1,17 @@
 @import '../../../abstracts/variables/variables';
 
+@import '../../../media/media';
+
 .input--hero {
     grid-area: input;
-    width: 51%;
+    width: 65%;
     margin-left: auto;
     margin-bottom: 5px;
+
+    @include media(lg){
+        width: 45%;
+        
+    }
 
     .button-addon2 {
         background-color: $btn-color ;

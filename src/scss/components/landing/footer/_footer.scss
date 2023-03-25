@@ -27,7 +27,6 @@
     justify-content: center;
 
 
-
     .footer-mobile-version__hfooter--svg {
       background-color: $main-color;
       border-radius: 100px 100px 0px 100px;
@@ -62,6 +61,10 @@
 
   &--li3 {
     margin-bottom: 30px;
+    p a{
+      text-decoration: none;
+      color: $main-color;
+    }
   }
 
   &--li4 {
@@ -70,6 +73,10 @@
 
   &--li5 {
     margin-top: -15px;
+    p a{
+      text-decoration: none;
+      color: $main-color;
+    }
   }
 
 }

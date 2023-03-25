@@ -6,12 +6,18 @@ import '../../../scss/components/landing/header/_button.scss'
 
 export default function Button() {
   return (
-    <div className='btn'>
-      <Link to="/login" className='Link'>
-      <button className='btn'   >    
-        {'\{ENTRAR\}'}
-        </button>    
-        </Link> 
-    </div>
+
+    <>
+
+      <Link to="/login" className='link'>
+        <button className='btn__hero'>
+          <div className='btn__text'>
+          {'\{ENTRAR\}'}
+          </div>
+          
+        </button>
+      </Link>
+
+    </>
   )
 }

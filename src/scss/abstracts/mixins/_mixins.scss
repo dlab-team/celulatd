@@ -1,4 +1,6 @@
+@import '../variables/variables';
 
+@import '../../media/media';
 
 
 @mixin flex ($display, $justify, $align, $direction, $wrap ) {
@@ -7,33 +9,6 @@
     justify-content: $justify;
     align-items: $align;
 }
-
-
-///////////RESPONSIVE///////////////////////////////////////////////////////
-$breakpoints: (
-    sm:375px,
-    md:768px,
-    lg:1024px
-);
-
-@mixin media($breakpoint) {
-    @if map-has-key($map: $breakpoints, $key: $breakpoint) {
-        @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
-            @content;
-        }
-    }
-
-    @else {
-        @warn "Breakpoint `#{$breakpoint}` no encontrado en `$breakpoints` map.";
-    }
-}
-
-///////////RESPONSIVE///////////////////////////////////////////////////////
-
-
-
-
-
 
 ////////////////TEXT////////////////////////////////////////////////////////
 
@@ -45,7 +20,7 @@ $breakpoints: (
     height: auto;
 }
 
-@mixin font-roboto($font-style,$font-weight, $font-size, $line-height) {
+@mixin font-roboto($font-style, $font-weight, $font-size, $line-height) {
     font-family: Roboto;
     font-style: $font-style;
     font-weight: $font-weight ;
@@ -119,9 +94,19 @@ $breakpoints: (
 @mixin ul-size-mobile {
     width: 50%;
     height: 1.5625rem;
+    height: 70%;
     margin-left: auto;
-    margin-bottom: auto;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+    @include media(lg){
+        margin-bottom: 0;
+        width: 728px;
+        height: 92px;
+    }
+
 }
 
 //NAV----------------------------------------------------------
@@ -130,18 +115,35 @@ $breakpoints: (
 
 //BUTTON--------------------------------------------------------
 @mixin btn-size {
-    border-radius: .5em;
+    
     background: $btn-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  */
+     
     height: 2.5rem;
     width: 4.6875rem;
+    
 }
 
 @mixin btn-display {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin: auto;
+    background-color: $btn-color;
+    margin-bottom: .9375rem;
+    border-radius: .3125rem .3125rem .3125rem .3125rem;
+    width: 5rem;
+    height: 2.5rem;
+    box-shadow: 0px 4px 4px rgba(250, 249, 249, 0.25);
+    border-radius: .5em; 
+
+    @include media(lg){
+        width: 252px;
+        height: 145px;
+        border-radius: 20px 20px 20px 20px;
+        
+    }
+
 }
 
 @mixin btn_text_mobile($color) {
@@ -151,6 +153,11 @@ $breakpoints: (
     font-size: .875rem;
     line-height: 1.0625rem;
     color: $color;
+
+    @include media(lg){
+        text-transform: lowercase;
+    }
+    
 }
 
 @mixin btn_text_desktop ($color) {
@@ -175,20 +182,21 @@ $breakpoints: (
     background-color: $bg-color;
     border-radius: 6.25rem 6.25rem 0rem 6.25rem;
     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-    width: 60px;
-    height: 60px;
+    width: 4.9875rem;
+    height: 4.9875rem;
+    margin-left: 0.9375rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin line-horizontal-body{
+@mixin line-horizontal-body {
     border-bottom: 4px solid #073B3A;
     display: inline-block;
     width: 100%;
 }
 
-@mixin svg-body{
+@mixin svg-body {
     transform: rotate(-45deg);
     width: 50%;
     margin-left: 0.1875rem;
@@ -203,9 +211,7 @@ $breakpoints: (
     width: 9.375rem;
     height: 6.875rem;
     stroke-width: 1;
-    margin: auto; 
-
- 
+    margin: auto;
 }
 
 @mixin svg_call_to_action_mobile_right {
@@ -279,7 +285,7 @@ $breakpoints: (
     height: auto;
     margin: 0;
     border-radius: 20px 20px 0px 20px;
-    
+
 }
 
 @mixin img_card_desktop($path) {

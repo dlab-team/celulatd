@@ -1,5 +1,6 @@
 @import '../../../abstracts/mixins/mixins';
 @import '../../../abstracts/variables/variables';
+@import '../../../media/media';
 
 
 
@@ -43,7 +44,7 @@ p {
   bottom: 0;
   width: 1px;
   margin: 15px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .title-date-container::before {

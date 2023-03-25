@@ -17,12 +17,12 @@
   background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(24, auto);
+  grid-template-rows:  70px 100px 100px 80px   repeat(20, auto);
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 25;
-  gap: 10px;
+  gap: .625rem;
 
   grid-template-areas:
     "header header header"
@@ -50,6 +50,10 @@
     "footer footer footer"
   ;
 
+  @include media(lg){
+    grid-template-rows:  200px 150px 150px 100px   repeat(20, auto);
+  }
+
   ::selection {
     color: $main-color;
     background-color: rgba(40, 44, 39, 0.215);
@@ -61,18 +65,23 @@
   grid-area: header;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 70px 180px 50px 50px;
+  grid-template-rows: 70px 100px 100px 80px;
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
   grid-row-end: 5;
   grid-template-areas:
     "input  input  input"
-    "logo    h1     btn"
-    "logo    h2     btn"
+    "logo    logo     btn"
+    "letras   letras     btn"
     "nav    nav    nav";
 
   @include background_image_fixed('../../assets/img/BkgdTransp.jpg');
+
+  @include media(lg){
+    grid-template-rows: 200px 150px 150px 100px;
+    padding: 15px;
+  }
 }
 
 .main {
@@ -111,7 +120,7 @@
 
   .footer-desktop-version {
 
-    padding: 20px;
+    
     border: 1px solid black;
     background-color: white;
     width: auto;

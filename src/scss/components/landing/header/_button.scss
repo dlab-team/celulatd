@@ -1,14 +1,43 @@
 @import '../../../abstracts/mixins/mixins';
 @import '../../../abstracts/variables/variables';
 
-.btn{
-    @include btn-size;
-    @include btn-display;
-    @include btn_text_mobile($main-color);
-    margin-top: auto;
-    
-    &link{
-        text-decoration: none;
+@import '../../../media/media';
+
+
+.container-btn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+
+    @include media(lg){
+        align-items: center;
     }
 }
 
+.link {
+    text-decoration: none;
+}
+
+.btn__hero {
+    /* @include btn-size; 
+    @include btn_text_mobile($main-color);  */
+    @include btn-display;
+    @include btn_text_mobile($main-color);
+
+    @include media(lg){
+        @include btn_text_desktop($main-color)
+    };
+    
+    .btn__text{
+        margin: auto;
+        
+    }
+}
+
+    

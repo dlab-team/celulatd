@@ -17,11 +17,11 @@
   background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows:  70px 100px 100px 80px   repeat(20, auto);
+  grid-template-rows: repeat(23, auto);
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
-  grid-row-end: 25;
+  grid-row-end: 24;
   gap: .625rem;
 
   grid-template-areas:
@@ -65,7 +65,7 @@
   grid-area: header;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 70px 100px 100px 80px;
+  grid-template-rows: 70px 100px 110px 80px;
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;

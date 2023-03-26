@@ -92,13 +92,14 @@
 }
 
 @mixin ul-size-mobile {
-    width: 50%;
+    width: 60%;
     height: 1.5625rem;
     height: 70%;
     margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
    
 
     @include media(lg){

@@ -51,8 +51,8 @@
   ;
 
   @include media(lg){
-    grid-template-rows:  200px 150px 150px 100px   repeat(20, auto);
-  }
+    gap: 0;
+    }
 
   ::selection {
     color: $main-color;
@@ -79,8 +79,13 @@
   @include background_image_fixed('../../assets/img/BkgdTransp.jpg');
 
   @include media(lg){
-    grid-template-rows: 200px 150px 150px 100px;
-    padding: 15px;
+    grid-template-rows: 60px auto 90px auto;
+    /* padding: 15px; */
+    grid-template-areas:
+    "input input  input"
+    "logo    logo     btn"
+    "letras   letras     btn"
+    "nav    nav    nav";
   }
 }
 
@@ -94,6 +99,11 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 350px) 320px  repeat(6, 420px) 320px repeat(2, 350px) 320px repeat(2, 350px);
   gap: 1.25rem;
+
+  @include media(lg){
+    margin-top: 10px;
+    grid-template-rows: repeat(2, 150px) 320px  repeat(6, 420px) 320px repeat(2, 350px) 320px repeat(2, 350px);
+  }
 }
 
 .footer {

@@ -28,9 +28,9 @@
     line-height: $line-height ;
 }
 
-@mixin font-inter($font-weight, $font-size, $line-height) {
+@mixin font-inter($font-style, $font-weight, $font-size, $line-height) {
     font-family: Inter;
-    font-style: normal;
+    font-style: $font-style;
     font-weight: $font-weight ;
     font-size: $font-size ;
     line-height: $line-height ;
@@ -178,6 +178,8 @@
 @mixin logo-mobile-size {
     height: 6.25rem;
     width: 6.25rem;
+
+    
 }
 
 @mixin logo-body($bg-color) {
@@ -190,6 +192,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media(lg){
+        width: 8.125rem ;
+        height: 8.125rem;
+    }
 }
 
 @mixin line-horizontal-body {
@@ -226,14 +233,14 @@
 @mixin svg_call_to_action_desktop_left($path) {
     background-image: url(#{$path});
     width: 9.375rem;
-    height: 13rem;
+    height: 100%;
     stroke-width: 1;
 }
 
 @mixin svg_call_to_action_desktop_right($path) {
     background-image: url(#{$path});
     width: 9.375rem;
-    height: 13rem;
+    height: 100%;
     stroke-width: 1;
 }
 

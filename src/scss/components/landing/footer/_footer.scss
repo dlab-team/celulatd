@@ -10,7 +10,7 @@
   &--h2 {
     color: $main-color;
     text-align: $text-center;
-    @include font-inter(700, 15px, 18px);
+    @include font-inter(normal, 700, 15px, 18px);
     margin-bottom: 30px;
   }
   //solo modificamos lo que queremos que cambie, lo que no queremos que cambie lo hereda de la clase principal que en este caso es input--hero que se encuentra declarada en Input.js
@@ -90,7 +90,7 @@
   grid-row-end: 4;
 
   &--p {
-    @include font-inter(600, 18px, 22px);
+    @include font-inter(normal, 600, 18px, 22px);
     text-align: $text-center;
     color: $main-color;
   }

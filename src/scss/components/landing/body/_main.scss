@@ -11,47 +11,114 @@
   grid-row-start: 1;
   grid-row-end: 3;
 
-  &--content {
+  display: grid;
+  background-color: $bg-color;
+  grid-template-columns: 3fr;
+  grid-template-rows: 2 auto;
 
-    display: grid;
-    grid-template-areas:
-      "svg1 texts svg2"
-      "svg1 texts svg2";
-    background-color: $bg-color;
-    ;
+  grid-template-areas:
+  "svg1 texts svg2"
+  "svg1 texts svg2";
+
+  ;
+
+  
+  &--content {
     @include background_image_fixed('../../../../assets/img/bg2.png');
-    padding: 3%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: justify;
+    width: 100%;
+    padding: 2%;
+    
+
+    @include media(lg) {
+      padding: 1%;
+    }
   }
 
   &--svg1 {
     grid-area: svg1;
-    @include svg_call_to_action_mobile_left
+    @include svg_call_to_action_mobile_left;
+    
+    
+
+    @include media(lg) {
+      flex-basis: 3%;
+      height: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
   }
 
   &--svg2 {
     grid-area: svg2;
-    @include svg_call_to_action_mobile_right
+    @include svg_call_to_action_mobile_right;
+    transform: rotate(180deg);
+
+    @include media(lg) {
+      flex-basis: 3%;
+      transform: rotate(180deg);
+      height: 100%;
+    }
   }
 
   &--texts {
     @include column-text;
+      display: flex;
+      flex-direction: column;
+      height: 95%;
+
+
+    @include media(lg) {
+      flex-basis: 94%;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
 
     .main__call-to-action--h2 {
       color: $main-color;
-      @include font-inter(600, 20px, 24px);
+      @include font-inter(normal, 600, 20px, 24px);
       width: 200px;
       text-align: $text-center;
+      flex-basis: 15%;
+      padding-top: 25px;
+
+      @include media(lg) {
+        @include font-inter(italic, 300, 40px, 20px);
+        text-align: center;
+        width: 100%;
+        flex-basis: 30%;
+        margin-top: 15px;
+      }
 
     }
 
     .main__call-to-action--p {
       color: $main-color;
-      @include font-inter(400, 16px, 19px)
+      @include font-inter(normal, 400, 16px, 19px);
+      overflow: hidden;
+      flex-basis: 85%;
+      word-wrap: break-word;
+        overflow: hidden;
+
+      @include media(lg){
+        @include font-inter(normal,400,20px,24px);
+        flex-basis:70%;
+        flex-shrink: 0;
+        word-wrap: break-word;
+        overflow: hidden;
+        margin-top: 10px;
+        text-align: justify;
+
+
+      }
     }
   }
 }
@@ -75,7 +142,11 @@
 
     .main__comunidad--h2 {
       grid-area: h2;
-      @include font-roboto(italic,500, 20px, 23px);
+      @include font-roboto(italic, 500, 20px, 23px);
+
+      @include media(lg){
+        @include font-roboto(italic,500,40px,47px);
+      }
 
     }
 
@@ -111,7 +182,7 @@
 
     .main__experiencia--h2 {
       grid-area: h2;
-      @include font-roboto(italic,500, 20px, 23px);
+      @include font-roboto(italic, 500, 20px, 23px);
     }
 
     .main__experiencia--line {
@@ -130,7 +201,7 @@
 }
 
 .main__carousel1 {
-  
+
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 11;
@@ -140,13 +211,13 @@
     "content content content"
     "content content content";
 
-   &--content {
+  &--content {
     grid-area: content;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-  } 
+  }
 }
 
 
@@ -167,7 +238,7 @@
 
     .main__agenda--h2 {
       grid-area: h2;
-      @include font-roboto(italic,500, 20px, 23px);
+      @include font-roboto(italic, 500, 20px, 23px);
     }
 
 
@@ -208,4 +279,3 @@
     height: 100%;
   }
 }
-

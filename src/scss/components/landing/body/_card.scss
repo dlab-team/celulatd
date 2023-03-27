@@ -2,17 +2,12 @@
 @import '../../../abstracts/variables/variables';
 
 
-
-
-
 .main__card1-mobile {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 6;
-
-
-
+    
     &--content {
 
         /* background-color: $bg-card1; */
@@ -21,7 +16,6 @@
         grid-template-areas:
             "svg-card1 img-card1 img-card1"
             "p-card1 p-card1 p-card1";
-
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: 30% 70%;
         height: 100%;
@@ -53,53 +47,79 @@
             height: auto;
             width: 100%;
         }
-
-
-
     }
 }
 
 .main__card1-desktop {
-
-    border: 10px solid;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 6;
 
-
-
     &--content {
-        background-color: blue;
+        background-color: $bg-card1;
+        height: 100%;
+        padding: 15px;
         display: grid;
         grid-template-areas:
             "svg-card1 p-card1 img-card1"
-            "svg-card1 p-card1 mg-card1";
-        grid-template-columns: 20% 50% 30%;
+            "svg-card1 p-card1 img-card1";
+        grid-template-columns: 20% 60% 20%;
 
         .main__card1-desktop--svg {
             grid-area: svg-card1;
-            background-color: black;
-            width: 50px;
-            height: 50%;
+            width: auto;
+            height: 70%;
             margin: auto;
-
         }
 
         .main__card1-desktop--img {
             grid-area: img-card1;
-            background-color: red;
-            width: 200px;
-            height: 200px;
+            width: 270px;
+            height: 270px;
             margin: auto;
-
         }
 
         .main__card1-desktop--p {
             grid-area: p-card1;
             color: white;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            height: 100%;
+            padding-right: 20px;
+            text-align: justify;
+            overflow: hidden;
+            @include font-inter(normal,400,20px,24px);
         }
+    }
+}
+
+@include media(sm){
+    .main__card1-mobile, .main__card2-mobile, .main__card3-mobile {
+        display: block;
+    }
+    .main__card1-desktop, .main__card2-desktop, .main__card3-desktop{
+        display: none;
+    }
+}
+
+@include media(md){
+    .main__card1-mobile, .main__card2-mobile, .main__card3-mobile{
+        display: none;
+    }
+    .main__card1-desktop, .main__card2-desktop, .main__card3-desktop{
+        display: block;
+    }
+}
+
+@include media(lg){
+    .main__card1-mobile, .main__card2-mobile,.main__card3-mobile{
+        display: none;
+    }
+    .main__card1-desktop, .main__card2-desktop, .main__card3-desktop{
+        display: block;
     }
 }
 
@@ -111,7 +131,6 @@
     grid-row-start: 6;
     grid-row-end: 8;
 
-
     &--content {
 
         background-color: $bg-card2;
@@ -119,7 +138,6 @@
         grid-template-areas:
             "svg-card2 img-card2 img-card2"
             "p-card2 p-card2 p-card2";
-
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: 30% 70%;
         height: 100%;
@@ -127,7 +145,6 @@
 
         .main__card2-mobile--svg {
             grid-area: svg-card2;
-
             width: 4.375rem;
             height: 7.5rem;
             margin: auto;
@@ -156,47 +173,52 @@
 }
 
 .main__card2-desktop {
-
-    border: 10px solid;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 6;
     grid-row-end: 8;
 
+
     &--content {
-        background-color: blue;
+        background-color: $bg-card2;
+        height: 100%;
+        padding: 15px;
         display: grid;
         grid-template-areas:
             "svg-card2 p-card2 img-card2"
-            "svg-card2 p-card2 mg-card2";
-        grid-template-columns: 20% 50% 30%;
+            "svg-card2 p-card2 img-card2";
+        grid-template-columns: 20% 60% 20%;
 
         .main__card2-desktop--svg {
             grid-area: svg-card2;
-            background-color: black;
-            width: 50px;
-            height: 50%;
+            width: auto;
+            height: 70%;
             margin: auto;
-
         }
 
         .main__card2-desktop--img {
             grid-area: img-card2;
-            background-color: red;
-            width: 200px;
-            height: 200px;
+            width: 270px;
+            height: 270px;
             margin: auto;
-
         }
 
         .main__card2-desktop--p {
             grid-area: p-card2;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            height: 100%;
+            padding-right: 20px;
+            text-align: justify;
+            overflow: hidden;
+            @include font-inter(normal,400,20px,24px);
 
         }
     }
 }
-
 
 
 .main__card3-mobile {
@@ -233,8 +255,6 @@
             height: 11.25rem;
             margin-top: 25%;
             margin-left: 40%; 
-           
-
         }
 
         .main__card3-mobile--p {
@@ -252,79 +272,59 @@
 }
 
 .main__card3-desktop {
-
-    border: 10px solid;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 8;
     grid-row-end: 10;
 
     &--content {
-        background-color: blue;
+        background-color: $bg-card3;
+        height: 100%;
+        padding: 15px;
         display: grid;
         grid-template-areas:
             "img-card3 p-card3 svg-card3"
             "img-card3 p-card3 svg-card3";
-        grid-template-columns: 20% 50% 30%;
+        grid-template-columns: 20% 60% 20%;
+        height: 100%;
 
         .main__card3-desktop--svg {
             grid-area: svg-card3;
-            background-color: black;
-            width: 50px;
-            height: 50%;
+            width: auto;
+            height: 70%;
             margin: auto;
-
         }
 
         .main__card3-desktop--img {
             grid-area: img-card3;
-            background-color: red;
-            width: 200px;
-            height: 200px;
-            margin-left: 15%;
-
+            width: 270px;
+            height: 270px;
+            margin: auto;
         }
 
         .main__card3-desktop--p {
             grid-area: p-card3;
             color: white;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            height: 100%;
+            padding-left: 20px;
+            text-align: justify;
+            overflow: hidden;
+            @include font-inter(normal,400,20px,24px);
         }
     }
 }
 
-@media screen and (min-width: 768px) {
-    .main__card1-mobile {
-        display: none;
-    }
-}
+
 
 @media screen and (max-width: 768px) {
-    .main__card1-desktop {
-        display: none;
+    .main__card1-desktop, .main__card2-desktop, .main__card3-desktop  {
+    display: none;
     }
-}
+}  
 
-@media screen and (min-width: 768px) {
-    .main__card2-mobile {
-        display: none;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .main__card2-desktop {
-        display: none;
-    }
-}
 
-@media screen and (min-width: 768px) {
-    .main__card3-mobile {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .main__card3-desktop {
-        display: none;
-    }
-}

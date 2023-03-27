@@ -63,10 +63,31 @@ export default function Card() {
       <div className='main__card1-desktop'>
         <div className='main__card1-desktop--content'>
           <img className='main__card1-desktop--svg' src={menorque} />
-          <img className='main__card1-desktop--img'></img>
+          <img className='main__card1-desktop--img' src={card1} />
           <p className='main__card1-desktop--p'>
-            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
-            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+            Lorem ipsum dolor sit amet consectetur. Sed odio
+
+            egestas tincidunt mauris mollis senectus tellus
+
+            Condimentum egestas dignissim venenatis magna
+
+            ut at a id placerat. Donec gravida elit velit quisque.
+            Lorem ipsum dolor sit amet consectetur. Sed odio
+
+            egestas tincidunt mauris mollis senectus tellus
+
+            Condimentum egestas dignissim venenatis magna
+
+            ut at a id placerat. Donec gravida elit velit quisque.
+            Lorem ipsum dolor sit amet consectetur. Sed odio
+
+            egestas tincidunt mauris mollis senectus tellus
+
+            Condimentum egestas dignissim venenatis magna
+
+            ut at a id placerat. Donec gravida elit velit quisque.
+
+
 
           </p>
         </div>
@@ -112,11 +133,37 @@ export default function Card() {
 
       <div className='main__card2-desktop'>
         <div className='main__card2-desktop--content'>
-          <img className='main__card2-desktop--svg'></img>
-          <img className='main__card2-desktop--img'></img>
+          <img className='main__card2-desktop--svg'src={slash}/>
+          <img className='main__card2-desktop--img' src={card2}/>
           <p className='main__card2-desktop--p'>
-            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
-            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+          Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
+Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
+Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
+Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
 
           </p>
         </div>
@@ -161,11 +208,37 @@ export default function Card() {
 
       <div className='main__card3-desktop'>
         <div className='main__card3-desktop--content'>
-          <img className='main__card3-desktop--svg'></img>
-          <img className='main__card3-desktop--img'></img>
+          <img className='main__card3-desktop--svg' src={mayorque}/>
+          <img className='main__card3-desktop--img' src={card3}/>
           <p className='main__card3-desktop--p'>
-            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
-            texto texto texto texto texto texto texto textotextotextotextotextotextotexto
+          Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
+Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
+Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
+Lorem ipsum dolor sit amet consectetur. Sed odio
+
+egestas tincidunt mauris mollis senectus tellus
+
+Condimentum egestas dignissim venenatis magna
+
+ut at a id placerat. Donec gravida elit velit quisque.
           </p>
         </div>
       </div>

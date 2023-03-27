@@ -131,7 +131,6 @@ export default function Main() {
                                 sed elit cursus dui lorem
                                 donec. Quis porta at 
 
-                               
                             </p>
                         </div>
                         <img className='main__call-to-action--svg2' src={LLave1} alt='svg'></img>

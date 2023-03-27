@@ -102,7 +102,7 @@
 
   @include media(lg){
     margin-top: 10px;
-    grid-template-rows: repeat(2, 170px) 320px  repeat(6, 420px) 320px repeat(2, 350px) 320px repeat(2, 350px);
+    grid-template-rows: repeat(2, 170px) 200px  repeat(6, 170px) 200px repeat(2, 350px) 200px repeat(2, 350px);
   }
 }
 
@@ -297,17 +297,3 @@
   }
   }
 
-  
-
-    /* 
-  .input-nav{
-    width: 1px;
-    background-color: black;
-    height: 1px;
-  }
-  */
-
-   
-   
-
-      

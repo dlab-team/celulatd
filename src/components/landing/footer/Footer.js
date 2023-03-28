@@ -8,7 +8,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import logo3 from '../../../assets/img/logo3.svg';
 
 import '../../../scss/components/landing/footer/_footer.scss';
-import '../../../scss/components/landing/footer/_footer-desktop.scss';
+
 
 
 import drafts from '../../../assets/img/draftsVerde.svg';
@@ -98,8 +98,15 @@ export default function Footer() {
 
 
                     <div className='footer-desktop-version__hfooter--icon-input'>
-                        <span className='footer-desktop-version__hfooter--icon'> <p>hola hola hola hola hola<br /> hola<br /> hola</p></span>
-                        <input className='footer-desktop-version__hfooter--input' placeholder='escribe aca'></input>
+                        {/* <span className='footer-desktop-version__hfooter--icon'> <p>hola hola hola hola hola<br /> hola<br /> hola</p></span> */}
+                        <button className='footer-desktop-version__hfooter--svg'>
+
+                            <img src={drafts} alt='svg' />
+
+                        </button>
+
+                        <InputHero />
+                        {/* <input className='footer-desktop-version__hfooter--input' placeholder='escribe aca'></input> */}
                     </div>
 
                 </div>
@@ -123,28 +130,49 @@ export default function Footer() {
 
                 <span className='footer-desktop-version__span'>
                     <p className='footer-desktop-version__span--p'>NUESTRAS REDES SOCIALES</p>
-                    <i className='footer-desktop-version__span--i'><a href='#'>icon</a></i>
-                    <i className='footer-desktop-version__span--i'><a href='#'>icon</a></i>
-                    <i className='footer-desktop-version__span--i'><a href='#'>icon</a></i>
 
+                    <div className='footer-desktop-version__span--container-icons'>
+
+                    
+                    <i className='footer-desktop-version__span--i'><a href='#'><FaInstagram /></a></i>
+                    <i className='footer-desktop-version__span--i'><a href='#'><FaFacebookF /></a></i>
+                    <i className='footer-desktop-version__span--i'><a href='#'><FaTwitter /></a></i>
+                    </div>
                 </span>
 
 
 
 
                 <div className='footer-desktop-version__logo'>
-                    <img className='footer-desktop-version__logo--img' alt="logo"></img>
-                    <h2 className='footer-desktop-version__logo--h2'>DESAFIO<br />latam_</h2>
+                    <img className='footer-desktop-version__logo--img' src={logo3}alt="logo"/>
+
+                    <div className='footer-mobile-version__logo--texts'>
+                    <h2 className='footer-desktop-version__logo--h2'>DESAFIO</h2>
+                    <h3 className='footer-desktop-version__logo--h3'>latam_
+                    </h3>
+                    </div>
                 </div>
 
                 <div className='faq'>
+
+
                     <p>FAQ</p>
+                    <p>MISION Y VISION</p>
+                    <p>TRANSPARENCIA</p>
                 </div>
                 <div className=' about'>
-                    <p>ABOUT</p>
+                    <p>SOBRE EL SITIO </p>
+                    <p>POLITICA DE SEGURIDAD</p>
+                    <p>POLITICA CYBERBULLING</p>
                 </div>
                 <div className='site'>
                     <p>SITIO</p>
+                    <p>Comunidad</p>
+                    <p>Newsletters</p>
+                    <p>Mail</p>
+                    <p>Agenda</p>
+                    <p>Experiencia</p>
+                    <p>Formulario</p>
                 </div>
 
 

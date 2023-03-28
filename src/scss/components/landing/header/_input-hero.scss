@@ -8,11 +8,7 @@
     margin-left: auto;
     margin-bottom: 5px;
 
-    @include media(lg){
-        width: 45%;
-        margin-bottom: 0;
-        
-    }
+    
 
     .button-addon2 {
         background-color: $btn-color ;

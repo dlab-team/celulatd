@@ -18,6 +18,10 @@
     width: 85%;
     margin-left: auto;
     margin-bottom: 15px;
+
+   @include media(lg){
+    width: 100%;
+   } 
   }
 
 
@@ -119,8 +123,9 @@
   padding: 20px;
 
   &--img {
-
-    @include logo-mobile-size
+    height: 100%;
+    width: 50px;
+   /*  @include logo-mobile-size */
   }
 
   &--texts {

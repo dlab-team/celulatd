@@ -7,13 +7,13 @@ import '../../../scss/components/landing/body/_carrusel1.scss';
 
 function CarruselStories() {
   const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-device-width: 1224px)'
+    query: '(min-device-width: 1024px)'
   });
 
   const itemsToShow = isDesktopOrLaptop ? 3 : 1;
 
   return (
-    <Container className="justify-content-center carousel1">
+    <Container className="justify-content-center  carousel1">
       <Carousel interval={null} indicators={false} >
         {HistoriaUsuarios.reduce((groups, usuario, index) => {
           if (index % itemsToShow === 0) {

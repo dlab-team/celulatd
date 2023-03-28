@@ -9,7 +9,7 @@ const CarruselCalendario = () => {
   const [events, setEvents] = useState([]);
 
    const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-device-width: 1224px)'
+    query: '(min-device-width: 1024px)'
   });
 
   const itemsToShow = isDesktopOrLaptop ? 3 : 1;
@@ -36,7 +36,7 @@ const CarruselCalendario = () => {
   }, []);
 
   return (
-    <Container className=' justify-content-center carousel2'id= "calendario">
+    <Container className=' justify-content-center carousel2'  id="calendario">
         <Carousel interval={null} indicators={false}>
           {events.reduce((groups, event, index) => {
             if (index % itemsToShow === 0) {

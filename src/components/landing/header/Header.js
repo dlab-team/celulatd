@@ -36,12 +36,12 @@ export default function Header() {
       </div>
       {/* <button className='header__btn'>  {'\{ENTRAR\}'}  </button> */}
       <nav className='header__nav'>
-        <li className='header__nav--li'><a className='anchor' href='#card1'><img src={groups} /> <p>COMUNIDAD</p> </a>
+        <li className='header__nav--li'><a className='anchor' href='#card1'><img  src={groups} /> <p>COMUNIDAD</p> </a>
         </li>
-        <li className='header__nav--li'><a className='anchor' href='#'><img src={drafts} /><p>NEWSLETTER</p></a></li>
-        <li className='header__nav--li'><a className='anchor' href='#'><img src={mail1} /><p>MAIL</p></a></li>
-        <li className='header__nav--li'><a className='anchor' href='#calendario'><img src={calendar} /><p>AGENDA</p></a></li>
-        <li className='header__nav--li'><a className='anchor' href='#experiencia'><img src={communication} /><p>EXPERIENCIA</p></a></li>
+        <li className='header__nav--li'><a className='anchor' href='#'><img  src={drafts} /><p>NEWSLETTER</p></a></li>
+        <li className='header__nav--li'><a className='anchor' href='#'><img  src={mail1} /><p>MAIL</p></a></li>
+        <li className='header__nav--li'><a className='anchor' href='#calendario'><img  src={calendar} /><p>AGENDA</p></a></li>
+        <li className='header__nav--li'><a className='anchor' href='#experiencia'><img  src={communication} /><p>EXPERIENCIA</p></a></li>
       </nav>
 
     </header>

@@ -16,7 +16,7 @@ import iconlupa from '../../../assets/img/iconlupa.svg';
 function InputHero() {
   return (
     <>
-      <div className='input--hero input--footer'>
+      <div className='input--hero input--footer input--footer-desktop'>
         <InputGroup  >
           <Form.Control 
             placeholder="Recipient's username"

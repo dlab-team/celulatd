@@ -71,7 +71,7 @@
   grid-row-start: 1;
   grid-row-end: 5;
   grid-template-areas:
-    "input  input  input"
+    ". input  input"
     "logo    logo     btn"
     "letras   letras     btn"
     "nav    nav    nav";
@@ -133,6 +133,7 @@
     width: 100%;
     height: 100%;
     display: grid;
+    padding: 10px;
 
     grid-template-columns: 25% 50% 25%;
 
@@ -152,11 +153,17 @@
       grid-area: hfooter;
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
 
       &--h2 {
         color: white;
         text-align: center;
+        flex-basis: 40%;
+        margin-top: 50px;
+        padding-top: 70px;
       }
 
       &--icon-input {
@@ -164,19 +171,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        margin: auto;
+        flex-basis: 60%;
 
         .footer-desktop-version__hfooter--svg {
           background-color: $main-color;
           border-radius: 100px 100px 0px 100px;
           transform: rotate(-45deg);
-          width: 37px;
-          height: 37px;
+          width: 55px;
+          height: 55px;
+          
           @include flex(flex, center, center, row, nowrap);
 
           img {
             width: 26px;
             height: 25px;
             transform: rotate(45deg);
+          }
+
+          .input--footer-desktop{
+            width: 100%;
           }
         }
 
@@ -209,23 +225,34 @@
       }
 
       &--li1 {
-        color: white;
+        color: $main-color;
       }
 
       &--li2 {
-        color: white;
+        color: $main-color;
+
       }
 
       &--li3 {
-        color: white;
+
+        a {
+          text-decoration: none;
+          color: $main-color;
+        }
       }
 
       &--li4 {
-        color: white;
+        color: $main-color;
       }
 
       &--li5 {
-        color: black;
+        margin-top: -25px;
+
+        a {
+          text-decoration: none;
+          color: $main-color;
+        }
+
       }
 
     }
@@ -258,11 +285,11 @@
 
         font-size: 40px;
         margin: auto;
-        padding: 0 30px ;
+        padding: 0 30px;
 
         a {
           color: $main-color;
-    
+
         }
 
       }
@@ -282,18 +309,23 @@
         width: 140px;
         padding: 20px 0;
       }
+
       &--texts {
-        @include flex(flex,space-between,start,column,nowrap);
+        @include flex(flex, space-between, start, column, nowrap);
         margin-left: 10px;
+        margin-bottom: 10px;
       }
 
       &--h2 {
         color: $main-color;
-        @include font-roboto(italic,900, 20px, 23px);
+        @include font-roboto(italic, 900, 20px, 23px);
+        margin: 0;
       }
+
       &--h3 {
         color: $main-color;
-        @include font-roboto(italic,200, 20px, 23px)
+        padding: 0;
+        @include font-roboto(italic, 200, 20px, 23px)
       }
 
     }
@@ -320,6 +352,7 @@
       @include flex(flex, center, center, column, nowrap);
       @include font-inter(normal, 600, 18px, 21px);
       color: $main-color;
+      padding-top: 15px;
     }
   }
 

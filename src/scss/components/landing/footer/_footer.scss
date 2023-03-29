@@ -19,9 +19,9 @@
     margin-left: auto;
     margin-bottom: 15px;
 
-   @include media(lg){
-    width: 100%;
-   } 
+  @include media(lg){
+    width: 1000px;
+  } 
   }
 
 
@@ -124,7 +124,7 @@
 
   &--img {
     height: 100%;
-    width: 50px;
+    width: 100px;
    /*  @include logo-mobile-size */
   }
 

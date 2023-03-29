@@ -146,7 +146,7 @@ export default function Footer() {
                 <div className='footer-desktop-version__logo'>
                     <img className='footer-desktop-version__logo--img' src={logo3}alt="logo"/>
 
-                    <div className='footer-mobile-version__logo--texts'>
+                    <div className='footer-desktop-version__logo--texts'>
                     <h2 className='footer-desktop-version__logo--h2'>DESAFIO</h2>
                     <h3 className='footer-desktop-version__logo--h3'>latam_
                     </h3>

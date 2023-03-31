@@ -100,27 +100,14 @@
     align-items: center;
     justify-content: center;
     margin-top: auto;
-   
-
-    @include media(lg){
-        margin-bottom: 0;
-        width: 50%;
-        height: auto;   
-         
-    }
-
 }
-
 //NAV----------------------------------------------------------
 
 
 
 //BUTTON--------------------------------------------------------
 @mixin btn-size {
-    
     background: $btn-color;
-     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  */
-     
     height: 2.5rem;
     width: 4.6875rem;
     
@@ -142,8 +129,7 @@
     @include media(lg){
         width: 150px;
         height: 80px;
-        border-radius: 20px 20px 20px 20px;
-        
+        border-radius: 20px 20px 20px 20px; 
     }
 
 }
@@ -155,11 +141,6 @@
     font-size: .875rem;
     line-height: 1.0625rem;
     color: $color;
-
-    @include media(lg){
-        text-transform: lowercase;
-    }
-    
 }
 
 @mixin btn_text_desktop ($color) {
@@ -169,18 +150,13 @@
     font-size: 2.125rem;
     line-height: 3.8125rem;
     color: $color;
+    text-transform: lowercase;
 }
 
 //BUTTON------------------------------------------------------
 
 
 //LOGO--------------------------------------------------------
-@mixin logo-mobile-size {
-    height: 6.25rem;
-    width: 6.25rem;
-
-    
-}
 
 @mixin logo-body($bg-color) {
     background-color: $bg-color;
@@ -192,12 +168,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @include media(lg){
-        width: 8.125rem ;
-        height: 8.125rem;
-    }
-}
+} 
 
 @mixin line-horizontal-body {
     border-bottom: 4px solid #073B3A;
@@ -209,7 +180,7 @@
     transform: rotate(-45deg);
     width: 50%;
     margin-left: 0.1875rem;
-    filter: brightness(0) invert(1);
+    filter:$invert-color-svg;
 }
 
 //LOGO--------------------------------------------------------
@@ -248,66 +219,75 @@
 
 
 //CARD------------------------------------------------------
-@mixin svg_card_mobile_left($path) {
-    background-image: url(#{$path});
-    height: 4rem;
-    width: 4rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 10%;
+@mixin card1-grid-start-end{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+@mixin card2-grid-start-end{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 8;
 
 }
-
-
-@mixin svg_card_desktop_letf($path) {
-    background-image: url(#{$path});
-    height: 10rem;
-    width: 10rem;
-    margin-left: 10%;
-    opacity: 70%;
+@mixin card3-grid-start-end{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 10;
 }
 
-@mixin svg_card_mobile_right($path) {
-    background-image: url(#{$path});
-    height: 4rem;
-    width: 4rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10%;
+@mixin card-content-desktop {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
 }
 
-@mixin svg_card_desktop_right($path) {
-    background-image: url(#{$path});
-    height: 10rem;
-    width: 10rem;
-    margin-right: 10%;
-    opacity: 70%;
+@mixin card-svg-desktop {
+    width: auto;
+    height: 70%;
+    margin: auto;
 }
 
-@mixin img_card_mobile($path) {
-    background-image: url(#{$path});
-    background-repeat: no-repeat;
-    background-size: contain;
-    object-fit: contain;
-    display: block;
-    max-width: 70%;
+@mixin card-img-desktop {
+    width: 270px;
+    height: 270px;
+    margin: auto;
+}
+
+@mixin card-p-desktop {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    padding-right: 20px;
+    text-align: $text-justify;
+    overflow: hidden;
+}
+
+@mixin card-content-mobile {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 30% 70%;
+}
+
+@mixin card-p-mobile {
+    color: white;
+    text-align: $text-justify;
+    margin-top: 10%;
+    padding: 0.3125rem 10% 0 10%;
+    overflow: hidden;
     height: auto;
-    margin: 0;
-    border-radius: 20px 20px 0px 20px;
-
-}
-
-@mixin img_card_desktop($path) {
-    background-image: url(#{$path});
-    background-repeat: no-repeat;
-    background-size: contain;
-    object-fit: contain;
-    display: block;
-    max-width: 70%;
-    height: auto;
-    margin: 0;
-    border-radius: 100px 100px 0px 100px;
-}
+    width: 100%;
+};
 
 //CARD----------------------------------------------------
 

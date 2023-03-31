@@ -1,8 +1,6 @@
 @import '../../../abstracts/mixins/mixins';
 @import '../../../abstracts/variables/variables';
 
-
-
 .main__call-to-action {
   width: $width-100;
   height: $heigth-100;
@@ -10,29 +8,20 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
-
   display: grid;
   background-color: $bg-color;
   grid-template-columns: 3fr;
   grid-template-rows: 2 auto;
-
   grid-template-areas:
     "svg1 texts svg2"
     "svg1 texts svg2";
 
-  ;
-
-
   &--content {
     @include background_image_fixed('../../../../assets/img/bg2.png');
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
+    @include flex(flex,center,center,row,nowrap);
+    text-align: $text-justify;
     width: 100%;
     padding: 2%;
-
 
     @include media(lg) {
       padding: 1%;
@@ -42,8 +31,6 @@
   &--svg1 {
     grid-area: svg1;
     @include svg_call_to_action_mobile_left;
-
-
 
     @include media(lg) {
       flex-basis: 3%;
@@ -69,10 +56,7 @@
 
   &--texts {
     @include column-text;
-    display: flex;
-    flex-direction: column;
     height: 95%;
-
 
     @include media(lg) {
       flex-basis: 94%;
@@ -83,8 +67,8 @@
     }
 
     .main__call-to-action--h2 {
-      color: $main-color;
       @include font-inter(normal, 600, 20px, 24px);
+      color: $main-color;
       width: 200px;
       text-align: $text-center;
       flex-basis: 15%;
@@ -92,18 +76,16 @@
 
       @include media(lg) {
         @include font-inter(italic, 300, 40px, 20px);
-        text-align: center;
+        text-align: $text-center;
         width: 100%;
         flex-basis: 30%;
         margin-top: 15px;
       }
-
     }
 
     .main__call-to-action--p {
       color: $main-color;
       @include font-inter(normal, 400, 16px, 19px);
-      overflow: hidden;
       flex-basis: 85%;
       word-wrap: break-word;
       overflow: hidden;
@@ -115,9 +97,7 @@
         word-wrap: break-word;
         overflow: hidden;
         margin-top: 10px;
-        text-align: justify;
-
-
+        text-align: $text-justify;
       }
     }
   }
@@ -138,8 +118,6 @@
     grid-area: content;
     @include flex(flex, center, center, row, nowrap);
 
-
-
     .main__comunidad--h2 {
       grid-area: h2;
       @include font-roboto(italic, 500, 20px, 23px);
@@ -147,7 +125,6 @@
       @include media(lg) {
         @include font-roboto(italic, 500, 40px, 47px);
       }
-
     }
 
     .main__comunidad--line {
@@ -156,6 +133,11 @@
 
     .main__comunidad--logo {
       @include logo-body($bg-color);
+
+      @include media(lg) {
+        width: 8.125rem;
+        height: 8.125rem;
+      }
     }
 
     .main__comunidad--svg {
@@ -165,7 +147,6 @@
 }
 
 .main__experiencia {
-
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 10;
@@ -195,6 +176,11 @@
 
     .main__experiencia--logo {
       @include logo-body($bg-color);
+
+      @include media(lg) {
+        width: 8.125rem;
+        height: 8.125rem;
+      }
     }
 
     .main__experiencia--svg {
@@ -205,7 +191,6 @@
 }
 
 .main__carousel1 {
-
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 11;
@@ -219,11 +204,10 @@
     grid-area: content;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     width: 100%;
   }
 }
-
 
 .main__agenda {
   grid-column-start: 1;
@@ -249,15 +233,17 @@
       }
     }
 
-
     .main__agenda--line {
       @include line-horizontal-body;
-
     }
-
 
     .main__agenda--logo {
       @include logo-body($bg-color);
+
+      @include media(lg) {
+        width: 8.125rem;
+        height: 8.125rem;
+      }
     }
 
     .main__agenda--svg {
@@ -266,7 +252,6 @@
     }
   }
 }
-
 
 .main__carousel2 {
   grid-column-start: 1;
@@ -280,9 +265,10 @@
 
   &--content {
     grid-area: content;
-    display: flex;
+    /* @include flex(flex,center,center,row,nowrap);
+    display: flex;*/
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     width: 100%;
     height: 100%;
   }

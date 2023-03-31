@@ -3,24 +3,16 @@
 
 
 .main__card1-mobile {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 6;
+    @include card1-grid-start-end;
     
     &--content {
-
-        /* background-color: $bg-card1; */
+        @include card-content-mobile; 
         background-color: $bg-card1;
-        display: grid;
+        
         grid-template-areas:
             "svg-card1 img-card1 img-card1"
             "p-card1 p-card1 p-card1";
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 30% 70%;
-        height: 100%;
-        width: 100%;
-
+        
         .main__card1-mobile--svg {
             grid-area: svg-card1;
             width: 4.375rem;
@@ -39,62 +31,171 @@
         .main__card1-mobile--p {
             grid-area: p-card1;
             @include font-roboto(normal,400, 1.1rem, 1.6rem);
-            color: white;
-            text-align: $text-justify;
-            margin-top: 10%;
-            padding: 0.3125rem 10% 0 10%;
-            overflow: hidden;
-            height: auto;
-            width: 100%;
+            @include card-p-mobile;
         }
     }
 }
 
 .main__card1-desktop {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 6;
+    @include card1-grid-start-end;
 
     &--content {
+        @include card-content-desktop;
         background-color: $bg-card1;
-        height: 100%;
-        padding: 15px;
-        display: grid;
         grid-template-areas:
             "svg-card1 p-card1 img-card1"
             "svg-card1 p-card1 img-card1";
-        grid-template-columns: 20% 60% 20%;
 
         .main__card1-desktop--svg {
             grid-area: svg-card1;
-            width: auto;
-            height: 70%;
-            margin: auto;
+            @include card-svg-desktop;
         }
 
         .main__card1-desktop--img {
             grid-area: img-card1;
-            width: 270px;
-            height: 270px;
-            margin: auto;
+            @include card-img-desktop;
         }
 
         .main__card1-desktop--p {
             grid-area: p-card1;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            height: 100%;
-            padding-right: 20px;
-            text-align: justify;
-            overflow: hidden;
+            @include card-p-desktop;
             @include font-inter(normal,400,20px,24px);
         }
     }
 }
+
+
+.main__card2-mobile {
+    @include card2-grid-start-end;
+
+    &--content {
+        @include card-content-mobile; 
+        background-color: $bg-card2;
+        grid-template-areas:
+            "svg-card2 img-card2 img-card2"
+            "p-card2 p-card2 p-card2";
+        
+
+        .main__card2-mobile--svg {
+            grid-area: svg-card2;
+            width: 4.375rem;
+            height: 7.5rem;
+            margin: auto;
+            margin-bottom: 30%;
+        }
+
+        .main__card2-mobile--img {
+            grid-area: img-card2;
+            width: 11.25rem;
+            height: 11.25rem;
+            margin: 25% -5%;
+        }
+
+        .main__card2-mobile--p {
+            grid-area: p-card2;
+            @include font-roboto(normal,400, 1.1rem, 1.6rem);
+            @include card-p-mobile;
+        }
+    }
+}
+
+.main__card2-desktop {
+    @include card2-grid-start-end;
+
+
+    &--content {
+        @include card-content-desktop;
+        background-color: $bg-card2;
+        grid-template-areas:
+            "svg-card2 p-card2 img-card2"
+            "svg-card2 p-card2 img-card2";
+        
+        .main__card2-desktop--svg {
+            grid-area: svg-card2;
+            @include card-svg-desktop;
+        }
+
+        .main__card2-desktop--img {
+            grid-area: img-card2;
+            @include card-img-desktop;
+        }
+
+        .main__card2-desktop--p {
+            grid-area: p-card2;
+            @include card-p-desktop;
+            @include font-inter(normal,400,20px,24px);
+        }
+    }
+}
+
+
+.main__card3-mobile {
+    @include card3-grid-start-end;
+
+    &--content {
+        @include card-content-mobile; 
+        background-color: $bg-card3;
+        grid-template-areas:
+            "img-card3 img-card3 svg-card3"
+            "p-card3 p-card3 p-card3";
+
+        .main__card3-mobile--svg {
+            grid-area: svg-card3;
+            width: 4.375rem;
+            height: 6.25rem;
+            margin: auto;
+            margin-bottom: 40%;
+            margin-left: 35%;
+        }
+
+        .main__card3-mobile--img {
+            grid-area: img-card3;
+            width: 11.25rem;
+            height: 11.25rem;
+            margin-top: 25%;
+            margin-left: 40%; 
+        }
+
+        .main__card3-mobile--p {
+            grid-area: p-card3;
+            @include font-roboto(normal,400, 1.1rem, 1.6rem);
+            @include card-p-mobile;
+        }
+    }
+}
+
+.main__card3-desktop {
+    @include card3-grid-start-end;
+
+    &--content {
+        @include card-content-desktop;
+        background-color: $bg-card3;
+        grid-template-areas:
+            "img-card3 p-card3 svg-card3"
+            "img-card3 p-card3 svg-card3";
+        
+
+        .main__card3-desktop--svg {
+            grid-area: svg-card3;
+            @include card-svg-desktop;
+        }
+
+        .main__card3-desktop--img {
+            grid-area: img-card3;
+            @include card-img-desktop;
+        }
+
+        .main__card3-desktop--p {
+            grid-area: p-card3;
+            @include card-p-desktop;
+            @include font-inter(normal,400,20px,24px);
+        }
+    }
+}
+
+
+
+
 
 @include media(sm){
     .main__card1-mobile, .main__card2-mobile, .main__card3-mobile {
@@ -122,202 +223,6 @@
         display: block;
     }
 }
-
-
-
-.main__card2-mobile {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 8;
-
-    &--content {
-
-        background-color: $bg-card2;
-        display: grid;
-        grid-template-areas:
-            "svg-card2 img-card2 img-card2"
-            "p-card2 p-card2 p-card2";
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 30% 70%;
-        height: 100%;
-        width: 100%;
-
-        .main__card2-mobile--svg {
-            grid-area: svg-card2;
-            width: 4.375rem;
-            height: 7.5rem;
-            margin: auto;
-            margin-bottom: 30%;
-        }
-
-        .main__card2-mobile--img {
-            grid-area: img-card2;
-            width: 11.25rem;
-            height: 11.25rem;
-            margin: 25% -5%;
-        }
-
-        .main__card2-mobile--p {
-            grid-area: p-card2;
-            @include font-roboto(normal,400, 1.1rem, 1.6rem);
-            color: white;
-            text-align: $text-justify;
-            margin-top: 10%;
-            padding: 0.3125rem 10% 0 10%;
-            overflow: hidden;
-            height: auto;
-            width: 100%;
-        }
-    }
-}
-
-.main__card2-desktop {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 8;
-
-
-    &--content {
-        background-color: $bg-card2;
-        height: 100%;
-        padding: 15px;
-        display: grid;
-        grid-template-areas:
-            "svg-card2 p-card2 img-card2"
-            "svg-card2 p-card2 img-card2";
-        grid-template-columns: 20% 60% 20%;
-
-        .main__card2-desktop--svg {
-            grid-area: svg-card2;
-            width: auto;
-            height: 70%;
-            margin: auto;
-        }
-
-        .main__card2-desktop--img {
-            grid-area: img-card2;
-            width: 270px;
-            height: 270px;
-            margin: auto;
-        }
-
-        .main__card2-desktop--p {
-            grid-area: p-card2;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            height: 100%;
-            padding-right: 20px;
-            text-align: justify;
-            overflow: hidden;
-            @include font-inter(normal,400,20px,24px);
-
-        }
-    }
-}
-
-
-.main__card3-mobile {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 10;
-
-    &--content {
-
-        background-color: $bg-card3;
-        display: grid;
-        grid-template-areas:
-            "img-card3 img-card3 svg-card3"
-            "p-card3 p-card3 p-card3";
-
-            grid-template-columns: 33% 33% 33%;
-            grid-template-rows: 30% 70%;
-            height: 100%;
-            width: 100%;
-
-        .main__card3-mobile--svg {
-            grid-area: svg-card3;
-            width: 4.375rem;
-            height: 6.25rem;
-            margin: auto;
-            margin-bottom: 40%;
-            margin-left: 35%;
-        }
-
-        .main__card3-mobile--img {
-            grid-area: img-card3;
-            width: 11.25rem;
-            height: 11.25rem;
-            margin-top: 25%;
-            margin-left: 40%; 
-        }
-
-        .main__card3-mobile--p {
-            grid-area: p-card3;
-            @include font-roboto(normal,400, 1.1rem, 1.6rem);
-            color: white;
-            text-align: $text-justify;
-            margin-top: 10%;
-            padding: 0.3125rem 10% 0 10%;
-            overflow: hidden;
-            height: auto;
-            width: 100%;
-        }
-    }
-}
-
-.main__card3-desktop {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 10;
-
-    &--content {
-        background-color: $bg-card3;
-        height: 100%;
-        padding: 15px;
-        display: grid;
-        grid-template-areas:
-            "img-card3 p-card3 svg-card3"
-            "img-card3 p-card3 svg-card3";
-        grid-template-columns: 20% 60% 20%;
-        height: 100%;
-
-        .main__card3-desktop--svg {
-            grid-area: svg-card3;
-            width: auto;
-            height: 70%;
-            margin: auto;
-        }
-
-        .main__card3-desktop--img {
-            grid-area: img-card3;
-            width: 270px;
-            height: 270px;
-            margin: auto;
-        }
-
-        .main__card3-desktop--p {
-            grid-area: p-card3;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            height: 100%;
-            padding-left: 20px;
-            text-align: justify;
-            overflow: hidden;
-            @include font-inter(normal,400,20px,24px);
-        }
-    }
-}
-
 
 
 @media screen and (max-width: 768px) {

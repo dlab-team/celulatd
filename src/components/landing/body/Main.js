@@ -15,7 +15,7 @@ import card1 from '../../../assets/img/card1.png';
 
 import slash from '../../../assets/img/Slash.svg';
 import card2 from '../../../assets/img/card2.png';
-
+    
 
 import mayorque from '../../../assets/img/_Mayor.svg';
 import card3 from '../../../assets/img/card3.png';

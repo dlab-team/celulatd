@@ -187,7 +187,6 @@
         }
     }
 }
-
 @include media(sm){
     .main__card1-mobile, .main__card2-mobile, .main__card3-mobile {
         display: block;
@@ -212,11 +211,9 @@
         display: block;
     }
 }
-@media screen and (max-width: 768px) {
+@include media-max(md){
     .main__card1-desktop, .main__card2-desktop, .main__card3-desktop  {
-    display: none;
-    }
-}  
-
-
+        display: none;
+        }
+}
 

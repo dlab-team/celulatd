@@ -14,7 +14,7 @@
     height: 100%;
 
     @include media(lg){
-        align-items: center;
+    align-items: center;
     }
 }
 
@@ -28,6 +28,9 @@
 
     @include media(lg){
         @include btn_text_desktop($main-color);
+        width: 150px;
+        height: 80px;
+        border-radius: 20px 20px 20px 20px; 
     };
     
     .btn__text{

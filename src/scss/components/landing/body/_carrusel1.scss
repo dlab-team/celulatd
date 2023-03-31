@@ -2,9 +2,6 @@
 @import '../../../abstracts/variables/variables';
 @import '../../../media/media';
 
-
-
-
 .carousel1 {
   background-color: #F5F5F5;
   display: flex;
@@ -61,7 +58,6 @@ p {
 
 .title-date-container.active {
   transform: scale(1.2);
-  
 }
 
 $carousel-control-color: black;
@@ -72,11 +68,8 @@ $carousel-indicator-height: 10px;
 
 .title-date-container p {
   width: 100%;
-  word-wrap: break-word;
-  
+  word-wrap: break-word; 
 }
-
-
 
 @include media(lg) {
   .carousel-inner{

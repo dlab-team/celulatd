@@ -137,14 +137,16 @@
       ". . . "
     ;
   }
-  @media screen and (min-width: 768px) {
+ 
+  @include media(md){
     .footer-mobile-version {
       display: none;
     }
-  }
-  @media screen and (max-width: 768px) {
+  }  
+
+  @include media-max(md){
     .footer-desktop-version {
       display: none;
     }
-  }
+  }  
 }

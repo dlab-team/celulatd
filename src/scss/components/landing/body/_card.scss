@@ -108,7 +108,9 @@
         
         .main__card2-desktop--svg {
             grid-area: svg-card2;
-            @include card-svg-desktop;
+            width: 40%; 
+            height: 15.625rem;
+            margin: auto;
         }
 
         .main__card2-desktop--img {

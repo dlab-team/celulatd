@@ -1,9 +1,6 @@
 @import '../../../abstracts/variables/variables';
 @import'../../../abstracts/mixins/mixins';
-
 @import '../../../media/media';
-
-
 
 
 .header-container__img1 {
@@ -27,7 +24,6 @@
     }
   }
 }
-
 .header-container__img2 {
   @include flex(flex, flex-start, first baseline, row, nowrap);
   width: 100%;
@@ -54,15 +50,12 @@
     }
   }
 }
-
 .header__btn {
   grid-area: btn;
   @include btn-size;
   @include btn-display;
   @include btn_text_mobile($main-color);
 }
-
-
 .header__nav {
   grid-area: nav;
   @include ul-display-mobile($nav-color2);

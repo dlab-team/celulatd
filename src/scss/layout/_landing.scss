@@ -1,13 +1,11 @@
 @import '../abstracts/mixins/mixins';
 @import '../abstracts/variables/variables';
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 #container {
   width: 100vw;
   height: 100%;
@@ -49,7 +47,6 @@
     "footer footer footer"
     "footer footer footer"
   ;
-
   @include media(lg) {
     gap: 0;
   }
@@ -59,7 +56,6 @@
     background-color: rgba(40, 44, 39, 0.215);
   }
 }
-
 .header {
   padding: 10px;
   grid-area: header;
@@ -75,12 +71,10 @@
     "logo    logo     btn"
     "letras   letras     btn"
     "nav    nav    nav";
-
   @include background_image_fixed('../../assets/img/BkgdTransp.jpg');
 
   @include media(lg) {
     grid-template-rows: auto 150px 55px auto;
-    /* padding: 15px; */
     grid-template-areas:
       "input input  input"
       "logo    logo     btn"
@@ -88,7 +82,6 @@
       "nav    nav    nav";
   }
 }
-
 .main {
   grid-area: main;
   display: grid;
@@ -105,14 +98,12 @@
     grid-template-rows: repeat(2, 170px) 200px repeat(6, 170px) 200px repeat(2, 350px) 200px repeat(2, 350px);
   }
 }
-
 .footer {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 20;
   grid-row-end: 24;
   width: auto;
-
 
   .footer-mobile-version {
     background-color: $bg-color;
@@ -127,16 +118,13 @@
     padding: 40px 10px 10px 10px;
   }
 
-
   .footer-desktop-version {
     background-color: $bg-color;
     width: 100%;
     height: 100%;
     display: grid;
     padding: 10px;
-
     grid-template-columns: 25% 50% 25%;
-
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 1;
@@ -148,220 +136,12 @@
       "faq about logo"
       ". . . "
     ;
-
-    &__hfooter {
-      grid-area: hfooter;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-
-      &--h2 {
-        color: white;
-        text-align: center;
-        flex-basis: 40%;
-        margin-top: 50px;
-        padding-top: 70px;
-      }
-
-      &--icon-input {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-items: flex-start;
-        width: 50%;
-        margin: auto;
-        flex-basis: 60%;
-
-        .footer-desktop-version__hfooter--svg {
-          background-color: $main-color;
-          border-radius: 100px 100px 0px 100px;
-          transform: rotate(-45deg);
-          width: 55px;
-          height: 55px;
-          
-          @include flex(flex, center, center, row, nowrap);
-
-          img {
-            width: 26px;
-            height: 25px;
-            transform: rotate(45deg);
-          }
-
-          .input--footer-desktop{
-            width: 100%;
-          }
-        }
-
-        /* input.footer-desktop-version__hfooter--input {
-          background-color: white;
-          color: black;
-        } */
-
-      }
-    }
-
-
-
-
-
-    &__section {
-
-      grid-area: section;
-      @include flex(flex, center, center, row, nowrap);
-      @include font-inter(normal, 400, 18px, 21px);
-      width: auto;
-      text-align: $text-center;
-
-
-
-      &--ul {
-        @include flex(flex, center, center, column, nowrap);
-        color: $main-color;
-        min-width: 100%;
-      }
-
-      &--li1 {
-        color: $main-color;
-      }
-
-      &--li2 {
-        color: $main-color;
-
-      }
-
-      &--li3 {
-
-        a {
-          text-decoration: none;
-          color: $main-color;
-        }
-      }
-
-      &--li4 {
-        color: $main-color;
-      }
-
-      &--li5 {
-        margin-top: -25px;
-
-        a {
-          text-decoration: none;
-          color: $main-color;
-        }
-
-      }
-
-    }
-
-    ol,
-    ul,
-    dl {
-      padding: 0;
-      margin: 0;
-    }
-
-
-    &__span {
-      grid-area: span;
-      @include flex(flex, center, center, column, nowrap);
-
-
-      &--p {
-        @include font-inter(normal, 600, 18px, 22px);
-        text-align: $text-center;
-        color: $main-color;
-      }
-
-      &--container-icons {
-        display: flex;
-        flex-direction: row;
-      }
-
-      &--i {
-
-        font-size: 40px;
-        margin: auto;
-        padding: 0 30px;
-
-        a {
-          color: $main-color;
-
-        }
-
-      }
-
-    }
-
-    &__logo {
-      grid-area: logo;
-
-      @include flex(flex, center, flex-end, row, nowrap);
-      width: $width-100;
-      border-top: 2px solid $main-color;
-
-
-      &--img {
-        height: 180px;
-        width: 140px;
-        padding: 20px 0;
-      }
-
-      &--texts {
-        @include flex(flex, space-between, start, column, nowrap);
-        margin-left: 10px;
-        margin-bottom: 10px;
-      }
-
-      &--h2 {
-        color: $main-color;
-        @include font-roboto(italic, 900, 20px, 23px);
-        margin: 0;
-      }
-
-      &--h3 {
-        color: $main-color;
-        padding: 0;
-        @include font-roboto(italic, 200, 20px, 23px)
-      }
-
-    }
-
-    .faq {
-      grid-area: faq;
-      @include flex(flex, center, center, column, nowrap);
-      @include font-inter(normal, 600, 15px, 18px);
-      color: $main-color;
-      border-top: 2px solid $main-color;
-    }
-
-    .about {
-      grid-area: about;
-      @include flex(flex, center, center, column, nowrap);
-      @include font-inter(normal, 600, 15px, 18px);
-      color: $main-color;
-      border-top: 2px solid $main-color;
-
-    }
-
-    .site {
-      grid-area: site;
-      @include flex(flex, center, center, column, nowrap);
-      @include font-inter(normal, 600, 18px, 21px);
-      color: $main-color;
-      padding-top: 15px;
-    }
   }
-
   @media screen and (min-width: 768px) {
     .footer-mobile-version {
       display: none;
     }
   }
-
   @media screen and (max-width: 768px) {
     .footer-desktop-version {
       display: none;

@@ -35,7 +35,6 @@
         }
     }
 }
-
 .main__card1-desktop {
     @include card1-grid-start-end;
 
@@ -63,8 +62,6 @@
         }
     }
 }
-
-
 .main__card2-mobile {
     @include card2-grid-start-end;
 
@@ -98,7 +95,6 @@
         }
     }
 }
-
 .main__card2-desktop {
     @include card2-grid-start-end;
 
@@ -127,8 +123,6 @@
         }
     }
 }
-
-
 .main__card3-mobile {
     @include card3-grid-start-end;
 
@@ -163,7 +157,6 @@
         }
     }
 }
-
 .main__card3-desktop {
     @include card3-grid-start-end;
 
@@ -193,10 +186,6 @@
     }
 }
 
-
-
-
-
 @include media(sm){
     .main__card1-mobile, .main__card2-mobile, .main__card3-mobile {
         display: block;
@@ -205,7 +194,6 @@
         display: none;
     }
 }
-
 @include media(md){
     .main__card1-mobile, .main__card2-mobile, .main__card3-mobile{
         display: none;
@@ -214,7 +202,6 @@
         display: block;
     }
 }
-
 @include media(lg){
     .main__card1-mobile, .main__card2-mobile,.main__card3-mobile{
         display: none;
@@ -223,8 +210,6 @@
         display: block;
     }
 }
-
-
 @media screen and (max-width: 768px) {
     .main__card1-desktop, .main__card2-desktop, .main__card3-desktop  {
     display: none;

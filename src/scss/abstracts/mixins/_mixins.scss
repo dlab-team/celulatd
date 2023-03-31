@@ -44,8 +44,8 @@
 ///////////////////BACKGROUND///////////////////////////////////////////////
 @mixin background_color($bg_color) {
     background-color: $bg_color;
-    height: 100%;
-    width: 100%;
+    height: $heigth-100;
+    width: $width-100;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -53,8 +53,8 @@
 }
 
 @mixin background_image_fixed($path) {
-    height: 100%;
-    width: 100%;
+    height: $heigth-100;
+    width: $width-100;
     background-image: url(#{$path});
     background-size: cover;
     background-position: center;
@@ -64,8 +64,8 @@
 }
 
 @mixin background_image_normal($path) {
-    height: 100%;
-    width: 100%;
+    height: $heigth-100;
+    width: $width-100;
     background-image: url(#{$path});
     background-size: cover;
     background-position: center;
@@ -110,7 +110,6 @@
     background: $btn-color;
     height: 2.5rem;
     width: 4.6875rem;
-    
 }
 
 @mixin btn-display {
@@ -131,7 +130,6 @@
         height: 80px;
         border-radius: 20px 20px 20px 20px; 
     }
-
 }
 
 @mixin btn_text_mobile($color) {
@@ -173,7 +171,7 @@
 @mixin line-horizontal-body {
     border-bottom: 4px solid #073B3A;
     display: inline-block;
-    width: 100%;
+    width: $width-100;
 }
 
 @mixin svg-body {
@@ -187,35 +185,21 @@
 
 
 //CALL-TO-ACTION-----------------------------------------------
-@mixin svg_call_to_action_mobile_left {
+@mixin svg_call_to_action_left {
     width: 9.375rem;
     height: 6.875rem;
     stroke-width: 1;
     margin: auto;
 }
 
-@mixin svg_call_to_action_mobile_right {
+@mixin svg_call_to_action_right {
     width: 9.375rem;
     height: 6.875rem;
     stroke-width: 1;
     margin: auto;
 }
 
-@mixin svg_call_to_action_desktop_left($path) {
-    background-image: url(#{$path});
-    width: 9.375rem;
-    height: 100%;
-    stroke-width: 1;
-}
-
-@mixin svg_call_to_action_desktop_right($path) {
-    background-image: url(#{$path});
-    width: 9.375rem;
-    height: 100%;
-    stroke-width: 1;
-}
-
-//CALL-TO-ACTION--------------------------------------------
+//CALL-TO-ACTION-----------------------------------------
 
 
 //CARD------------------------------------------------------
@@ -240,8 +224,8 @@
 }
 
 @mixin card-content-desktop {
-    height: 100%;
-    width: 100%;
+    height: $heigth-100;
+    width: $width-100;
     padding: 15px;
     display: grid;
     grid-template-columns: 20% 60% 20%;
@@ -265,15 +249,15 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    height: 100%;
+    height: $heigth-100;
     padding-right: 20px;
     text-align: $text-justify;
     overflow: hidden;
 }
 
 @mixin card-content-mobile {
-    height: 100%;
-    width: 100%;
+    height: $heigth-100;
+    width: $width-100;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 30% 70%;
@@ -286,7 +270,7 @@
     padding: 0.3125rem 10% 0 10%;
     overflow: hidden;
     height: auto;
-    width: 100%;
+    width: $width-100;
 };
 
 //CARD----------------------------------------------------

@@ -1,31 +1,14 @@
 import React from 'react'
 import InputHero from '../header/Input';
-
-
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
-
-
-import logo3 from '../../../assets/img/logo3.svg';
-
 import '../../../scss/components/landing/footer/_footer.scss';
-
-
-
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import logo3 from '../../../assets/img/logo3.svg';
 import drafts from '../../../assets/img/draftsVerde.svg';
-
-
 
 export default function Footer() {
     return (
-
-        
-
         <footer className='footer'>
-
-
-
             <div className='footer-mobile-version'>
-
                 <div className='footer-mobile-version__hfooter'>
                     <h2 className='footer-mobile-version__hfooter--h2'>SUSCRÍBETE Y RECIBE
                         NUESTRO BOLETÍN QUINCENAL </h2>
@@ -45,11 +28,6 @@ export default function Footer() {
 
                 </div>
 
-
-
-
-
-
                 <section className='footer-mobile-version__section '>
                     <ul className='footer-mobile-version__section--ul'>
                         <li className='footer-mobile-version__section--li1'><p>NUESTROS CONTACTOS</p></li>
@@ -59,8 +37,6 @@ export default function Footer() {
                         <li className='footer-mobile-version__section--li5'><p><a href='#'>ayuda@desafiolatam.com</a></p></li>
                     </ul>
                 </section>
-
-
 
                 <span className='footer-mobile-version__span'>
                     <p className='footer-mobile-version__span--p'>NUESTRAS REDES SOCIALES</p>
@@ -72,10 +48,6 @@ export default function Footer() {
 
                 </span>
 
-
-
-
-
                 <div className='footer-mobile-version__logo'>
                     <img className='footer-mobile-version__logo--img' src={logo3} alt="logo" />
                     <div className='footer-mobile-version__logo--texts'>
@@ -83,14 +55,9 @@ export default function Footer() {
                         <h3 className='footer-mobile-version__logo--h3'>latam_</h3>
                     </div>
                 </div>
-
-
             </div>
 
-
-
             <div className='footer-desktop-version'>
-
                 <div className='footer-desktop-version__hfooter'>
 
                     <h2 className='footer-desktop-version__hfooter--h2'>SUSCRÍBETE Y RECIBE
@@ -110,12 +77,6 @@ export default function Footer() {
                     </div>
 
                 </div>
-
-
-
-
-
-
                 <section className='footer-desktop-version__section '>
                     <ul className='footer-desktop-version__section--ul'>
                         <li className='footer-desktop-version__section--li1'><p>NUESTROS CONTACTOS</p></li>
@@ -126,22 +87,14 @@ export default function Footer() {
                     </ul>
                 </section>
 
-
-
                 <span className='footer-desktop-version__span'>
                     <p className='footer-desktop-version__span--p'>NUESTRAS REDES SOCIALES</p>
-
                     <div className='footer-desktop-version__span--container-icons'>
-
-                    
                     <i className='footer-desktop-version__span--i'><a href='#'><FaInstagram /></a></i>
                     <i className='footer-desktop-version__span--i'><a href='#'><FaFacebookF /></a></i>
                     <i className='footer-desktop-version__span--i'><a href='#'><FaTwitter /></a></i>
                     </div>
                 </span>
-
-
-
 
                 <div className='footer-desktop-version__logo'>
                     <img className='footer-desktop-version__logo--img' src={logo3}alt="logo"/>
@@ -153,19 +106,17 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className='faq'>
-
-
+                <div className='footer-desktop-version__faq'>
                     <p>FAQ</p>
                     <p>MISION Y VISION</p>
                     <p>TRANSPARENCIA</p>
                 </div>
-                <div className=' about'>
+                <div className=' footer-desktop-version__about'>
                     <p>SOBRE EL SITIO </p>
                     <p>POLITICA DE SEGURIDAD</p>
                     <p>POLITICA CYBERBULLING</p>
                 </div>
-                <div className='site'>
+                <div className='footer-desktop-version__site'>
                     <p>SITIO</p>
                     <p>Comunidad</p>
                     <p>Newsletters</p>
@@ -174,15 +125,7 @@ export default function Footer() {
                     <p>Experiencia</p>
                     <p>Formulario</p>
                 </div>
-
-
             </div>
-
-
-
-
         </footer>
-
-
     )
 }

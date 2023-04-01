@@ -61,16 +61,6 @@
     background-attachment: fixed;
 }
 
-@mixin background_image_normal($path) {
-    height: $heigth-100;
-    width: $width-100;
-    background-image: url(#{$path});
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    background-repeat: no-repeat;
-}
-
 ///////////////////BACKGROUND///////////////////////////////////////////////
 
 

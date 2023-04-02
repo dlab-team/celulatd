@@ -7,7 +7,7 @@
 
   &--h2 {
     color: $main-color;
-    text-align: $text-center;
+    text-align: center;
     @include font-inter(normal, 700, 15px, 18px);
     margin-bottom: 30px;
   }
@@ -50,7 +50,7 @@
   @include flex(flex, center, center, row, nowrap);
   padding: 40px;
   width: auto;
-  text-align: $text-center;
+  text-align: center;
 
   &--ul {
     @include flex(flex, center, center, column, nowrap);
@@ -91,7 +91,7 @@
 
   &--p {
     @include font-inter(normal, 600, 18px, 22px);
-    text-align: $text-center;
+    text-align: center;
     color: $main-color;
   }
 
@@ -110,7 +110,7 @@
 .footer-mobile-version__logo {
   grid-area: logo;
   @include flex(flex, center, flex-end, row, nowrap);
-  width: $width-100;
+  width: 100%;
   border-top: 2px solid $main-color;
   padding: 20px;
 
@@ -189,7 +189,7 @@
   @include flex(flex, center, center, row, nowrap);
   @include font-inter(normal, 400, 18px, 21px);
   width: auto;
-  text-align: $text-center;
+  text-align: center;
 
   &--ul {
     @include flex(flex, center, center, column, nowrap);
@@ -236,7 +236,7 @@
   
   &--p {
     @include font-inter(normal, 600, 18px, 22px);
-    text-align: $text-center;
+    text-align: center;
     color: $main-color;
   }
 
@@ -263,7 +263,7 @@
   grid-area: logo;
 
   @include flex(flex, center, flex-end, row, nowrap);
-  width: $width-100;
+  width: 100%;
   border-top: 2px solid $main-color;
 
 

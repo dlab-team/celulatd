@@ -4,12 +4,9 @@
 
 .carousel1 {
   background-color: #F5F5F5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(flex,center,center,column,nowrap);
   height: 100%;
   min-width: 100%;
-  
   .testimonio{
     width: 70%;
   }
@@ -27,7 +24,6 @@ p {
   font-family: Roboto;
   text-align: justify;
   padding: 10px;
-  
 }
 .title-date-container {
   position: relative;

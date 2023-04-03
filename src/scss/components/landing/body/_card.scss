@@ -30,8 +30,8 @@
 
         .main__card1-mobile--p {
             grid-area: p-card1;
-            @include font-roboto(normal,400, 1.1rem, 1.6rem);
-            @include card-p-mobile;
+            @include p;
+            padding: 0.3125rem 10% 0 10%;
         }
     }
 }
@@ -57,8 +57,9 @@
 
         .main__card1-desktop--p {
             grid-area: p-card1;
-            @include card-p-desktop;
-            @include font-inter(normal,400,20px,24px);
+            @include p;
+            @include flex(flex,center,center,column,nowrap);
+            margin-right: 5%;
         }
     }
 }
@@ -90,8 +91,8 @@
 
         .main__card2-mobile--p {
             grid-area: p-card2;
-            @include font-roboto(normal,400, 1.1rem, 1.6rem);
-            @include card-p-mobile;
+            @include p;
+            padding: 0.3125rem 10% 0 10%;
         }
     }
 }
@@ -120,8 +121,9 @@
 
         .main__card2-desktop--p {
             grid-area: p-card2;
-            @include card-p-desktop;
-            @include font-inter(normal,400,20px,24px);
+            @include p;
+            @include flex(flex,center,center,column,nowrap);
+            margin-right: 5%;
         }
     }
 }
@@ -141,7 +143,7 @@
             height: 6.25rem;
             margin: auto;
             margin-bottom: 40%;
-            margin-left: 35%;
+            margin-right: 10%;
         }
 
         .main__card3-mobile--img {
@@ -149,13 +151,13 @@
             width: 11.25rem;
             height: 11.25rem;
             margin-top: 25%;
-            margin-left: 40%; 
+            margin-left: 35%; 
         }
 
         .main__card3-mobile--p {
             grid-area: p-card3;
-            @include font-roboto(normal,400, 1.1rem, 1.6rem);
-            @include card-p-mobile;
+            @include p;
+            padding: 0.3125rem 10% 0 10%;
         }
     }
 }
@@ -182,8 +184,9 @@
 
         .main__card3-desktop--p {
             grid-area: p-card3;
-            @include card-p-desktop;
-            @include font-inter(normal,400,20px,24px);
+            @include p;
+            @include flex(flex,center,center,column,nowrap);
+            margin-left: 5%;
         }
     }
 }

@@ -11,28 +11,34 @@
 
 ////////////////TEXT////////////////////////////////////////////////////////
 
-@mixin column-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: auto;
-}
-
-@mixin font-roboto($font-style, $font-weight, $font-size, $line-height) {
-    font-family: Roboto;
-    font-style: $font-style;
-    font-weight: $font-weight ;
-    font-size: $font-size ;
-    line-height: $line-height ;
-}
-
-@mixin font-inter($font-style, $font-weight, $font-size, $line-height) {
+@mixin p {
     font-family: Inter;
-    font-style: $font-style;
-    font-weight: $font-weight ;
-    font-size: $font-size ;
-    line-height: $line-height ;
+    font-style: normal;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    overflow: hidden;
+    color: $main-color;
+}
+
+@mixin h2-mobile {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+@mixin h2-desktop {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 35px;
+}
+
+@mixin h3{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 23px;
 }
 ////////////////TEXT////////////////////////////////////////////////////////
 
@@ -60,7 +66,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 ///////////////////BACKGROUND///////////////////////////////////////////////
 
 
@@ -94,12 +99,6 @@
 
 
 //BUTTON--------------------------------------------------------
-@mixin btn-size {
-    background: $btn-color;
-    height: 2.5rem;
-    width: 4.6875rem;
-}
-
 @mixin btn-display {
     display: flex;
     align-items: center;
@@ -111,33 +110,12 @@
     width: 5rem;
     height: 2.5rem;
     box-shadow: 0px 4px 4px rgba(250, 249, 249, 0.25);
-    border-radius: .5em; 
+    border-radius: .5em;
 }
-
-@mixin btn_text_mobile($color) {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: .875rem;
-    line-height: 1.0625rem;
-    color: $color;
-}
-
-@mixin btn_text_desktop ($color) {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.125rem;
-    line-height: 3.8125rem;
-    color: $color;
-    text-transform: lowercase;
-}
-
 //BUTTON------------------------------------------------------
 
 
 //LOGO--------------------------------------------------------
-
 @mixin logo-body($bg-color) {
     background-color: $bg-color;
     border-radius: 6.25rem 6.25rem 0rem 6.25rem;
@@ -148,7 +126,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
 @mixin line-horizontal-body {
     border-bottom: 4px solid #073B3A;
@@ -160,7 +138,7 @@
     transform: rotate(-45deg);
     width: 50%;
     margin-left: 0.1875rem;
-    filter:$invert-color-svg;
+    filter: $invert-color-svg;
 }
 
 //LOGO--------------------------------------------------------
@@ -185,32 +163,25 @@
 
 
 //CARD------------------------------------------------------
-@mixin card1-grid-start-end{
+@mixin card1-grid-start-end {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 6;
 }
-@mixin card2-grid-start-end{
+
+@mixin card2-grid-start-end {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 6;
     grid-row-end: 8;
-
 }
-@mixin card3-grid-start-end{
+
+@mixin card3-grid-start-end {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 8;
     grid-row-end: 10;
-}
-
-@mixin card-content-desktop {
-    height: 100%;
-    width: 100%;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
 }
 
 @mixin card-svg-desktop {
@@ -225,17 +196,6 @@
     margin: auto;
 }
 
-@mixin card-p-desktop {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    height: 100%;
-    padding-right: 20px;
-    text-align: justify;
-    overflow: hidden;
-}
 
 @mixin card-content-mobile {
     height: 100%;
@@ -244,16 +204,14 @@
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 30% 70%;
 }
-
-@mixin card-p-mobile {
-    color: white;
-    text-align:justify;
-    margin-top: 10%;
-    padding: 0.3125rem 10% 0 10%;
-    overflow: hidden;
-    height: auto;
+@mixin card-content-desktop {
+    height: 100%;
     width: 100%;
-};
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
 
 //CARD----------------------------------------------------
 

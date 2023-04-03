@@ -52,9 +52,9 @@
 }
 .header__btn {
   grid-area: btn;
-  @include btn-size;
   @include btn-display;
-  @include btn_text_mobile($main-color);
+  @include p;
+  color: $main-color;
 }
 .header__nav {
   grid-area: nav;
@@ -100,11 +100,10 @@
 
         p {
           display: block;
-          @include font-inter(normal, 400, 16px, 19px);
-          margin: auto;
-          font-size: 12px;
-          padding: 0;
+          @include p;
+          overflow: clip;
           margin: 0;
+          padding: 0;
         }
       }
     }

@@ -8,7 +8,9 @@
   &--h2 {
     color: $main-color;
     text-align: center;
-    @include font-inter(normal, 700, 15px, 18px);
+    @include h2-mobile;
+    font-family: Inter;
+    font-style: normal;
     margin-bottom: 30px;
   }
 
@@ -52,11 +54,16 @@
   width: auto;
   text-align: center;
 
+  ol, ul, dl {
+    margin: 0;
+    padding: 0;
+  }
+
   &--ul {
     @include flex(flex, center, center, column, nowrap);
     color: $main-color;
     width: 100%;
-    margin-right: 35px;
+    
   }
 
   &--li3 {
@@ -90,8 +97,7 @@
   grid-row-end: 4;
 
   &--p {
-    @include font-inter(normal, 600, 18px, 22px);
-    text-align: center;
+    @include p;
     color: $main-color;
   }
 
@@ -127,14 +133,15 @@
 
   &--h2 {
     color: $main-color;
-    @include font-roboto(italic, 900, 20px, 23px)
+    @include h2-mobile;
+    font-family: Roboto;
+    font-style: italic;
   }
 
   &--h3 {
     color: $main-color;
-    @include font-roboto(italic, 200, 20px, 23px)
+    @include h3;
   }
-
 }
 ////////////////////////////////////////////////////////////
 
@@ -187,9 +194,9 @@
 .footer-desktop-version__section {
   grid-area: section;
   @include flex(flex, center, center, row, nowrap);
-  @include font-inter(normal, 400, 18px, 21px);
+  @include p;
   width: auto;
-  text-align: center;
+  
 
   &--ul {
     @include flex(flex, center, center, column, nowrap);
@@ -235,8 +242,7 @@
   
   
   &--p {
-    @include font-inter(normal, 600, 18px, 22px);
-    text-align: center;
+    @include p;
     color: $main-color;
   }
 
@@ -281,28 +287,30 @@
 
   &--h2 {
     color: $main-color;
-    @include font-roboto(italic, 900, 20px, 23px);
+    @include h2-desktop;
+    font-family: Roboto;
+    font-style: italic;
     margin: 0;
   }
 
   &--h3 {
     color: $main-color;
     padding: 0;
-    @include font-roboto(italic, 200, 20px, 23px)
+    @include h3;
   }
 
 }
 .footer-desktop-version__faq {
   grid-area: faq;
   @include flex(flex, center, center, column, nowrap);
-  @include font-inter(normal, 600, 15px, 18px);
+  @include p;
   color: $main-color;
   border-top: 2px solid $main-color;
 }
 .footer-desktop-version__about {
   grid-area: about;
   @include flex(flex, center, center, column, nowrap);
-  @include font-inter(normal, 600, 15px, 18px);
+  @include p;
   color: $main-color;
   border-top: 2px solid $main-color;
 
@@ -310,7 +318,7 @@
 .footer-desktop-version__site {
   grid-area: site;
   @include flex(flex, center, center, column, nowrap);
-  @include font-inter(normal, 600, 18px, 21px);
+  @include p;
   color: $main-color;
   padding-top: 15px;
 }

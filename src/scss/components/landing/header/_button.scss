@@ -24,10 +24,12 @@
 
 .btn__hero {
     @include btn-display;
-    @include btn_text_mobile($main-color);
-
+    @include p;
+    color: $main-color;
+    
     @include media(lg){
-        @include btn_text_desktop($main-color);
+        text-transform: lowercase;
+        font-size: 34px;
         width: 150px;
         height: 80px;
         border-radius: 20px 20px 20px 20px; 

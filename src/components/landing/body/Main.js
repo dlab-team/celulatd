@@ -17,96 +17,9 @@ export default function Main() {
                         <img className='main__call-to-action--svg1' src={LLave1} alt='svg' />
                         <div className='main__call-to-action--texts'>
                             <h2 className='main__call-to-action--h2'>¡ÚNETE A NUESTRO EQUIPO! </h2>
-                            <p className='main__call-to-action--p'> Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                ed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at ed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at ed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at ed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at ed elit cursus dui lorem
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
-                                donec. Quis porta at
-                                sed elit cursus dui lorem
-                                donec. Quis porta at adipiscin
-                                Lorem ipsum dolor sit amet
-                                consectetur. Adipiscing suscipit
-                                sed elit cursus dui lorem
-                                donec. Quis porta at
+                            <p className='main__call-to-action--p'> Tecnología y Conocimiento para hacer de tu futuro una brillante carrera,
+¡Se parte de este desafío!
+
 
                             </p>
                         </div>

@@ -26,34 +26,9 @@ export default function Card() {
           <img className='main__card1-mobile--img' src={card1} />
 
           <p className='main__card1-mobile--p'>
-            Lorem ipsum dolor sit amet consectetur. Sed odio
+          Ecosistema TI: <br/>
+          Aprenderás el valor que tiene la red de tecnologías, plataformas y servicios digitales que ofrece el mercado TI, para aportar valor a tu búsqueda laboral.
 
-            egestas tincidunt mauris mollis senectus tellus
-
-            Condimentum egestas dignissim venenatis magna
-
-            ut at a id placerat. Donec gravida elit velit quisque.
-            Lorem ipsum dolor sit amet consectetur. Sed odio
-
-            egestas tincidunt mauris mollis senectus tellus
-
-            Condimentum egestas dignissim venenatis magna
-
-            ut at a id placerat. Donec gravida elit velit quisque.
-            Lorem ipsum dolor sit amet consectetur. Sed odio
-
-            egestas tincidunt mauris mollis senectus tellus
-
-            Condimentum egestas dignissim venenatis magna
-
-            ut at a id placerat. Donec gravida elit velit quisque.
-            Lorem ipsum dolor sit amet consectetur. Sed odio
-
-            egestas tincidunt mauris mollis senectus tellus
-
-            Condimentum egestas dignissim venenatis magna
-
-            ut at a id placerat. Donec gravida elit velit quisque.
           </p>
 
 

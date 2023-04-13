@@ -1,0 +1,45 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/breakpoints";
+@import "../base/base";
+
+#navbar-user {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+
+  @include media(lg) {
+    position: fixed;
+    top: 150px;
+    width: 100%;
+    height: 80px;
+  }
+}
+
+.navbar-admin-all {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  @include media (lg){
+    justify-content: flex-end;
+    
+  }
+  img{
+    width: 40%;
+    margin: auto;
+    @include media (lg){
+      
+      
+    }
+
+  }
+}
+
+.navbar-background {
+  background: $usergeendark;
+}
+
+

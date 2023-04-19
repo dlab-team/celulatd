@@ -1,0 +1,13 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/breakpoints";
+@import "../base/typography";
+@import "../base/base";
+
+.link-2{
+    h2{
+      border-bottom: solid 7px;
+    margin-bottom: 3px;
+    }
+    
+  }

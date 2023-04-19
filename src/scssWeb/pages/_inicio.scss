@@ -1,0 +1,119 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/breakpoints";
+@import "../base/base";
+
+.barra {
+  background: $useryellowdark;
+  display: flex;
+  z-index: 8;
+  position: fixed;
+  margin-top: -70px;
+  height: 60px;
+  width: 100%;
+  @include media(lg) {
+      top: 270px;
+      margin-top: 0px;
+  }
+
+  h2 {
+    margin-left: 4px;
+    margin-bottom: 11px;
+    margin-top: 19px;
+    color: #073b3a;
+    @include media (lg){
+      margin-top: 15px;
+    }
+  
+    
+  }
+}
+
+.svg-img-barra{
+  
+  width: 49px;
+    height: 40px;
+  margin-left: 10px;
+  margin-top: 10px;
+    
+      @include media(lg) {
+        width: 35px;
+        margin-bottom: 0px;
+        height: 35px;
+      
+    }
+
+}
+
+.container-body-all{
+  margin-top: 260px;
+  max-width: 99vw;
+  @include media(lg) {
+    margin-top: 350px;
+    
+  }
+
+}
+.container-body-all-position{
+  @include media (lg){
+    position: fixed;
+  }
+}
+
+.container-inicio_body{
+@include media(lg) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  
+  }
+}
+
+
+
+
+.container-inicio_component_all {
+  width: 150px;
+  height: 150px;
+  border: 2px solid $usergeendark;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 15px;
+ 
+
+  @include media(lg) {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0;
+    margin-top: 10%;
+  }
+  img {
+    width: 50%;
+    margin: auto;
+    padding-top: 15%;
+  }
+  
+  button {
+    margin: auto;
+    margin-top: 15%;
+    line-height: 1.5rem;
+    p{
+      color: $usergeendark;
+    }
+  }
+  
+}
+
+
+.container-inicio_component-background_resources {
+  background: $usergeenligth;
+}
+
+.container-inicio_component-background_video {
+  background: $useryellowdark;
+}
+
+.container-inicio_component-background_notification {
+  background: $userblue;
+}
+

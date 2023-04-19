@@ -1,0 +1,45 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/breakpoints";
+@import "../base/base";
+
+.header-container{   
+    display: flex;
+    justify-content: space-around;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    padding-top: 5%;
+    height: 250px;
+    background-color:$usergeendark;
+    color: $userwhite;
+    @include media(lg) {
+        
+        top: 0;
+    }
+    p{
+        color: $userwhite
+    }
+}
+
+.header-container-logo{
+    width: 20%;
+
+    img{
+        width: 100%;
+        @include media (lg){
+            width: 80%;
+        }
+    }
+}
+.user-container{
+    p{
+        margin-top: 12%;
+    }
+}
+.settings-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+

@@ -3,10 +3,12 @@ import "../../scssWeb/main.css";
 import LogoSvg from "../../assets/img/LogoVector.svg";
 import FraseSvg from "../../assets/img/Frase1Vector.svg";
 
-const Header = ({ userName }) => {
+function Header({ userName }) {
   const currentDate = new Date().toLocaleDateString();
   const avatar =
     "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50";
+
+    
   return (
     <header className="header-container">
       <div className="header-container-logo">
@@ -29,6 +31,6 @@ const Header = ({ userName }) => {
       </div>
     </header>
   );
-};
+}
 
 export default Header;

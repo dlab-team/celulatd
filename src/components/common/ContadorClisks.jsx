@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {sendCounterValue} from '../../services/CounterApi';
 
 
-function Counter({ icon, nombreContador ,link}) {
+export default function Counter({ icon, nombreContador ,link}) {
   const [contador, setContador] = useState(0);
 
   const handleClick = async () => {
@@ -22,4 +22,4 @@ function Counter({ icon, nombreContador ,link}) {
   );
 }
 
-export default Counter;
+ 

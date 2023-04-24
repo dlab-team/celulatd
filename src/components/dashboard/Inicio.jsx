@@ -1,9 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavbarComp from "./NavbarComponent";
-import VideoUploader from "./video/VideoUploader";
-// import VideoList from "./video/ComponetVideo";
-// import Message from "./message/Message";
 import { Link } from "react-router-dom";
 import "../../scssWeb/main.css";
 import VectorSubirVid from "../../assets/img/upload_G.svg";

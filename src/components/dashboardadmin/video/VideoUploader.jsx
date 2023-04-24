@@ -7,6 +7,7 @@ import Uploadbutton from "../../../assets/img/Uploadbutton.svg";
 import Header from "../../common/header";
 import UploadSvg from "../../../assets/img/upload_G.svg";
 
+// se hace cel cambio por link de videos de youtube
 const VideoUploader = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [title, setTitle] = useState("");

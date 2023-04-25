@@ -3,10 +3,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 
-import NavbarComp from "../NavbarComponent";
+import NavbarComp from "../NavbarComponentUser";
 import NavbarDocumentUser from "./NavbarDocumentUser";
+import Header from "../../../common/header";
+
 import RecursosSvg from "../../../assets/img/video_library_G.svg";
-import Header from "../../common/header";
 import imagenpdf from "../../../assets/img/imagenpdf.jpeg";
 
 export default function ListDocumentUser() {

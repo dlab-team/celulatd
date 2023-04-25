@@ -21,27 +21,27 @@ function NavbarComponent() {
           <div className="navbar-admin-all">
             {" "}
             <Link to="/Inicio">
-              <img src={HomeWSvg} />
+              <img src={HomeWSvg} alt="paguina principal admin" />
               <Nav.Link href="/Inicio"></Nav.Link>
             </Link>
             <Link to="/Ajustes">
-              <img src={AjusteWt} />
+              <img src={AjusteWt} alt="paguina de ajustes" />
               <Nav.Link href="/Ajustes"></Nav.Link>
             </Link>
             <Link to="/Statistics">
-              <img src={Metricassvg} />
+              <img src={Metricassvg}  alt="estadisticas de usuarios"/>
               <Nav.Link href="/Statistics"></Nav.Link>
             </Link>
             <Link to="/VideoUploader">
-              <img src={SvgSubirVidW} />
+              <img src={SvgSubirVidW}  alt="subir videos"/>
               <Nav.Link href="/VideoUploader"></Nav.Link>
             </Link>
             <Link to="/ListVideo">
-              <img src={MiniRecursos} />
+              <img src={MiniRecursos} alt="lista de videos" />
               <Nav.Link href="/ListVideo"></Nav.Link>
             </Link>
             <Link to="/Message">
-              <img src={SvgMensajeW} />
+              <img src={SvgMensajeW} alt="lista de mensajes"/>
               <Nav.Link href="/Message"></Nav.Link>
             </Link>
           </div>

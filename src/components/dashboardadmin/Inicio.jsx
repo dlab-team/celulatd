@@ -23,7 +23,7 @@ const Inicio = () => {
           <Link to="/VideoUploader" className="Link">
             <img src={VectorSubirVid} />
             <button>
-              <p>Subir Recursos</p>
+              <p>SUBIR RECURSOS</p>
             </button>
           </Link>
         </div>
@@ -31,7 +31,7 @@ const Inicio = () => {
           <Link to="/ListVideo" className="Link">
             <img src={Recursos} />
             <button>
-              <p>Recursos</p>
+              <p>RECURSOS</p>
             </button>
           </Link>
         </div>

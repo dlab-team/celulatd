@@ -3,7 +3,7 @@ import "../../../src/scssWeb/main.css";
 import Movil404 from "../../assets/img/movil404.svg";
  //import Dktp404 from '../../assets/img/dktp404.svg'
 
-export const Error404 = () => {
+const Error404 = () => {
   return (
     <div className="container-error">
       <div className="container-error-movil">
@@ -16,3 +16,4 @@ export const Error404 = () => {
     </div>
   );
 };
+export default Error404;

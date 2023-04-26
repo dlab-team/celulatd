@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 
 import NavbarComp from "../NavbarComponentUser";
-import NavbarDocumentUser from "./NavbarDocumentUser";
 import Header from "../../../common/header";
+import NavbarNavbar from "../../../common/Navbarnavbar";
 
-import RecursosSvg from "../../../assets/img/video_library_G.svg";
-import imagenpdf from "../../../assets/img/imagenpdf.jpeg";
+import RecursosSvg from "../../../../assets/img/video_library_G.svg";
+import imagenpdf from "../../../../assets/img/imagenpdf.jpeg";
 
 export default function ListDocumentUser() {
   const [articles, setArticles] = useState([]);
@@ -37,7 +37,10 @@ export default function ListDocumentUser() {
         <h2>RECURSOS</h2>
       </div>
       <div className="container-body-all">
-        <NavbarDocumentUser/>
+        <NavbarNavbar
+          links={["/VideoListUser", "/ListDocumentUser"]}
+          texts={["VIDEO", "DOCUMENTO"]}
+        />
         <div className="container-componentvideo_flex">
           {articles.map((article) => (
             <div className="container-componentvideo_body">
@@ -49,14 +52,6 @@ export default function ListDocumentUser() {
                 <div className="document-text">
                   <h2>{article.title}</h2>
                   <p>{article.content}</p>
-                  <div className="body-button-edit-all">
-                    <button
-                      onClick={() =>
-                        console.log(`Editando video ${article.id}`)
-                      }>
-                      Editar
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

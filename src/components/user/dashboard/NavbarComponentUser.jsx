@@ -31,9 +31,9 @@ export default function NavbarComponentUser() {
               <img src={Metricassvg}  alt="estadisticas de usuario"/>
               <Nav.Link href="/StatisticsUser"></Nav.Link>
             </Link>
-            <Link to="/ListVideoUser">
+            <Link to="/VideoListUser">
               <img src={MiniRecursos}  alt="lista de videos"/>
-              <Nav.Link href="/ListVideoUser"></Nav.Link>
+              <Nav.Link href="/VideoListUser"></Nav.Link>
             </Link>
             <Link to="/ListMessageUser">
               <img src={SvgMensajeW}  alt="lista de mensajes "/>

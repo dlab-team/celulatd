@@ -28,6 +28,8 @@ import ListMessageUser from "./components/user/dashboard/message/ListMessageUser
 import TrashMessageMessageUser from "./components/user/dashboard/message/TrasMessageUser";
 import VideoListUser from "./components/user/dashboard/video/VideoListUser";
 import SettigUser from "./components/user/dashboard/SettigUser";
+import ListDocumentUser from "./components/user/dashboard/document/ListDocumentUser";
+import StatisticsUser from "./components/user/dashboard/StatisticsUser";
 import "./scssWeb/main.css";
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
       <Route path="/InicioUser" element={<InicioUser />} />
       <Route path="/VideoListUser" element={<VideoListUser />} />
       <Route path="/SettigUser" element={<SettigUser />} />
+      <Route path="/ListDocumentUser" element={<ListDocumentUser />} />
+      <Route path="/StatisticsUser" element={<StatisticsUser />} />
     </Routes>
   );
 }

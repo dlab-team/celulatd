@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NavbarComp from "../NavbarComponentUser";
-//import NavbarVideoRead from "../../document/NavbarDocument";
 import RecursosSvg from "../../../../assets/img/video_library_G.svg";
 import Header from "../../../common/header";
 import "../../../../scssWeb/main.css";
+
+import NavbarComp from "../NavbarComponentUser";
+import NavbarNavbar from "../../../common/Navbarnavbar";
 
 export default function VideoListUser() {
   const [videos, setVideos] = useState([]);
@@ -39,6 +40,10 @@ export default function VideoListUser() {
         <h2>RECURSOS</h2>
       </div>
       <div className="container-body-all">
+        <NavbarNavbar
+          links={["/VideoListUser", "/ListDocumentUser"]}
+          texts={["VIDEO", "DOCUMENTO"]}
+        />
         <div className="container-componentvideo_flex">
           {videos.map((video) => (
             <div

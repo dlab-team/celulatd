@@ -39,7 +39,6 @@ export default function VideoListUser() {
         <h2>RECURSOS</h2>
       </div>
       <div className="container-body-all">
-       {/* <NavbarVideoRead />*/}
         <div className="container-componentvideo_flex">
           {videos.map((video) => (
             <div

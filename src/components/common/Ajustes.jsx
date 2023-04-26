@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import NavbarComp from "../dashboardadmin/NavbarComponent";
+
 
 import "../../scssWeb/main.css";
 import Header from "./header";
@@ -25,8 +25,8 @@ export default function Settings(props) {
   };
 
   const { ROL, FUNCION } = props;
+
   const handleUploadPerfil = () => {
-  
     const formData = new FormData();
     formData.append("name", formData.name);
     formData.append("telefone", formData.telefone);
@@ -57,7 +57,6 @@ export default function Settings(props) {
   return (
     <div>
       <Header />
-      <NavbarComp />
       <div className="barra">
         <img
           className="svg-img-barra"

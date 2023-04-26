@@ -24,9 +24,9 @@ function NavbarComponent() {
               <img src={HomeWSvg} alt="paguina principal admin" />
               <Nav.Link href="/Inicio"></Nav.Link>
             </Link>
-            <Link to="/Ajustes">
+            <Link to="/SetingAdmin">
               <img src={AjusteWt} alt="paguina de ajustes" />
-              <Nav.Link href="/Ajustes"></Nav.Link>
+              <Nav.Link href="/SetingAdmin"></Nav.Link>
             </Link>
             <Link to="/Statistics">
               <img src={Metricassvg}  alt="estadisticas de usuarios"/>

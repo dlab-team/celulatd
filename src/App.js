@@ -8,7 +8,7 @@ import Register from "./components/user/register/Register";
 import Error404 from "./components/common/Error404";
 /*  admin  */
 import Inicio from "./components/dashboardadmin/Inicio";
-import Ajustes from "./components/common/Ajustes";
+import SetingAdmin from "./components/dashboardadmin/SetingAdmin";
 
 import VideoUploader from "./components/dashboardadmin/video/VideoUploader";
 import ListVideo from "./components/dashboardadmin/video/ListVideo";
@@ -27,7 +27,7 @@ import InicioUser from "./components/user/dashboard/InicioUser";
 import ListMessageUser from "./components/user/dashboard/message/ListMessageUser";
 import TrashMessageMessageUser from "./components/user/dashboard/message/TrasMessageUser";
 import VideoListUser from "./components/user/dashboard/video/VideoListUser";
-
+import SettigUser from "./components/user/dashboard/SettigUser";
 import "./scssWeb/main.css";
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
       <Route path="/DocumentUploader" element={<DocumentUploader />} />
       <Route path="/Message" element={<Message />} />
 
-      <Route path="/ajustes" element={<Ajustes />} />
+      <Route path="/SetingAdmin" element={<SetingAdmin />} />
       <Route path="/VideoUploader" element={<VideoUploader />} />
       <Route path="/ListVideo" element={<ListVideo />} />
       <Route path="/Statistics" element={<Statistics />} />
@@ -55,6 +55,7 @@ function App() {
       <Route path="/TrashMessageUser" element={<TrashMessageMessageUser />} />
       <Route path="/InicioUser" element={<InicioUser />} />
       <Route path="/VideoListUser" element={<VideoListUser />} />
+      <Route path="/SettigUser" element={<SettigUser />} />
     </Routes>
   );
 }

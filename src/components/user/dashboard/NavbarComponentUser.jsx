@@ -23,9 +23,9 @@ export default function NavbarComponentUser() {
               <img src={HomeWSvg} alt="paguina principal usuario" />
               <Nav.Link href="/InicioUser"></Nav.Link>
             </Link>
-            <Link to="/AjustesUser">
+            <Link to="/SettigUser">
               <img src={AjusteWt} alt="ajustes usuario" />
-              <Nav.Link href="/AjustesUser"></Nav.Link>
+              <Nav.Link href="/SettigUser"></Nav.Link>
             </Link>
             <Link to="/StatisticsUser">
               <img src={Metricassvg}  alt="estadisticas de usuario"/>

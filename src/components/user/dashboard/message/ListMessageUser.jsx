@@ -5,8 +5,7 @@ import Nav from "react-bootstrap/Nav";
 
 import Header from "../../../common/header";
 import NavbarComp from "../NavbarComponentUser";
-import NavbarMessageUser from "./NavbarMessageUser";
-import Navbarnavbar from "../../../common/Navbarnavbar";
+import NavbarNavbar from "../../../common/Navbarnavbar";
 
 import RecursosSvg from "../../../../assets/img/video_library_G.svg";
 import imagenpdf from "../../../../assets/img/imagenpdf.jpeg";
@@ -38,7 +37,7 @@ export default function ListMessageUser() {
         <h2>MENSAJES</h2>
       </div>
       <div className="container-body-all">
-        <Navbarnavbar
+        <NavbarNavbar
           links={["/ListMessageUser", "/TrashMessageUser"]}
           texts={["MENSAJES", "PAPELERA"]}
         />

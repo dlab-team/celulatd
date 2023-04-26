@@ -5,7 +5,7 @@ import NavbarComp from "../NavbarComponentUser";
 import "../../../../scssWeb/main.css";
 import trash from "../../../../assets/img/trash.svg";
 import MensajeSvg from "../../../../assets/img/messages_G.svg";
-import NavbarMessage from "./NavbarMessageUser";
+import NavbarNavbar from "../../../common/Navbarnavbar";
 
 export default function TrashMessageUser() {
   const [articles, setArticles] = useState([]);
@@ -47,8 +47,11 @@ export default function TrashMessageUser() {
         <h2>PAPELERA</h2>
       </div>
       <div className="container-body-message">
-        <NavbarMessage />
         <div className="container-message">
+        <NavbarNavbar
+          links={["/ListMessageUser", "/TrashMessageUser"]}
+          texts={["MENSAJES", "PAPELERA"]}
+        />
           {articles.map((article) => (
             <div className="message-box" key={article.id}>
               <div className="message-icons">

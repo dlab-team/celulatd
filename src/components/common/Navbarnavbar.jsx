@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import "../../scssWeb/main.css";
 
-export default function Navbarnavbar(props) {
+export default function NavbarNavbar(props) {
 
   const { links, texts } = props;
 

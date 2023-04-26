@@ -19,25 +19,25 @@ export default function NavbarComponentUser() {
           className="navbar-background">
           <div className="navbar-admin-all">
             {" "}
-            <Link to="/HomeUser">
+            <Link to="/InicioUser">
               <img src={HomeWSvg} alt="paguina principal usuario" />
-              <Nav.Link href="/Inicio"></Nav.Link>
+              <Nav.Link href="/InicioUser"></Nav.Link>
             </Link>
-            <Link to="/Ajustes">
+            <Link to="/AjustesUser">
               <img src={AjusteWt} alt="ajustes usuario" />
-              <Nav.Link href="/Ajustes"></Nav.Link>
+              <Nav.Link href="/AjustesUser"></Nav.Link>
             </Link>
-            <Link to="/Statistics">
+            <Link to="/StatisticsUser">
               <img src={Metricassvg}  alt="estadisticas de usuario"/>
-              <Nav.Link href="/Statistics"></Nav.Link>
+              <Nav.Link href="/StatisticsUser"></Nav.Link>
             </Link>
             <Link to="/ListVideoUser">
               <img src={MiniRecursos}  alt="lista de videos"/>
-              <Nav.Link href="/ListVideo"></Nav.Link>
+              <Nav.Link href="/ListVideoUser"></Nav.Link>
             </Link>
             <Link to="/ListMessageUser">
               <img src={SvgMensajeW}  alt="lista de mensajes "/>
-              <Nav.Link href="/Message"></Nav.Link>
+              <Nav.Link href="/ListMessageUser"></Nav.Link>
             </Link>
           </div>
         </Navbar>

@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import "../../../scssWeb/main.css";
 import LogoSvg from "../../../assets/img/LogoVector.svg";
 import FraseSvg from "../../../assets/img/Frase1Vector.svg";
-import Bkgnd from "../../../assets/img/VectorBkgdTransp.svg";
-
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -77,21 +75,21 @@ export default function Login() {
           </label>
         </div>
         {error && <p>{error}</p>}
-        <Link to="/Inicio" className='Link'>
-        <button type="submit">Iniciar sesión</button>
-        </Link> 
+        <Link to="/InicioUser" className="Link">
+          <button type="submit">Iniciar sesión</button>
+        </Link>
         <div className="register">
-          ¿Aún no tienes cuenta? 
-          <Link to="/register" className='Link'>
-          <a href="#">Regístrate aquí</a>  
-        </Link>   
+          ¿Aún no tienes cuenta?
+          <Link to="/register" className="Link">
+            <a href="#">Regístrate aquí</a>
+          </Link>
         </div>
         <div className="or">
           <hr />
           <span>o</span>
           <hr />
         </div>
-        <GoogleLoginButton/>
+        <GoogleLoginButton />
       </form>
     </div>
   );

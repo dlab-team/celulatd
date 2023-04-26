@@ -47,6 +47,8 @@ export default function ListDocument() {
       .catch((error) => {
         console.log(error);
       });
+
+      
   };
 
   return (

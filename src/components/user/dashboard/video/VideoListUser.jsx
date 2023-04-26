@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NavbarComp from "../NavbarComponent";
-import NavbarVideoRead from "../document/NavbarDocument";
-import RecursosSvg from "../../../assets/img/video_library_G.svg";
-import Header from "../../common/header";
-import "../../../scssWeb/main.css";
+import NavbarComp from "../NavbarComponentUser";
+//import NavbarVideoRead from "../../document/NavbarDocument";
+import RecursosSvg from "../../../../assets/img/video_library_G.svg";
+import Header from "../../../common/header";
+import "../../../../scssWeb/main.css";
 
-const ListVideo = (props) => {
+export default function VideoListUser() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -30,27 +30,16 @@ const ListVideo = (props) => {
       });
   }, []);
 
-  const handleDelete = () => {
-    axios
-      .delete(`/videos/${props.id}`)
-      .then(() => {
-        props.onDelete();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   return (
     <div className="container-responsive">
       <Header />
       <NavbarComp />
       <div className="barra">
-        <img className="svg-img-barra" src={RecursosSvg} alt="nabvar videos"/>
+        <img className="svg-img-barra" src={RecursosSvg} alt="nabvar videos" />
         <h2>RECURSOS</h2>
       </div>
       <div className="container-body-all">
-        <NavbarVideoRead />
+       {/* <NavbarVideoRead />*/}
         <div className="container-componentvideo_flex">
           {videos.map((video) => (
             <div
@@ -59,19 +48,10 @@ const ListVideo = (props) => {
               <video src={video.video_files[0].link} controls />
               <h2>{video.user.name}</h2>
               <p>{video.url}</p>
-              <div className="body-button-edit-all">
-                <button onClick={() => handleDelete(video.id)}>Eliminar</button>
-                <button
-                  onClick={() => console.log(`Editando video ${video.id}`)}>
-                  Editar
-                </button>
-              </div>
             </div>
           ))}
         </div>
       </div>
     </div>
   );
-};
-
-export default ListVideo;
+}

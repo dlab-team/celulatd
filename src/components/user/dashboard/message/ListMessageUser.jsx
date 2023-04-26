@@ -6,11 +6,12 @@ import Nav from "react-bootstrap/Nav";
 import Header from "../../../common/header";
 import NavbarComp from "../NavbarComponentUser";
 import NavbarMessageUser from "./NavbarMessageUser";
+import Navbarnavbar from "../../../common/Navbarnavbar";
 
 import RecursosSvg from "../../../../assets/img/video_library_G.svg";
 import imagenpdf from "../../../../assets/img/imagenpdf.jpeg";
 
-export default function ListDocumentUser() {
+export default function ListMessageUser() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -34,10 +35,13 @@ export default function ListDocumentUser() {
       <NavbarComp />
       <div className="barra">
         <img className="svg-img-barra" src={RecursosSvg} alt="" />
-        <h2>RECURSOS</h2>
+        <h2>MENSAJES</h2>
       </div>
       <div className="container-body-all">
-        <NavbarMessageUser />
+        <Navbarnavbar
+          links={["/ListMessageUser", "/TrashMessageUser"]}
+          texts={["MENSAJES", "PAPELERA"]}
+        />
         <div className="container-componentvideo_flex">
           {articles.map((article) => (
             <div className="container-componentvideo_body">

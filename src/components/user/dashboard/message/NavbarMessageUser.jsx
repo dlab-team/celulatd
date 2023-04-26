@@ -15,9 +15,9 @@ export default function NavbarMessageUser() {
             </NavLink>
           </div>
           <div>
-            <NavLink to="/FavoriteMessage" className="Link" activeClassName="active">
-              <Nav.Link href="/FavoriteMessage">
-                <p>FAVORITOS</p>
+            <NavLink to="/TrashMessageUser" className="Link" activeClassName="active">
+              <Nav.Link href="/TrashMessageUser">
+                <p>PAPELERA</p>
               </Nav.Link>
             </NavLink>
           </div>

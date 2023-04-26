@@ -8,7 +8,7 @@ import Register from "./components/user/register/Register";
 import Error404 from "./components/common/Error404";
 /*  admin  */
 import Inicio from "./components/dashboardadmin/Inicio";
-import Ajustes from "./components/dashboardadmin/Ajustes";
+import Ajustes from "./components/common/Ajustes";
 
 import VideoUploader from "./components/dashboardadmin/video/VideoUploader";
 import ListVideo from "./components/dashboardadmin/video/ListVideo";
@@ -21,12 +21,12 @@ import TrashMessage from "./components/dashboardadmin/message/TrashMessage";
 
 import DocumentUploader from "./components/dashboardadmin/document/DocumentUploader";
 import ListDocument from "./components/dashboardadmin/document/ListDocument";
-/*  User */
 
-//import SettingsUser from "./components/user/dashboardadmin/SettingsUser";
-//import InicioUser from "./components/user/dashboardadmin/Inicio";
-//import MessageUser from "./components/dashboardadmin/message/Message";
-//import ComponetVideoUser from "./components/user/dashboardadmin/ComponetVideoUser";
+/*  User */
+import InicioUser from "./components/user/dashboard/InicioUser";
+import ListMessageUser from "./components/user/dashboard/message/ListMessageUser";
+import TrashMessageMessageUser from "./components/user/dashboard/message/TrasMessageUser";
+import VideoListUser from "./components/user/dashboard/video/VideoListUser";
 
 import "./scssWeb/main.css";
 
@@ -51,10 +51,10 @@ function App() {
       <Route path="/ListVideo" element={<ListVideo />} />
       <Route path="/Statistics" element={<Statistics />} />
 
-      {/*<Route path="/ComponetVideoUser" element={<ComponetVideoUser />} />*/}
-      {/*<Route path="/SettingsUser" element={<SettingsUser />} />*/}
-      {/*   <Route path="/InicioUser" element={<InicioUser />} />*/}
-      {/*<Route path="/MessageUser" element={<MessageUser />} />*/}
+      <Route path="/ListMessageUser" element={<ListMessageUser />} />
+      <Route path="/TrashMessageUser" element={<TrashMessageMessageUser />} />
+      <Route path="/InicioUser" element={<InicioUser />} />
+      <Route path="/VideoListUser" element={<VideoListUser />} />
     </Routes>
   );
 }

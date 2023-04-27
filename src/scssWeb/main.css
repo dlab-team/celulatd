@@ -835,76 +835,6 @@ body h3 {
   }
 }
 
-.landing-header-container {
-  display: flex;
-  flex-direction: column;
-  background-image: url("../assets/img/fondoTransparente.jpg");
-  height: 35%;
-}
-
-.landing-header-middle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5% 8% 5%;
-}
-
-.landing-logo-nav {
-  width: 37%;
-}
-
-.landing-container-btn {
-  background: #e2a30b;
-  border-radius: 3px;
-}
-.landing-container-btn p {
-  color: white;
-  padding-top: 20%;
-}
-
-.landing-header-navbar ul {
-  display: flex;
-  justify-content: end;
-}
-@media screen and (min-width: 1024px) {
-  .landing-header-navbar ul li {
-    margin-right: 30px;
-  }
-}
-.landing-header-navbar ul li a {
-  width: 50%;
-}
-@media screen and (min-width: 1024px) {
-  .landing-header-navbar ul li a {
-    width: 100%;
-  }
-}
-
-body p {
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 0.5rem;
-  color: black;
-}
-@media screen and (min-width: 1024px) {
-  body p {
-    font-size: 1.5rem;
-    line-height: 1rem;
-  }
-}
-body h2 {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: black;
-}
-@media screen and (min-width: 1024px) {
-  body h2 {
-    font-size: 1.7rem;
-  }
-}
-
 .background-register {
   background-color: #073B3A;
   background-size: cover;
@@ -1623,11 +1553,13 @@ a.Link {
   width: 94vw;
   height: min-content;
   overflow: scroll;
+  margin-left: 11px;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 1024px) {
   .message-box {
     width: 100vw;
+    margin-left: 0px;
   }
 }
 .message-box h2 {
@@ -1646,12 +1578,17 @@ a.Link {
 .message-icons {
   display: flex;
   justify-content: end;
-  margin-right: 5%;
 }
 .message-icons button {
   width: 7%;
   margin-right: 5%;
   margin-top: 3%;
+}
+@media screen and (min-width: 1024px) {
+  .message-icons button {
+    width: 3%;
+    margin-right: 3%;
+  }
 }
 
 body p {

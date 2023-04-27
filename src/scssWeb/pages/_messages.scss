@@ -26,9 +26,11 @@ a.Link {
   width: 94vw;
   height: min-content;
   overflow: scroll;
+  margin-left: 11px;
   margin-bottom: 10px;
   @include media(lg) {
     width: 100vw;
+    margin-left: 0px;
   }
   h2 {
     padding: 8px;
@@ -44,10 +46,14 @@ a.Link {
 .message-icons {
   display: flex;
   justify-content: end;
-  margin-right: 5%;
+  
   button {
     width: 7%;
     margin-right: 5%;
     margin-top: 3%;
+    @include media(lg) {
+      width: 3%;
+      margin-right: 3%;
+    }
   }
 }

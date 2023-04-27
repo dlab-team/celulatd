@@ -7,28 +7,29 @@ import Login from "./components/user/login/Login";
 import Register from "./components/user/register/Register";
 import Error404 from "./components/common/Error404";
 /*  admin  */
-import Inicio from "./components/dashboard/Inicio";
-import Ajustes from "./components/dashboard/Ajustes";
+import Inicio from "./components/dashboardadmin/Inicio";
+import SetingAdmin from "./components/dashboardadmin/SetingAdmin";
 
-import VideoUploader from "./components/dashboard/video/VideoUploader";
-import ListVideo from "./components/dashboard/video/ListVideo";
+import VideoUploader from "./components/dashboardadmin/video/VideoUploader";
+import ListVideo from "./components/dashboardadmin/video/ListVideo";
 
-import Statistics from "./components/dashboard/statistics/Statistics";
+import Statistics from "./components/dashboardadmin/statistics/Statistics";
 
-import ListMessages from "./components/dashboard/message/ListMessages";
-import Message from "./components/dashboard/message/Message";
-import TrashMessage from "./components/dashboard/message/TrashMessage";
+import ListMessages from "./components/dashboardadmin/message/ListMessages";
+import Message from "./components/dashboardadmin/message/Message";
+import TrashMessage from "./components/dashboardadmin/message/TrashMessage";
 
-import DocumentUploader from "./components/dashboard/document/DocumentUploader";
-import ListDocument from "./components/dashboard/document/ListDocument";
+import DocumentUploader from "./components/dashboardadmin/document/DocumentUploader";
+import ListDocument from "./components/dashboardadmin/document/ListDocument";
+
 /*  User */
-
-import SettingsUser from "./components/user/dashboard/SettingsUser";
-import InicioUser from "./components/user/dashboard/Inicio";
-import MessageUser from "./components/dashboard/message/Message";
-import Perfil from "./components/dashboard/Perfil";
-import ComponetVideoUser from "./components/user/dashboard/ComponetVideoUser";
-
+import InicioUser from "./components/user/dashboard/InicioUser";
+import ListMessageUser from "./components/user/dashboard/message/ListMessageUser";
+import TrashMessageMessageUser from "./components/user/dashboard/message/TrasMessageUser";
+import VideoListUser from "./components/user/dashboard/video/VideoListUser";
+import SettigUser from "./components/user/dashboard/SettigUser";
+import ListDocumentUser from "./components/user/dashboard/document/ListDocumentUser";
+import StatisticsUser from "./components/user/dashboard/StatisticsUser";
 import "./scssWeb/main.css";
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <Route exact path="/" element={<Landing />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="*" element={<Error404 />} />
+      {<Route path="*" element={<Error404 />} />}
 
       <Route exact path="/Inicio" element={<Inicio />} />
 
@@ -47,16 +48,18 @@ function App() {
       <Route path="/DocumentUploader" element={<DocumentUploader />} />
       <Route path="/Message" element={<Message />} />
 
-      <Route path="/ajustes" element={<Ajustes />} />
-      <Route path="/perfil" element={<Perfil />} />
+      <Route path="/SetingAdmin" element={<SetingAdmin />} />
       <Route path="/VideoUploader" element={<VideoUploader />} />
       <Route path="/ListVideo" element={<ListVideo />} />
       <Route path="/Statistics" element={<Statistics />} />
 
-      <Route path="/ComponetVideoUser" element={<ComponetVideoUser />} />
-      <Route path="/SettingsUser" element={<SettingsUser />} />
+      <Route path="/ListMessageUser" element={<ListMessageUser />} />
+      <Route path="/TrashMessageUser" element={<TrashMessageMessageUser />} />
       <Route path="/InicioUser" element={<InicioUser />} />
-      <Route path="/MessageUser" element={<MessageUser />} />
+      <Route path="/VideoListUser" element={<VideoListUser />} />
+      <Route path="/SettigUser" element={<SettigUser />} />
+      <Route path="/ListDocumentUser" element={<ListDocumentUser />} />
+      <Route path="/StatisticsUser" element={<StatisticsUser />} />
     </Routes>
   );
 }

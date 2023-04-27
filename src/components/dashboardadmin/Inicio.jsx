@@ -9,35 +9,35 @@ import SvgMensaje from "../../assets/img/messages_G.svg";
 import HomeGSvg from "../../assets/img/home_G.svg";
 import Header from "../common/header";
 
-const Inicio = () => {
+export default function Inicio() {
   return (
     <div className="container_inicio">
       <Header />
       <NavbarComp />
       <div className="barra">
-        <img className="svg-img-barra" src={HomeGSvg} />
+        <img className="svg-img-barra" src={HomeGSvg} alt="imagen navbar de inicio" />
         <h2>INICIO</h2>
       </div>
       <div className="container-body-all container-inicio_body container-body-all-position">
         <div className="container-inicio_component_all container-inicio_component-background_resources">
           <Link to="/VideoUploader" className="Link">
-            <img src={VectorSubirVid} />
+            <img src={VectorSubirVid}  alt="imagen subir archivos"/>
             <button>
-              <p>Subir Recursos</p>
+              <p>SUBIR RECURSOS</p>
             </button>
           </Link>
         </div>
         <div className="container-inicio_component_all container-inicio_component-background_video">
           <Link to="/ListVideo" className="Link">
-            <img src={Recursos} />
+            <img src={Recursos} alt="imagen subir recursos" />
             <button>
-              <p>Recursos</p>
+              <p>RECURSOS</p>
             </button>
           </Link>
         </div>
         <div className="container-inicio_component_all container-inicio_component-background_message">
           <Link to="/Message" className="Link">
-            <img src={SvgMensaje} />
+            <img src={SvgMensaje} alt="imagen subir mensajes"/>
             <button>
               <p>Mensajes</p>
             </button>
@@ -46,6 +46,4 @@ const Inicio = () => {
       </div>
     </div>
   );
-};
-
-export default Inicio;
+}

@@ -18,7 +18,6 @@ export default function VideoUploader() {
     setFormData(event.target.files[0]);
   };
 
-
   const handleTitleInputChange = (event) => {
     setFormData(event.target.value);
   };
@@ -27,16 +26,9 @@ export default function VideoUploader() {
     setFormData(event.target.value);
   };
 
-  const handleInputChange = (event) => {
-    const { name, value, files } = event.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: files ? files[0] : value,
-    }));
-  };
 
   const handleUpload = () => {
-    const {title, description } = formData;
+    const { title, description } = formData;
     const formDataUpload = new FormData();
     formDataUpload.append("title", title);
     formDataUpload.append("description", description);
@@ -67,7 +59,7 @@ export default function VideoUploader() {
       <Header />
       <NavbarComp />
       <div className="barra">
-        <img className="svg-img-barra" src={UploadSvg} />
+        <img className="svg-img-barra" src={UploadSvg} alt="" />
         <h2>SUBIR DOCUMENTO</h2>
       </div>
       <div className="container-body-all">
@@ -84,7 +76,6 @@ export default function VideoUploader() {
           />
         </div>
         <div className="container-recive-info container_recive">
-          {/* <div className="container-videouploader-info container_videouploader"> */}
           <label className="recive_title">
             <h2>Description:</h2>
           </label>
@@ -107,4 +98,3 @@ export default function VideoUploader() {
     </div>
   );
 }
-

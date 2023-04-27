@@ -46,7 +46,7 @@ const ListVideo = (props) => {
       <Header />
       <NavbarComp />
       <div className="barra">
-        <img className="svg-img-barra" src={RecursosSvg} />
+        <img className="svg-img-barra" src={RecursosSvg} alt="nabvar videos"/>
         <h2>RECURSOS</h2>
       </div>
       <div className="container-body-all">

@@ -901,6 +901,10 @@ body h3 {
 .container-user form p {
   color: #d71515;
 }
+.container-user form img {
+  width: 36px;
+  margin-left: 69px;
+}
 
 .forgot-password {
   text-align: right;

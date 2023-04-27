@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logoG from "../../../assets/img/logos_google-icon.svg"
 
 const GoogleLoginButton = ({ onSuccess, onFailure }) => {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -45,7 +46,8 @@ const GoogleLoginButton = ({ onSuccess, onFailure }) => {
       {isSignedIn ? (
         <button onClick={handleSignOutClick}>Cerrar sesión</button>
       ) : (
-        <button onClick={handleSignInClick}>Iniciar sesión con Google</button>
+        <button onClick={handleSignInClick}>
+        <img className="" src={logoG}></img> Iniciar sesión con Google</button>
       )}
     </>
   );

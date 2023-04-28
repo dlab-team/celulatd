@@ -23,21 +23,26 @@ a.Link {
 
 .message-box {
   background: $usergeenligth;
-  width: 94vw;
+  width: 100vw;
   height: min-content;
   overflow: scroll;
   margin-bottom: 10px;
   @include media(lg) {
-    width: 100vw;
+    width: 90vw;
+    margin: 0 5% 1% 5%;
   }
   h2 {
     padding: 8px;
+    @include media(lg) {
+      padding: 8px 40px;
+    }
   }
   p {
     line-height: 1.2rem;
     padding: 8px;
     @include media(lg) {
       line-height: 1.8rem;
+      padding: 8px 40px;
     }
   }
 }
@@ -45,9 +50,21 @@ a.Link {
   display: flex;
   justify-content: end;
   margin-right: 5%;
+  margin-bottom: 1%;
   button {
-    width: 7%;
-    margin-right: 5%;
-    margin-top: 3%;
+    width: 3%;
+    margin-right: 2%;
+    margin-top: 1%;
+    @include media(md) {
+      width: 2%;
+    }
+  }
+}
+.trash-img {
+  width: 88%;
+  margin-top: 3px;
+  @include media(lg) {
+    width: 88%;
+    margin-top: 3px;
   }
 }

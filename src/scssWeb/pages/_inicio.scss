@@ -12,7 +12,8 @@
   height: 60px;
   width: 100%;
   @include media(lg) {
-      top: 290px;
+      height: 45px;
+      top: 161px;
       margin-top: 0px;
   }
 
@@ -22,7 +23,7 @@
     margin-top: 19px;
     color: #073b3a;
     @include media (lg){
-      margin-top: 15px;
+      margin-top: 12px;
     }
   
     
@@ -37,9 +38,9 @@
   margin-top: 10px;
     
       @include media(lg) {
-        width: 35px;
-        margin-bottom: 0px;
-        height: 35px;
+        width: 30px;
+        
+        height: 30px;
       
     }
 
@@ -49,7 +50,7 @@
   margin-top: 260px;
   max-width: 99vw;
   @include media(lg) {
-    margin-top: 380px;
+    top: 5px;
     
   }
 

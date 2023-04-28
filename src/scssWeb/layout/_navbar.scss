@@ -12,38 +12,32 @@
 
   @include media(lg) {
     position: fixed;
-    top: 210px;
+    top: 99px;
     width: 100%;
-    height: 80px;
+    height: 63px;
   }
 }
 
 .navbar-admin-all {
-
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 
-  @include media (lg){
+  @include media(lg) {
     justify-content: flex-end;
-    
   }
-  img{
+  img {
     width: 70%;
     margin: auto;
-    @include media (lg){
-      width: 40px;
-      height: 40px;
-    margin-right: 35px;
-      
+    @include media(lg) {
+      width: 30px;
+      height: 30px;
+      margin-right: 35px;
     }
-
   }
 }
 
 .navbar-background {
   background: $usergeendark;
 }
-
-

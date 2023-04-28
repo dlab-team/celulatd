@@ -77,6 +77,9 @@
 }
 .llave {
   width: 81%;
+  @include media(md) {
+    width: 40%;
+  }
   @include media(lg) {
     width: 20%;
   }
@@ -97,19 +100,25 @@
 }
 .landing-logo-container {
   width: 30%;
+  @include media(md) {
+    width: 20%;
+  }
   @include media(lg) {
     width: 12%;
   }
 }
 
 .landing-card {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
   padding: 3% 7%;
   margin-bottom: 5%;
-  text-align: center;
-  height: 50vh;
+
   @include media(lg) {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-around;
   }
 
@@ -122,7 +131,7 @@
 }
 .landing-card-img {
   display: flex;
- 
+
   align-items: center;
 }
 .landing-card-text {
@@ -148,19 +157,46 @@
 .landing-card3-bg {
   background: $userblue;
 
-  .landing-card-img{ 
-     img{ 
+  .landing-card-img {
+    img {
       flex-direction: row-reverse;
     }
   }
 }
+
+// Style Carousel
+
 .carousel1 {
-  width: 80% !important;
+  background-color: #e0dcdc29;
+
+  @include media(lg) {
+    margin: 0;
+    max-width: 100vw;
+    margin-bottom: 10%;
+  }
 }
 .carousel-item {
   text-align: center;
-  height: 30vh;
+  // height: 70vh;
+  // @include media(lg) {
+  //   height: 50vh;
+  // }
 }
+.carousel-item.active p {
+  border: none;
+}
+.carousel-caption {
+  position: inherit;
+  height: 60vh;
+  @include media(lg) {
+    height: 50vh;
+  }
+  img {
+    margin: 2% 25%;
+  }
+}
+
+// Style Footer
 .landing-footer {
   display: flex;
   flex-direction: column;
@@ -170,8 +206,10 @@
   padding: 3% 7%;
   @include media(lg) {
     display: flex;
-  align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
+
   p {
     @include font-p($color: $userwhite);
   }
@@ -179,16 +217,17 @@
     @include font-h2($color: $userwhite);
   }
 }
+
 .izquierda {
-   @include media(lg) {
-  width: 35%;
-   }
+  @include media(lg) {
+    width: 35%;
+  }
 }
-.centro{
-   @include media(lg) {
-   width: 40%;
-   padding: 0 3%;
-   }
+.centro {
+  @include media(lg) {
+    width: 40%;
+    padding: 0 3%;
+  }
 }
 .logo-footer {
   width: 70%;

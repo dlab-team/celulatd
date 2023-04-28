@@ -5,8 +5,7 @@ import { useMediaQuery } from "react-responsive";
 
 import "../../../../scssWeb/main.css";
 
-
-export default  function CarruselCalendario () {
+export default function CarruselCalendario() {
   const [events, setEvents] = useState([]);
 
   const isDesktopOrLaptop = useMediaQuery({
@@ -18,7 +17,7 @@ export default  function CarruselCalendario () {
   useEffect(() => {
     const API_KEY = "AIzaSyBdnXqWktn8J5oabH4m8UnEeCR0iiIzUw0";
     const CALENDAR_ID =
-     "1e337dbf0e24d3273d97c49b60bfff05501b1005d57d9ca155c4ddf53751e905@group.calendar.google.com";
+      "1e337dbf0e24d3273d97c49b60bfff05501b1005d57d9ca155c4ddf53751e905@group.calendar.google.com";
     const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
 
     axios
@@ -28,7 +27,7 @@ export default  function CarruselCalendario () {
           const eventDate = new Date(event.start.dateTime);
           return eventDate >= new Date();
         });
-
+        console.log(events);
         console.log("Número de eventos cargados:", events.length);
         setEvents(events);
       })
@@ -59,6 +58,7 @@ export default  function CarruselCalendario () {
                     style={{ flex: 1 }}>
                     <h3>{event.summary}</h3>
                     <p>{new Date(event.start.dateTime).toLocaleString()}</p>
+                    <p>{event.description}</p>
                   </div>
                 ))}
               </div>
@@ -67,6 +67,4 @@ export default  function CarruselCalendario () {
       </Carousel>
     </Container>
   );
-};
-
-
+}

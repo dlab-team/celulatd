@@ -23,7 +23,7 @@ export default function InicioUser() {
       </div>
       <div className="container-body-all container-inicio_body container-body-all-position">
         <div className="container-inicio_component_all container-inicio_component-background_video">
-          <Link to="/ListVideoUser" className="Link">
+          <Link to="/VideoListUser" className="Link">
             <img src={Recursos} alt="lista de videos" />
             <button>
               <p>RECURSOS</p>

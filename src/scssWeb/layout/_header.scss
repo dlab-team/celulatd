@@ -15,7 +15,7 @@
   color: $userwhite;
   @include media(lg) {
     padding-top: 11px;
- height: 270px;
+    height: 100px;
     top: 0;
   }
   p {
@@ -26,7 +26,7 @@
 .header-container-logo {
   width: 20%;
   @include media(lg) {
-    width: 18%;
+    width: 9%;
   }
   img {
     width: 100%;
@@ -36,6 +36,14 @@
   }
 }
 .user-container {
+  @include media(lg) {
+    height: 80%;
+    width: 8%;
+    display: flex;
+    img {
+      margin-right: 11%;
+    }
+  }
   p {
     margin-top: 12%;
     @include media(lg) {

@@ -37,10 +37,14 @@
   h2 {
     height: 40px;
     margin-top: 3px;
+    max-width: 95%;
+    word-wrap: break-word;
   }
   p {
     height: 80px;
     line-height: 1rem;
+    max-width: 95%;
+    word-wrap: break-word;
     @include media(lg) {
       line-height: 1.5rem;
     }
@@ -69,6 +73,7 @@
     background-color: $usergeenligth;
   }
 }
+
 
 .document-flex {
   display: flex;

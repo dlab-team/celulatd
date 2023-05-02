@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
-
 import Header from "../../../common/header";
 import NavbarComp from "../NavbarComponentUser";
+import "../../../../scssWeb/main.css";
+import stardestacados from "../../../../assets/img/stardestacados.svg";
+import trash from "../../../../assets/img/trash.svg";
+import MensajeSvg from "../../../../assets/img/messages_G.svg";
 import NavbarNavbar from "../../../common/Navbarnavbar";
-
-import RecursosSvg from "../../../../assets/img/video_library_G.svg";
-import imagenpdf from "../../../../assets/img/imagenpdf.jpeg";
 
 export default function ListMessageUser() {
   const [articles, setArticles] = useState([]);
@@ -28,32 +26,84 @@ export default function ListMessageUser() {
       });
   }, []);
 
+  const handleHighlight = (articleId) => {
+    const url = "http://localhost:3000/api/v1//message/highlight";
+    const data = { standout: articleId.target.value };
+
+    axios
+      .patch(url, data)
+      .then((response) => {
+        setArticles((prevArticles) => {
+          const updatedArticles = prevArticles.map((article) => {
+            if (article.id === articleId) {
+              return { ...article, highlighd: true };
+            }
+            return article;
+          });
+          console.log(updatedArticles);
+          return updatedArticles;
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleTrashMessage = (articleId) => {
+    const url = "http://localhost:3000/api/v1//message/highlight";
+    const data = { standout: articleId.target.value };
+
+    axios
+      .patch(url, data)
+      .then((response) => {
+        setArticles((prevArticles) => {
+          const updatedArticles = prevArticles.map((article) => {
+            if (article.id === articleId) {
+              return { ...article, trash: true };
+            }
+            return article;
+          });
+          console.log(updatedArticles);
+          return updatedArticles;
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
-    <div className="container-responsive">
+    <div>
       <Header />
       <NavbarComp />
       <div className="barra">
-        <img className="svg-img-barra" src={RecursosSvg} alt="" />
+        <img className="svg-img-barra" src={MensajeSvg} alt="" />
         <h2>MENSAJES</h2>
       </div>
-      <div className="container-body-all">
-        <NavbarNavbar
+      <div className="container-body-message">
+      <NavbarNavbar
           links={["/ListMessageUser", "/TrashMessageUser"]}
           texts={["MENSAJES", "PAPELERA"]}
         />
-        <div className="container-componentvideo_flex">
+        <div className="container-message">
           {articles.map((article) => (
-            <div className="container-componentvideo_body">
-              <div className="document-flex" key={article.id}>
-                <Link to="/Inicio">
-                  <img className="img-doc" src={imagenpdf} alt="" />
-                  <Nav.Link href="/#"></Nav.Link>
-                </Link>
-                <div className="document-text">
-                  <h2>{article.title}</h2>
-                  <p>{article.content}</p>
-                </div>
+            <div
+              className={`message-box ${article.highlighd ? "highlight" : ""}`}
+              key={article.id}>
+              <div className="message-icons">
+                <button
+                  className={`${article.highlighd ? "button-highlighd" : ""}`}
+                  onClick={() => handleHighlight(article.id)}>
+                  <img src={stardestacados} alt="destacados" />
+                </button>
+                <button
+                  className={`${article.trash ? "button-trash" : ""}`}
+                  onClick={() => handleTrashMessage(article.id)}>
+                  <img src={trash} alt="papelera" />
+                </button>
               </div>
+              <h2>{article.title}</h2>
+              <p>{article.content}</p>
             </div>
           ))}
         </div>
@@ -61,3 +111,7 @@ export default function ListMessageUser() {
     </div>
   );
 }
+
+
+
+

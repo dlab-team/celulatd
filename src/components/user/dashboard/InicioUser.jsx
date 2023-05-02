@@ -17,7 +17,7 @@ export default function InicioUser() {
         <img
           className="svg-img-barra"
           src={HomeGSvg}
-          alt="paguina principal usuario"
+          alt="pagina principal usuario"
         />
         <h2>INICIO</h2>
       </div>
@@ -26,7 +26,7 @@ export default function InicioUser() {
           <Link to="/VideoListUser" className="Link">
             <img src={Recursos} alt="lista de videos" />
             <button>
-              <p>VIDEOS</p>
+              <p>RECURSOS</p>
             </button>
           </Link>
         </div>

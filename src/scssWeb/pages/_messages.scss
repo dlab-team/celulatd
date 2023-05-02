@@ -26,6 +26,7 @@ a.Link {
   width: 100vw;
   height: min-content;
   overflow: scroll;
+  margin-left: 11px;
   margin-bottom: 10px;
   @include media(lg) {
     width: 90vw;

@@ -72,7 +72,7 @@ export default function Message() {
           </label>
           <div class="input-group">
             <textarea //estilos se desborda y falta el color de fondo ,la clase quedo recive_input-height --favor borrar comentario cuando se corrija.
-              class=" form-control recive_input-height"
+              class="form-control recive_input-height"
               aria-label="With textarea"
               type="text"
               value={formData.description}

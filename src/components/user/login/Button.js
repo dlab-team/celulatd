@@ -43,10 +43,8 @@ const GoogleLoginButton = ({ onSuccess, onFailure }) => {
 
   return (
     <>
-    
       {isSignedIn ? (
-       
-       <button onClick={handleSignOutClick}>Cerrar sesión</button>
+        <button onClick={handleSignOutClick}>Cerrar sesión</button>
       ) : (
         <button onClick={handleSignInClick}>
           <img src={logoG} alt=""></img> Iniciar sesión con Google</button>
